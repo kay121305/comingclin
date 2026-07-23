@@ -7,7 +7,7 @@
 
   <title>VINCORACLIN | Oportunidade Profissional</title>
 
-  <meta name="description" content="Oportunidade profissional para Recepcionista de Consultório Médico.">
+  <meta name="description" content="Processo seletivo para Recepcionista de Consultório Médico.">
 
   <style>
     :root {
@@ -20,7 +20,7 @@
       --text: #172331;
       --muted: #687684;
       --border: #e1e6eb;
-      --telegram: #229ED9;
+      --telegram: #229ed9;
     }
 
     * {
@@ -54,7 +54,7 @@
       top: 0;
       z-index: 1000;
       background: rgba(7, 26, 47, 0.98);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .header-content {
@@ -139,7 +139,7 @@
       display: inline-block;
       margin-bottom: 20px;
       padding: 7px 14px;
-      border: 1px solid rgba(231, 209, 141, 0.5);
+      border: 1px solid rgba(231,209,141,0.5);
       border-radius: 30px;
       color: var(--gold-light);
       font-size: 11px;
@@ -187,12 +187,12 @@
     }
 
     .button-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.45);
+      border: 1px solid rgba(255,255,255,0.45);
       color: var(--white);
     }
 
     .button-secondary:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.08);
     }
 
     .telegram-button {
@@ -211,7 +211,7 @@
       color: var(--text);
       border-top: 4px solid var(--gold);
       border-radius: 10px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
     }
 
     .vacancy-card h2 {
@@ -401,9 +401,15 @@
     }
 
     .benefit-icon {
-      margin-bottom: 12px;
-      color: var(--gold);
-      font-size: 28px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      background: var(--navy);
+      border-radius: 50%;
+      color: var(--gold-light);
       font-weight: bold;
     }
 
@@ -422,9 +428,9 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 42px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 10px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255,255,255,0.04);
       text-align: center;
     }
 
@@ -444,9 +450,9 @@
       max-width: 520px;
       margin: 25px auto;
       padding: 16px;
-      border: 1px solid rgba(231, 209, 141, 0.35);
+      border: 1px solid rgba(231,209,141,0.35);
       border-radius: 5px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.08);
       color: var(--gold-light);
       font-weight: bold;
       word-break: break-word;
@@ -616,9 +622,9 @@
       max-width: 850px;
       margin: 0 auto;
       padding: 35px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255,255,255,0.15);
       border-radius: 9px;
-      background: rgba(255, 255, 255, 0.04);
+      background: rgba(255,255,255,0.04);
     }
 
     .documents-card h3 {
@@ -632,7 +638,7 @@
 
     .documents-list li {
       padding: 13px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       color: #e2e8ee;
     }
 
@@ -646,7 +652,7 @@
     .documents-notice {
       margin-top: 23px;
       padding: 17px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.08);
       border-radius: 5px;
       color: #d8e0e8;
       font-size: 13px;
@@ -767,7 +773,8 @@
       }
 
       .button-primary,
-      .button-secondary {
+      .button-secondary,
+      .telegram-button {
         width: 100%;
       }
     }
@@ -847,7 +854,7 @@
   </div>
 
   <div class="vacancy-item">
-    <div class="vacancy-icon">+</div>
+    <div class="vacancy-icon">✓</div>
     <div>
       <strong>CONTRATAÇÃO</strong>
       <span>Contratação imediata para as vagas disponíveis</span>
@@ -855,7 +862,7 @@
   </div>
 
   <div class="vacancy-item">
-    <div class="vacancy-icon">+</div>
+    <div class="vacancy-icon">✓</div>
     <div>
       <strong>EXPERIÊNCIA</strong>
       <span>Não é necessário possuir experiência anterior</span>
@@ -863,7 +870,7 @@
   </div>
 
   <div class="vacancy-item">
-    <div class="vacancy-icon">+</div>
+    <div class="vacancy-icon">R$</div>
     <div>
       <strong>SALÁRIO</strong>
       <span>R$ 2.300,15</span>
@@ -879,6 +886,7 @@
   </div>
 
   <div class="immediate-box">
+
     <strong>CONTRATAÇÃO PARA AS VAGAS DISPONÍVEIS</strong>
 
     <p>
@@ -886,15 +894,18 @@
       qualificação profissional ou que desejam realizar a
       qualificação necessária para a função.
     </p>
+
   </div>
 
   <div class="vacancies-box">
+
     <strong>16 VAGAS</strong>
 
     <span>
       Após o preenchimento das vagas disponíveis,
       o processo seletivo será encerrado.
     </span>
+
   </div>
 
 </div>
@@ -928,10 +939,14 @@
     <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
 
       <defs>
+
         <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+
           <stop offset="0%" stop-color="#e7d18d"/>
           <stop offset="100%" stop-color="#c9a85d"/>
+
         </linearGradient>
+
       </defs>
 
       <circle
@@ -1086,7 +1101,7 @@
 
   <p>
     Já possui o certificado ou a qualificação profissional?
-    Envie seu currículo exclusivamente por e-mail para análise.
+    Envie seu currículo para análise.
   </p>
 
 </div>
@@ -1098,7 +1113,7 @@
   <p>
     Se você já possui o certificado ou a qualificação necessária
     para a função de Recepcionista de Consultório Médico,
-    envie seu currículo para análise da equipe.
+    basta enviar seu currículo para análise da equipe.
   </p>
 
   <p>
@@ -1106,11 +1121,6 @@
     currículo e a validação das informações necessárias,
     o perfil profissional poderá ser analisado conforme a
     região informada no currículo.
-  </p>
-
-  <p>
-    Após a validação das informações, a equipe poderá entrar
-    em contato para orientar sobre a próxima etapa do processo.
   </p>
 
   <div class="email-address">
@@ -1166,23 +1176,25 @@
       </div>
 
       <ul class="course-list">
+
         <li>Conteúdo introdutório da função</li>
         <li>Preparação profissional</li>
         <li>Material de qualificação</li>
         <li>Preparação para o processo</li>
+
       </ul>
 
       <a
-        href="https://t.me/Vagasimediataa"
+        href="https://t.me/Temosvagass"
         target="_blank"
         rel="noopener noreferrer"
         class="course-button"
       >
-        CONHECER CURSO BÁSICO — R$ 27,10
+        INTERESSADO NO CURSO BÁSICO — R$ 27,10
       </a>
 
       <div class="course-message">
-        Clique no botão para obter informações sobre a qualificação.
+        Clique no botão para falar com a equipe sobre esta opção.
       </div>
 
     </article>
@@ -1204,23 +1216,25 @@
       </div>
 
       <ul class="course-list">
+
         <li>Conteúdo completo da função</li>
         <li>Preparação profissional ampliada</li>
         <li>Material de qualificação</li>
         <li>Preparação para o processo seletivo</li>
+
       </ul>
 
       <a
-        href="https://t.me/Vagasimediataa"
+        href="https://t.me/Temosvagass"
         target="_blank"
         rel="noopener noreferrer"
         class="course-button"
       >
-        CONHECER CURSO COMPLETO — R$ 74,29
+        INTERESSADO NO CURSO COMPLETO — R$ 74,29
       </a>
 
       <div class="course-message">
-        Clique no botão para obter informações sobre a qualificação.
+        Clique no botão para falar com a equipe sobre esta opção.
       </div>
 
     </article>
@@ -1238,7 +1252,7 @@
       processo de contratação para as vagas disponíveis.
     </p>
 
-    <p style="margin-top: 10px;">
+    <p style="margin-top:10px;">
       A contratação está limitada às 16 vagas disponíveis.
       Após o preenchimento das vagas, o processo seletivo
       será encerrado.
@@ -1269,35 +1283,51 @@
 <div class="process-grid">
 
   <article class="process-card">
+
     <div class="process-number">1</div>
+
     <h3>Envie seu currículo</h3>
+
     <p>
-      Envie seu currículo exclusivamente por e-mail para análise.
+      Envie seu currículo por e-mail para análise.
     </p>
+
   </article>
 
   <article class="process-card">
+
     <div class="process-number">2</div>
+
     <h3>Validação das informações</h3>
+
     <p>
       A equipe analisa as informações necessárias.
     </p>
+
   </article>
 
   <article class="process-card">
+
     <div class="process-number">3</div>
+
     <h3>Análise do perfil</h3>
+
     <p>
       O perfil poderá ser analisado conforme a região informada.
     </p>
+
   </article>
 
   <article class="process-card">
+
     <div class="process-number">4</div>
+
     <h3>Próxima etapa</h3>
+
     <p>
       O candidato poderá receber orientações sobre o processo.
     </p>
+
   </article>
 
 </div>
@@ -1368,9 +1398,9 @@
 <p>
   São apenas 16 vagas para contratação.
   Não é necessário possuir experiência anterior.
-  Se você já possui qualificação, envie seu currículo
-  por e-mail. Caso ainda não possua, conheça as opções
-  de qualificação profissional disponíveis.
+  Se você já possui qualificação, envie seu currículo.
+  Caso ainda não possua, conheça as opções de qualificação
+  profissional disponíveis.
 </p>
 
 <a href="#curriculo" class="button-primary">
