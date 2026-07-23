@@ -1,622 +1,989 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Processo Seletivo | Recepcionista de Consultório Médico</title>
+<title>COMING RH | Processo Seletivo</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+
+    --navy: #071a2f;
+    --navy-light: #102d4d;
+    --gold: #c9a227;
+    --gold-light: #e5c866;
+    --white: #ffffff;
+    --background: #f5f7fa;
+    --text: #182433;
+    --muted: #687586;
+    --border: #e4e8ed;
+
 }
 
 body {
-    background: #f4f7fb;
-    color: #172033;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
     line-height: 1.6;
+
 }
 
-/* CABEÇALHO */
+/* =========================
+   HEADER
+========================= */
 
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #e6eaf0;
-    padding: 18px 6%;
+
+    background: rgba(7, 26, 47, 0.98);
+    height: 76px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
+    box-shadow: 0 3px 20px rgba(0,0,0,.18);
+
 }
 
 .logo {
+
+    color: white;
     font-size: 25px;
     font-weight: 800;
-    color: #123b69;
+    letter-spacing: 1px;
+
 }
 
 .logo span {
-    color: #1f8f65;
+
+    color: var(--gold-light);
+
 }
 
-.header-btn {
-    background: #123b69;
-    color: white;
+.header-button {
+
+    color: var(--navy);
+    background: var(--gold-light);
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 7px;
-    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 5px;
+    font-size: 13px;
     font-weight: bold;
+    transition: .3s;
+
 }
 
-/* HERO */
+.header-button:hover {
+
+    background: white;
+
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    background: linear-gradient(135deg, #123b69, #1c608f);
+
+    background:
+    linear-gradient(
+        rgba(7,26,47,.94),
+        rgba(7,26,47,.97)
+    );
+
     color: white;
-    padding: 75px 6%;
+    padding: 90px 7% 100px;
+
 }
 
 .hero-container {
+
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 45px;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
     align-items: center;
+
+}
+
+.hero-label {
+
+    display: inline-block;
+    color: var(--gold-light);
+    border: 1px solid rgba(229,200,102,.5);
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-bottom: 20px;
+
 }
 
 .hero h1 {
-    font-size: 48px;
-    line-height: 1.12;
-    margin-bottom: 22px;
+
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -.8px;
+
 }
 
 .hero h1 span {
-    color: #8ee0b5;
+
+    color: var(--gold-light);
+
 }
 
-.hero p {
+.hero-text {
+
+    color: #d5dce4;
     font-size: 18px;
-    color: #e5edf5;
     max-width: 650px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
+
 }
 
 .hero-buttons {
+
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+
 }
 
-.btn-primary {
-    display: inline-block;
-    background: #1f9b6b;
+.btn-gold {
+
+    background: var(--gold-light);
+    color: var(--navy);
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .3s;
+
+}
+
+.btn-gold:hover {
+
+    background: white;
+    transform: translateY(-2px);
+
+}
+
+.btn-outline {
+
+    border: 1px solid rgba(255,255,255,.45);
     color: white;
     text-decoration: none;
-    padding: 15px 24px;
-    border-radius: 7px;
+    padding: 15px 25px;
+    border-radius: 5px;
     font-weight: bold;
+    font-size: 14px;
+
 }
 
-.btn-secondary {
-    display: inline-block;
-    border: 1px solid #ffffff80;
-    color: white;
-    text-decoration: none;
-    padding: 15px 24px;
-    border-radius: 7px;
-    font-weight: bold;
-}
-
-/* CARD DA VAGA */
+/* =========================
+   CARD DA VAGA
+========================= */
 
 .vacancy-card {
+
     background: white;
-    color: #172033;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.18);
+    color: var(--text);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    border-top: 4px solid var(--gold);
+
 }
 
-.vacancy-card h3 {
-    font-size: 23px;
-    color: #123b69;
-    margin-bottom: 20px;
+.vacancy-title {
+
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+
 }
 
-.vacancy-info {
+.vacancy-item {
+
     display: flex;
-    gap: 12px;
-    margin: 15px 0;
-    font-size: 15px;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef0f3;
+
 }
 
-.vacancy-info strong {
-    color: #123b69;
+.vacancy-item:last-of-type {
+
+    border-bottom: none;
+
 }
 
-.vacancies-alert {
-    background: #e9f8f0;
-    border-left: 5px solid #1f9b6b;
-    padding: 18px;
-    border-radius: 8px;
-    margin-top: 25px;
-    color: #145a3d;
+.vacancy-icon {
+
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f7f1dc;
+    color: #927419;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    flex-shrink: 0;
+
 }
 
-.vacancies-alert strong {
+.vacancy-item strong {
+
+    color: var(--navy);
+    font-size: 13px;
     display: block;
-    font-size: 24px;
+
 }
 
-/* SEÇÕES */
+.vacancy-item span {
+
+    color: var(--muted);
+    font-size: 14px;
+
+}
+
+.vacancies {
+
+    margin-top: 25px;
+    background: var(--navy);
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+
+}
+
+.vacancies strong {
+
+    display: block;
+    color: var(--gold-light);
+    font-size: 28px;
+    margin-bottom: 4px;
+
+}
+
+.vacancies span {
+
+    font-size: 13px;
+    color: #d6dce3;
+
+}
+
+/* =========================
+   SEÇÕES
+========================= */
 
 section {
-    padding: 75px 6%;
+
+    padding: 80px 7%;
+
 }
 
-.section-container {
+.container {
+
     max-width: 1200px;
     margin: auto;
+
 }
 
-.section-title {
+.section-heading {
+
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
+
 }
 
-.section-title h2 {
+.section-heading h2 {
+
+    color: var(--navy);
     font-size: 35px;
-    color: #123b69;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
+
 }
 
-.section-title p {
-    color: #687386;
-    max-width: 700px;
+.section-heading p {
+
+    color: var(--muted);
+    max-width: 680px;
     margin: auto;
+
 }
 
-/* SEPARADOR */
+.gold-line {
 
-.section-divider {
-    width: 75px;
-    height: 4px;
-    background: #1f9b6b;
-    margin: 15px auto 0;
-    border-radius: 10px;
+    width: 65px;
+    height: 3px;
+    background: var(--gold);
+    margin: 18px auto;
+
 }
 
-/* CARDS DE BENEFÍCIOS */
-
-.benefits {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.benefit-card {
-    background: white;
-    padding: 28px;
-    border-radius: 12px;
-    border: 1px solid #e5eaf0;
-    box-shadow: 0 6px 20px rgba(18,59,105,.05);
-}
-
-.benefit-card h3 {
-    color: #123b69;
-    margin-bottom: 10px;
-}
-
-.benefit-card p {
-    color: #687386;
-}
-
-/* PERFIL */
+/* =========================
+   PERFIL
+========================= */
 
 .profile-section {
+
     background: white;
+
 }
 
-.profile-box {
+.profile-card {
+
     max-width: 900px;
     margin: auto;
+    background: #fafbfc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 35px;
     display: flex;
     align-items: center;
     gap: 30px;
-    background: #f7fafc;
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid #e1e7ee;
+
 }
 
 .profile-photo {
-    width: 130px;
-    height: 130px;
+
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid white;
     box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    background: #e7ebef;
+
 }
 
-.profile-text h3 {
-    color: #123b69;
+.profile-content h3 {
+
+    color: var(--navy);
     font-size: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+
 }
 
-.profile-text p {
-    color: #687386;
+.profile-content .position {
+
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+
 }
 
-/* QUALIFICAÇÃO */
+.profile-content p {
+
+    color: var(--muted);
+    font-size: 15px;
+
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.benefits {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+
+}
+
+.benefit-card {
+
+    background: white;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    border-top: 3px solid var(--gold);
+
+}
+
+.benefit-icon {
+
+    font-size: 27px;
+    margin-bottom: 15px;
+
+}
+
+.benefit-card h3 {
+
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+.benefit-card p {
+
+    color: var(--muted);
+    font-size: 14px;
+
+}
+
+/* =========================
+   QUALIFICAÇÃO
+========================= */
 
 .qualification-section {
-    background: #ffffff;
+
+    background: white;
+
 }
 
-.qualification-box {
-    background: #f7fafc;
-    border: 1px solid #e1e7ee;
-    border-radius: 15px;
-    padding: 40px;
-}
+.qualification-wrapper {
 
-.qualification-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 45px;
 
-.qualification-header h2 {
-    font-size: 34px;
-    color: #123b69;
-    margin-bottom: 12px;
-}
-
-.qualification-header p {
-    color: #687386;
 }
 
 .courses {
+
+    max-width: 900px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-    max-width: 850px;
-    margin: auto;
+
 }
 
 .course-card {
+
     background: white;
-    border: 1px solid #e1e7ee;
-    border-radius: 13px;
-    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
     position: relative;
+
 }
 
 .course-card.featured {
-    border: 2px solid #1f9b6b;
+
+    border: 2px solid var(--gold);
+
 }
 
-.recommended {
+.badge {
+
     position: absolute;
     top: -13px;
     right: 20px;
-    background: #1f9b6b;
+    background: var(--gold);
     color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 20px;
+
 }
 
 .course-card h3 {
-    color: #123b69;
-    font-size: 23px;
-    margin-bottom: 10px;
+
+    color: var(--navy);
+    font-size: 24px;
+    margin-bottom: 8px;
+
 }
 
-.course-description {
-    color: #687386;
+.course-subtitle {
+
+    color: var(--muted);
     font-size: 14px;
+
 }
 
 .price {
-    font-size: 34px;
-    color: #1f8f65;
-    font-weight: 800;
+
+    color: var(--navy);
+    font-size: 35px;
+    font-weight: bold;
     margin: 18px 0;
+
+}
+
+.price small {
+
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: normal;
+
 }
 
 .course-list {
+
     list-style: none;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
+
 }
 
 .course-list li {
-    margin: 10px 0;
+
+    padding: 9px 0;
+    color: #586575;
     font-size: 14px;
-    color: #4f5c6d;
+    border-bottom: 1px solid #f0f1f3;
+
 }
 
 .course-list li::before {
+
     content: "✓";
-    color: #1f9b6b;
+    color: var(--gold);
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 9px;
+
 }
 
 .course-button {
+
     display: block;
     text-align: center;
-    background: #123b69;
+    background: var(--navy);
     color: white;
-    padding: 13px;
-    border-radius: 7px;
+    padding: 14px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 14px;
+
 }
 
-/* GARANTIA */
+.course-button:hover {
+
+    background: var(--gold);
+    color: var(--navy);
+
+}
 
 .guarantee {
-    max-width: 850px;
+
+    max-width: 900px;
     margin: 35px auto 0;
-    background: #fff8e8;
-    border-left: 5px solid #d79b26;
-    padding: 22px;
+    background: #fffaf0;
+    border: 1px solid #ead9a2;
+    padding: 24px;
     border-radius: 8px;
-    color: #684d18;
+
 }
 
 .guarantee h3 {
+
+    color: #745d1b;
     margin-bottom: 8px;
-    color: #7c5b16;
+
 }
 
-/* PROCESSO */
+.guarantee p {
+
+    color: #6d633f;
+    font-size: 14px;
+
+}
+
+/* =========================
+   PROCESSO
+========================= */
 
 .process {
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+
 }
 
 .step {
-    text-align: center;
+
     background: white;
-    padding: 25px 18px;
-    border-radius: 12px;
-    border: 1px solid #e5eaf0;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 28px 20px;
+    text-align: center;
+
 }
 
 .step-number {
+
     width: 45px;
     height: 45px;
+    background: var(--navy);
+    color: var(--gold-light);
     border-radius: 50%;
-    background: #123b69;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 15px;
-    font-size: 20px;
+    margin: auto auto 16px;
     font-weight: bold;
+    font-size: 18px;
+
 }
 
 .step h3 {
-    color: #123b69;
+
+    color: var(--navy);
     font-size: 17px;
     margin-bottom: 8px;
+
 }
 
 .step p {
-    font-size: 14px;
-    color: #687386;
+
+    color: var(--muted);
+    font-size: 13px;
+
 }
 
-/* DOCUMENTOS */
+/* =========================
+   DOCUMENTOS
+========================= */
 
 .documents {
-    background: #123b69;
+
+    background: var(--navy);
     color: white;
+
 }
 
-.documents .section-title h2 {
+.documents .section-heading h2 {
+
     color: white;
+
 }
 
-.documents .section-title p {
-    color: #dce7f2;
+.documents .section-heading p {
+
+    color: #d4dce5;
+
 }
 
-.document-box {
-    background: rgba(255,255,255,.08);
-    border: 1px solid rgba(255,255,255,.15);
-    border-radius: 14px;
-    padding: 35px;
+.document-card {
+
     max-width: 850px;
     margin: auto;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 10px;
+    padding: 35px;
+    background: rgba(255,255,255,.04);
+
 }
 
-.document-box h3 {
-    margin-bottom: 18px;
-    font-size: 23px;
+.document-card h3 {
+
+    color: var(--gold-light);
+    margin-bottom: 20px;
+
 }
 
 .document-list {
+
     list-style: none;
+
 }
 
 .document-list li {
-    padding: 13px 0;
+
+    padding: 14px 0;
     border-bottom: 1px solid rgba(255,255,255,.12);
+    color: #e3e8ee;
+
 }
 
 .document-list li::before {
+
     content: "✓";
-    color: #8ee0b5;
+    color: var(--gold-light);
     font-weight: bold;
     margin-right: 10px;
+
 }
 
-.document-warning {
+.document-notice {
+
     margin-top: 25px;
-    background: rgba(255,255,255,.1);
     padding: 18px;
-    border-radius: 8px;
-    font-size: 14px;
+    background: rgba(255,255,255,.08);
+    border-radius: 6px;
+    color: #dce3eb;
+    font-size: 13px;
+
 }
 
-/* CTA */
+/* =========================
+   CTA FINAL
+========================= */
 
 .final-cta {
+
     text-align: center;
-    background: #f4f7fb;
+    background: #f5f7fa;
+
 }
 
 .final-cta h2 {
-    color: #123b69;
+
+    color: var(--navy);
     font-size: 34px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+
 }
 
 .final-cta p {
-    max-width: 700px;
+
+    max-width: 680px;
     margin: 0 auto 25px;
-    color: #687386;
+    color: var(--muted);
+
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: #0d2744;
-    color: #cbd7e3;
+
+    background: #041322;
+    color: #b9c4cf;
     text-align: center;
-    padding: 30px 6%;
+    padding: 35px 7%;
     font-size: 13px;
+
 }
 
 footer strong {
+
     color: white;
+    font-size: 17px;
+
 }
 
-/* RESPONSIVO */
+footer span {
 
-@media (max-width: 900px) {
+    color: var(--gold-light);
+
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 950px) {
 
     .hero-container {
-        grid-template-columns: 1fr;
-    }
 
-    .hero h1 {
-        font-size: 38px;
+        grid-template-columns: 1fr;
+
     }
 
     .benefits {
+
         grid-template-columns: 1fr;
+
     }
 
     .process {
+
         grid-template-columns: repeat(2, 1fr);
+
     }
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
     header {
-        padding: 15px 5%;
+
+        padding: 0 5%;
+
     }
 
     .logo {
+
         font-size: 20px;
+
+    }
+
+    .header-button {
+
+        padding: 9px 12px;
+        font-size: 11px;
+
     }
 
     .hero {
-        padding: 55px 5%;
+
+        padding: 60px 5% 70px;
+
     }
 
     .hero h1 {
-        font-size: 32px;
+
+        font-size: 34px;
+
+    }
+
+    .hero-text {
+
+        font-size: 16px;
+
     }
 
     section {
-        padding: 50px 5%;
+
+        padding: 55px 5%;
+
     }
 
-    .qualification-box {
+    .section-heading h2 {
+
+        font-size: 28px;
+
+    }
+
+    .profile-card {
+
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+
+    }
+
+    .qualification-wrapper {
+
         padding: 22px 15px;
+
     }
 
     .courses {
+
         grid-template-columns: 1fr;
+
     }
 
     .process {
+
         grid-template-columns: 1fr;
+
     }
 
-    .profile-box {
-        flex-direction: column;
-        text-align: center;
-    }
+    .document-card {
 
-    .document-box {
         padding: 25px 20px;
+
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
     <div class="logo">
+
         COMING <span>RH</span>
+
     </div>
 
-    <a href="#qualificacao" class="header-btn">
-        Ver Qualificação
+    <a href="#qualificacao" class="header-button">
+
+        VER QUALIFICAÇÃO
+
     </a>
 
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
     <div class="hero-container">
 
+
         <div>
 
+            <div class="hero-label">
+
+                PROCESSO SELETIVO ABERTO
+
+            </div>
+
+
             <h1>
-                Processo Seletivo para
-                <span>Recepcionista de Consultório Médico</span>
+
+                Oportunidade para
+
+                <span>
+
+                    Recepcionista de Consultório Médico
+
+                </span>
+
             </h1>
 
-            <p>
+
+            <p class="hero-text">
+
                 Estamos realizando um processo seletivo para profissionais
                 interessados em atuar na área de recepção de consultórios
                 e clínicas médicas.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#qualificacao" class="btn-primary">
-                    Ver opções de qualificação
+                <a href="#qualificacao" class="btn-gold">
+
+                    CONHECER QUALIFICAÇÃO
+
                 </a>
 
-                <a href="#processo" class="btn-secondary">
-                    Como funciona
+
+                <a href="#processo" class="btn-outline">
+
+                    COMO FUNCIONA
+
                 </a>
 
             </div>
@@ -624,53 +991,119 @@ footer strong {
         </div>
 
 
+        <!-- CARD DA VAGA -->
+
         <div class="vacancy-card">
 
-            <h3>
+            <h2 class="vacancy-title">
+
                 Informações da oportunidade
-            </h3>
 
-            <div class="vacancy-info">
-                <span>💼</span>
+            </h2>
+
+
+            <div class="vacancy-item">
+
+                <div class="vacancy-icon">
+
+                    💼
+
+                </div>
 
                 <div>
-                    <strong>Função:</strong><br>
-                    Recepcionista de Consultório Médico
+
+                    <strong>FUNÇÃO</strong>
+
+                    <span>
+
+                        Recepcionista de Consultório Médico
+
+                    </span>
+
                 </div>
+
             </div>
 
-            <div class="vacancy-info">
-                <span>📄</span>
+
+            <div class="vacancy-item">
+
+                <div class="vacancy-icon">
+
+                    📄
+
+                </div>
 
                 <div>
-                    <strong>Regime:</strong><br>
-                    CLT
+
+                    <strong>CONTRATO</strong>
+
+                    <span>
+
+                        CLT
+
+                    </span>
+
                 </div>
+
             </div>
 
-            <div class="vacancy-info">
-                <span>💰</span>
+
+            <div class="vacancy-item">
+
+                <div class="vacancy-icon">
+
+                    💰
+
+                </div>
 
                 <div>
-                    <strong>Salário:</strong><br>
-                    R$ 2.300,15
+
+                    <strong>SALÁRIO</strong>
+
+                    <span>
+
+                        R$ 2.300,15
+
+                    </span>
+
                 </div>
+
             </div>
 
-            <div class="vacancy-info">
-                <span>🎁</span>
+
+            <div class="vacancy-item">
+
+                <div class="vacancy-icon">
+
+                    🎁
+
+                </div>
 
                 <div>
-                    <strong>Benefícios:</strong><br>
-                    Vale-alimentação, vale-refeição, convênio médico e vale-transporte.
+
+                    <strong>BENEFÍCIOS</strong>
+
+                    <span>
+
+                        Vale-alimentação, vale-refeição,
+                        convênio médico e vale-transporte.
+
+                    </span>
+
                 </div>
+
             </div>
 
-            <div class="vacancies-alert">
 
-                <strong>16 vagas disponíveis</strong>
+            <div class="vacancies">
 
-                O processo seletivo será encerrado após o preenchimento das vagas disponíveis.
+                <strong>16 VAGAS</strong>
+
+                <span>
+
+                    Disponibilidade limitada para a oportunidade.
+
+                </span>
 
             </div>
 
@@ -681,38 +1114,63 @@ footer strong {
 </section>
 
 
+<!-- PERFIL -->
+
 <section class="profile-section">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="section-title">
+        <div class="section-heading">
 
             <h2>
-                Atendimento e recrutamento
+
+                Atendimento ao candidato
+
             </h2>
 
-            <div class="section-divider"></div>
+            <div class="gold-line"></div>
 
         </div>
 
 
-        <div class="profile-box">
+        <div class="profile-card">
+
+
+            <!-- FOTO DE PERFIL -->
 
             <img
-                src="foto-perfil.png"
+
+                src="foto-perfil.jpg"
+
                 alt="Perfil de atendimento"
+
                 class="profile-photo"
+
             >
 
-            <div class="profile-text">
+
+            <div class="profile-content">
 
                 <h3>
+
                     Equipe de Recrutamento
+
                 </h3>
 
+
+                <div class="position">
+
+                    COMING RH • RECRUTAMENTO E SELEÇÃO
+
+                </div>
+
+
                 <p>
-                    Nossa equipe acompanha o processo de seleção e orienta
-                    os candidatos sobre as etapas da oportunidade profissional.
+
+                    Nossa equipe acompanha os candidatos durante as etapas
+                    do processo seletivo e fornece as orientações necessárias
+                    para a participação na oportunidade profissional.
+
                 </p>
 
             </div>
@@ -724,20 +1182,26 @@ footer strong {
 </section>
 
 
+<!-- BENEFÍCIOS -->
+
 <section>
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="section-title">
+        <div class="section-heading">
 
             <h2>
-                Oportunidade profissional
+
+                Uma oportunidade para sua carreira
+
             </h2>
 
-            <div class="section-divider"></div>
+            <div class="gold-line"></div>
 
             <p>
+
                 Confira alguns dos principais pontos da oportunidade.
+
             </p>
 
         </div>
@@ -745,15 +1209,26 @@ footer strong {
 
         <div class="benefits">
 
+
             <div class="benefit-card">
 
+                <div class="benefit-icon">
+
+                    💼
+
+                </div>
+
                 <h3>
+
                     Contratação CLT
+
                 </h3>
 
                 <p>
-                    Oportunidade de contratação conforme as condições
-                    e requisitos definidos para a função.
+
+                    Oportunidade de contratação conforme os requisitos
+                    e condições definidos para a função.
+
                 </p>
 
             </div>
@@ -761,13 +1236,23 @@ footer strong {
 
             <div class="benefit-card">
 
+                <div class="benefit-icon">
+
+                    🎁
+
+                </div>
+
                 <h3>
+
                     Benefícios
+
                 </h3>
 
                 <p>
-                    A oportunidade conta com benefícios conforme
-                    as condições apresentadas no processo seletivo.
+
+                    A oportunidade conta com benefícios apresentados
+                    durante o processo seletivo.
+
                 </p>
 
             </div>
@@ -775,13 +1260,23 @@ footer strong {
 
             <div class="benefit-card">
 
+                <div class="benefit-icon">
+
+                    📈
+
+                </div>
+
                 <h3>
-                    Desenvolvimento profissional
+
+                    Desenvolvimento
+
                 </h3>
 
                 <p>
-                    Prepare-se profissionalmente para atuar em ambientes
+
+                    Prepare-se para atuar profissionalmente em ambientes
                     de atendimento e recepção na área da saúde.
+
                 </p>
 
             </div>
@@ -793,28 +1288,28 @@ footer strong {
 </section>
 
 
+<!-- QUALIFICAÇÃO -->
+
 <section class="qualification-section" id="qualificacao">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="qualification-box">
+        <div class="qualification-wrapper">
 
-            <div class="qualification-header">
+
+            <div class="section-heading">
 
                 <h2>
-                    Qualifique-se para a oportunidade
+
+                    Qualificação profissional
+
                 </h2>
 
-                <div class="section-divider"></div>
+                <div class="gold-line"></div>
 
                 <p>
+
                     Curso de Recepcionista de Consultório Médico
-                </p>
-
-                <p style="margin-top:10px;">
-
-                    A qualificação profissional é destinada aos candidatos
-                    que precisam se preparar para atuar na função.
 
                 </p>
 
@@ -824,104 +1319,145 @@ footer strong {
             <div class="courses">
 
 
+                <!-- BÁSICO -->
+
                 <div class="course-card">
 
                     <h3>
+
                         Básico
+
                     </h3>
 
-                    <p class="course-description">
 
-                        Conteúdo essencial para preparação inicial
-                        para a função de Recepcionista de Consultório Médico.
+                    <p class="course-subtitle">
+
+                        Preparação essencial para a função.
 
                     </p>
 
+
                     <div class="price">
+
                         R$ 27,10
+
                     </div>
+
 
                     <ul class="course-list">
 
                         <li>
+
                             Conteúdo introdutório da função
+
                         </li>
 
                         <li>
+
                             Preparação profissional
+
                         </li>
 
                         <li>
+
                             Material de qualificação
+
                         </li>
 
                         <li>
+
                             Preparação para o processo
+
                         </li>
 
                     </ul>
 
 
                     <a
+
                         href="mailto:comingrh.online@gmail.com?subject=Interesse%20na%20Qualificação%20Básica"
+
                         class="course-button"
+
                     >
 
-                        Escolher Básico
+                        ESCOLHER BÁSICO
 
                     </a>
 
                 </div>
 
 
+                <!-- COMPLETO -->
+
                 <div class="course-card featured">
 
-                    <div class="recommended">
+                    <div class="badge">
+
                         MAIS COMPLETO
+
                     </div>
 
+
                     <h3>
+
                         Completo
+
                     </h3>
 
-                    <p class="course-description">
 
-                        Formação mais completa para candidatos
-                        que desejam se preparar melhor para a função.
+                    <p class="course-subtitle">
+
+                        Preparação profissional ampliada.
 
                     </p>
 
+
                     <div class="price">
+
                         R$ 74,29
+
                     </div>
+
 
                     <ul class="course-list">
 
                         <li>
+
                             Conteúdo completo da função
+
                         </li>
 
                         <li>
+
                             Preparação profissional ampliada
+
                         </li>
 
                         <li>
+
                             Material de qualificação
+
                         </li>
 
                         <li>
+
                             Preparação para o processo seletivo
+
                         </li>
 
                     </ul>
 
 
                     <a
+
                         href="mailto:comingrh.online@gmail.com?subject=Interesse%20na%20Qualificação%20Completa"
+
                         class="course-button"
+
                     >
 
-                        Escolher Completo
+                        ESCOLHER COMPLETO
 
                     </a>
 
@@ -933,17 +1469,21 @@ footer strong {
             <div class="guarantee">
 
                 <h3>
-                    Atenção sobre as vagas disponíveis
+
+                    ⚠️ Sobre a disponibilidade das vagas
+
                 </h3>
+
 
                 <p>
 
                     Os candidatos que concluírem a qualificação profissional
                     exigida e atenderem aos requisitos da oportunidade terão
-                    a garantia de encaminhamento para a vaga, respeitando o
-                    limite de 16 vagas disponíveis.
+                    garantia de encaminhamento para a vaga, respeitando o limite
+                    de 16 vagas disponíveis.
 
                 </p>
+
 
                 <p style="margin-top:10px;">
 
@@ -961,20 +1501,26 @@ footer strong {
 </section>
 
 
+<!-- PROCESSO -->
+
 <section id="processo">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="section-title">
+        <div class="section-heading">
 
             <h2>
+
                 Como funciona o processo
+
             </h2>
 
-            <div class="section-divider"></div>
+            <div class="gold-line"></div>
 
             <p>
-                Veja as etapas para participar da oportunidade.
+
+                Entenda as etapas para participar da oportunidade.
+
             </p>
 
         </div>
@@ -982,18 +1528,25 @@ footer strong {
 
         <div class="process">
 
+
             <div class="step">
 
                 <div class="step-number">
+
                     1
+
                 </div>
 
                 <h3>
-                    Escolha a qualificação
+
+                    Escolha
+
                 </h3>
 
                 <p>
-                    Selecione a opção Básico ou Completo.
+
+                    Escolha a opção de qualificação profissional.
+
                 </p>
 
             </div>
@@ -1002,15 +1555,21 @@ footer strong {
             <div class="step">
 
                 <div class="step-number">
+
                     2
+
                 </div>
 
                 <h3>
-                    Conclua a preparação
+
+                    Prepare-se
+
                 </h3>
 
                 <p>
-                    Realize o processo de qualificação profissional.
+
+                    Conclua o processo de preparação profissional.
+
                 </p>
 
             </div>
@@ -1019,16 +1578,21 @@ footer strong {
             <div class="step">
 
                 <div class="step-number">
+
                     3
+
                 </div>
 
                 <h3>
-                    Envie seus documentos
+
+                    Documentação
+
                 </h3>
 
                 <p>
-                    Os documentos serão enviados somente pelo canal
-                    oficial informado no processo.
+
+                    Envie a documentação solicitada pelo canal oficial.
+
                 </p>
 
             </div>
@@ -1037,16 +1601,21 @@ footer strong {
             <div class="step">
 
                 <div class="step-number">
+
                     4
+
                 </div>
 
                 <h3>
+
                     Encaminhamento
+
                 </h3>
 
                 <p>
-                    Os candidatos qualificados e aprovados nos requisitos
-                    serão encaminhados conforme disponibilidade das vagas.
+
+                    Participe das etapas de encaminhamento da oportunidade.
+
                 </p>
 
             </div>
@@ -1058,57 +1627,77 @@ footer strong {
 </section>
 
 
+<!-- DOCUMENTOS -->
+
 <section class="documents">
 
-    <div class="section-container">
+    <div class="container">
 
-        <div class="section-title">
+
+        <div class="section-heading">
 
             <h2>
+
                 Documentação necessária
+
             </h2>
 
-            <div class="section-divider"></div>
+            <div class="gold-line"></div>
 
             <p>
-                A documentação será solicitada durante o processo
+
+                A documentação poderá ser solicitada durante o processo
                 de encaminhamento.
+
             </p>
 
         </div>
 
 
-        <div class="document-box">
+        <div class="document-card">
 
             <h3>
+
                 Documentos que poderão ser solicitados
+
             </h3>
+
 
             <ul class="document-list">
 
                 <li>
+
                     Documento de identificação
+
                 </li>
 
                 <li>
+
                     Carteira de Trabalho Digital
+
                 </li>
 
                 <li>
+
                     Certificado ou comprovante de qualificação profissional
+
                 </li>
 
                 <li>
+
                     Informações de contato atualizadas
+
                 </li>
 
             </ul>
 
 
-            <div class="document-warning">
+            <div class="document-notice">
 
                 <strong>
+
                     Importante:
+
                 </strong>
 
                 Os documentos não são armazenados diretamente neste site.
@@ -1124,28 +1713,34 @@ footer strong {
 </section>
 
 
+<!-- CTA FINAL -->
+
 <section class="final-cta">
 
-    <div class="section-container">
+    <div class="container">
 
         <h2>
+
             Ainda há vagas disponíveis
+
         </h2>
 
-        <div class="section-divider"></div>
+
+        <div class="gold-line"></div>
+
 
         <p>
 
-            São apenas 16 vagas para a oportunidade.
-            Caso você tenha interesse em atuar como Recepcionista
-            de Consultório Médico, confira as opções de qualificação
-            profissional disponíveis.
+            São apenas 16 vagas disponíveis para a oportunidade.
+            Caso tenha interesse, confira as opções de qualificação
+            profissional e participe do processo.
 
         </p>
 
-        <a href="#qualificacao" class="btn-primary">
 
-            Ver opções de qualificação
+        <a href="#qualificacao" class="btn-gold">
+
+            VER OPÇÕES DE QUALIFICAÇÃO
 
         </a>
 
@@ -1154,26 +1749,37 @@ footer strong {
 </section>
 
 
+<!-- FOOTER -->
+
 <footer>
 
     <p>
 
-        <strong>COMING RH</strong>
+        <strong>
 
-        <br>
+            COMING <span>RH</span>
+
+        </strong>
+
+    </p>
+
+
+    <p style="margin-top: 10px;">
 
         Processo de recrutamento e seleção profissional.
 
     </p>
 
-    <p style="margin-top:12px;">
 
-        E-mail de atendimento:
+    <p style="margin-top: 10px;">
+
         comingrh.online@gmail.com
 
     </p>
 
 </footer>
 
+
 </body>
+
 </html>
