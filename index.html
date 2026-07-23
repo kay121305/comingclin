@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Processo Seletivo | Recepcionista de Consultório Médico</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e6eaf0;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #123b69;
+}
+
+.logo span {
+    color: #1f8f65;
+}
+
+.header-btn {
+    background: #123b69;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #123b69, #1c608f);
+    color: white;
+    padding: 75px 6%;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #8ee0b5;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5edf5;
+    max-width: 650px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #1f9b6b;
+    color: white;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    display: inline-block;
+    border: 1px solid #ffffff80;
+    color: white;
+    text-decoration: none;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* CARD DA VAGA */
+
+.vacancy-card {
+    background: white;
+    color: #172033;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.18);
+}
+
+.vacancy-card h3 {
+    font-size: 23px;
+    color: #123b69;
+    margin-bottom: 20px;
+}
+
+.vacancy-info {
+    display: flex;
+    gap: 12px;
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.vacancy-info strong {
+    color: #123b69;
+}
+
+.vacancies-alert {
+    background: #e9f8f0;
+    border-left: 5px solid #1f9b6b;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 25px;
+    color: #145a3d;
+}
+
+.vacancies-alert strong {
+    display: block;
+    font-size: 24px;
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 75px 6%;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    color: #123b69;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #687386;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* SEPARADOR */
+
+.section-divider {
+    width: 75px;
+    height: 4px;
+    background: #1f9b6b;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* CARDS DE BENEFÍCIOS */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.benefit-card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf0;
+    box-shadow: 0 6px 20px rgba(18,59,105,.05);
+}
+
+.benefit-card h3 {
+    color: #123b69;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #687386;
+}
+
+/* PERFIL */
+
+.profile-section {
+    background: white;
+}
+
+.profile-box {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #f7fafc;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e1e7ee;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
+.profile-text h3 {
+    color: #123b69;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile-text p {
+    color: #687386;
+}
+
+/* QUALIFICAÇÃO */
+
+.qualification-section {
+    background: #ffffff;
+}
+
+.qualification-box {
+    background: #f7fafc;
+    border: 1px solid #e1e7ee;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.qualification-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.qualification-header h2 {
+    font-size: 34px;
+    color: #123b69;
+    margin-bottom: 12px;
+}
+
+.qualification-header p {
+    color: #687386;
+}
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #e1e7ee;
+    border-radius: 13px;
+    padding: 30px;
+    position: relative;
+}
+
+.course-card.featured {
+    border: 2px solid #1f9b6b;
+}
+
+.recommended {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    background: #1f9b6b;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.course-card h3 {
+    color: #123b69;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    color: #687386;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 34px;
+    color: #1f8f65;
+    font-weight: 800;
+    margin: 18px 0;
+}
+
+.course-list {
+    list-style: none;
+    margin-bottom: 22px;
+}
+
+.course-list li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #4f5c6d;
+}
+
+.course-list li::before {
+    content: "✓";
+    color: #1f9b6b;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.course-button {
+    display: block;
+    text-align: center;
+    background: #123b69;
+    color: white;
+    padding: 13px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* GARANTIA */
+
+.guarantee {
+    max-width: 850px;
+    margin: 35px auto 0;
+    background: #fff8e8;
+    border-left: 5px solid #d79b26;
+    padding: 22px;
+    border-radius: 8px;
+    color: #684d18;
+}
+
+.guarantee h3 {
+    margin-bottom: 8px;
+    color: #7c5b16;
+}
+
+/* PROCESSO */
+
+.process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    text-align: center;
+    background: white;
+    padding: 25px 18px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf0;
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #123b69;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: #123b69;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #687386;
+}
+
+/* DOCUMENTOS */
+
+.documents {
+    background: #123b69;
+    color: white;
+}
+
+.documents .section-title h2 {
+    color: white;
+}
+
+.documents .section-title p {
+    color: #dce7f2;
+}
+
+.document-box {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 14px;
+    padding: 35px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.document-box h3 {
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.document-list {
+    list-style: none;
+}
+
+.document-list li {
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.document-list li::before {
+    content: "✓";
+    color: #8ee0b5;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.document-warning {
+    margin-top: 25px;
+    background: rgba(255,255,255,.1);
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* CTA */
+
+.final-cta {
+    text-align: center;
+    background: #f4f7fb;
+}
+
+.final-cta h2 {
+    color: #123b69;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    color: #687386;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0d2744;
+    color: #cbd7e3;
+    text-align: center;
+    padding: 30px 6%;
+    font-size: 13px;
+}
+
+footer strong {
+    color: white;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .qualification-box {
+        padding: 22px 15px;
+    }
+
+    .courses {
+        grid-template-columns: 1fr;
+    }
+
+    .process {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .document-box {
+        padding: 25px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        COMING <span>RH</span>
+    </div>
+
+    <a href="#qualificacao" class="header-btn">
+        Ver Qualificação
+    </a>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-container">
+
+        <div>
+
+            <h1>
+                Processo Seletivo para
+                <span>Recepcionista de Consultório Médico</span>
+            </h1>
+
+            <p>
+                Estamos realizando um processo seletivo para profissionais
+                interessados em atuar na área de recepção de consultórios
+                e clínicas médicas.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#qualificacao" class="btn-primary">
+                    Ver opções de qualificação
+                </a>
+
+                <a href="#processo" class="btn-secondary">
+                    Como funciona
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="vacancy-card">
+
+            <h3>
+                Informações da oportunidade
+            </h3>
+
+            <div class="vacancy-info">
+                <span>💼</span>
+
+                <div>
+                    <strong>Função:</strong><br>
+                    Recepcionista de Consultório Médico
+                </div>
+            </div>
+
+            <div class="vacancy-info">
+                <span>📄</span>
+
+                <div>
+                    <strong>Regime:</strong><br>
+                    CLT
+                </div>
+            </div>
+
+            <div class="vacancy-info">
+                <span>💰</span>
+
+                <div>
+                    <strong>Salário:</strong><br>
+                    R$ 2.300,15
+                </div>
+            </div>
+
+            <div class="vacancy-info">
+                <span>🎁</span>
+
+                <div>
+                    <strong>Benefícios:</strong><br>
+                    Vale-alimentação, vale-refeição, convênio médico e vale-transporte.
+                </div>
+            </div>
+
+            <div class="vacancies-alert">
+
+                <strong>16 vagas disponíveis</strong>
+
+                O processo seletivo será encerrado após o preenchimento das vagas disponíveis.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="profile-section">
+
+    <div class="section-container">
+
+        <div class="section-title">
+
+            <h2>
+                Atendimento e recrutamento
+            </h2>
+
+            <div class="section-divider"></div>
+
+        </div>
+
+
+        <div class="profile-box">
+
+            <img
+                src="foto-perfil.png"
+                alt="Perfil de atendimento"
+                class="profile-photo"
+            >
+
+            <div class="profile-text">
+
+                <h3>
+                    Equipe de Recrutamento
+                </h3>
+
+                <p>
+                    Nossa equipe acompanha o processo de seleção e orienta
+                    os candidatos sobre as etapas da oportunidade profissional.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="section-container">
+
+        <div class="section-title">
+
+            <h2>
+                Oportunidade profissional
+            </h2>
+
+            <div class="section-divider"></div>
+
+            <p>
+                Confira alguns dos principais pontos da oportunidade.
+            </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+            <div class="benefit-card">
+
+                <h3>
+                    Contratação CLT
+                </h3>
+
+                <p>
+                    Oportunidade de contratação conforme as condições
+                    e requisitos definidos para a função.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <h3>
+                    Benefícios
+                </h3>
+
+                <p>
+                    A oportunidade conta com benefícios conforme
+                    as condições apresentadas no processo seletivo.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <h3>
+                    Desenvolvimento profissional
+                </h3>
+
+                <p>
+                    Prepare-se profissionalmente para atuar em ambientes
+                    de atendimento e recepção na área da saúde.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="qualification-section" id="qualificacao">
+
+    <div class="section-container">
+
+        <div class="qualification-box">
+
+            <div class="qualification-header">
+
+                <h2>
+                    Qualifique-se para a oportunidade
+                </h2>
+
+                <div class="section-divider"></div>
+
+                <p>
+                    Curso de Recepcionista de Consultório Médico
+                </p>
+
+                <p style="margin-top:10px;">
+
+                    A qualificação profissional é destinada aos candidatos
+                    que precisam se preparar para atuar na função.
+
+                </p>
+
+            </div>
+
+
+            <div class="courses">
+
+
+                <div class="course-card">
+
+                    <h3>
+                        Básico
+                    </h3>
+
+                    <p class="course-description">
+
+                        Conteúdo essencial para preparação inicial
+                        para a função de Recepcionista de Consultório Médico.
+
+                    </p>
+
+                    <div class="price">
+                        R$ 27,10
+                    </div>
+
+                    <ul class="course-list">
+
+                        <li>
+                            Conteúdo introdutório da função
+                        </li>
+
+                        <li>
+                            Preparação profissional
+                        </li>
+
+                        <li>
+                            Material de qualificação
+                        </li>
+
+                        <li>
+                            Preparação para o processo
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="mailto:comingrh.online@gmail.com?subject=Interesse%20na%20Qualificação%20Básica"
+                        class="course-button"
+                    >
+
+                        Escolher Básico
+
+                    </a>
+
+                </div>
+
+
+                <div class="course-card featured">
+
+                    <div class="recommended">
+                        MAIS COMPLETO
+                    </div>
+
+                    <h3>
+                        Completo
+                    </h3>
+
+                    <p class="course-description">
+
+                        Formação mais completa para candidatos
+                        que desejam se preparar melhor para a função.
+
+                    </p>
+
+                    <div class="price">
+                        R$ 74,29
+                    </div>
+
+                    <ul class="course-list">
+
+                        <li>
+                            Conteúdo completo da função
+                        </li>
+
+                        <li>
+                            Preparação profissional ampliada
+                        </li>
+
+                        <li>
+                            Material de qualificação
+                        </li>
+
+                        <li>
+                            Preparação para o processo seletivo
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="mailto:comingrh.online@gmail.com?subject=Interesse%20na%20Qualificação%20Completa"
+                        class="course-button"
+                    >
+
+                        Escolher Completo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="guarantee">
+
+                <h3>
+                    Atenção sobre as vagas disponíveis
+                </h3>
+
+                <p>
+
+                    Os candidatos que concluírem a qualificação profissional
+                    exigida e atenderem aos requisitos da oportunidade terão
+                    a garantia de encaminhamento para a vaga, respeitando o
+                    limite de 16 vagas disponíveis.
+
+                </p>
+
+                <p style="margin-top:10px;">
+
+                    Após o preenchimento das 16 vagas, o processo seletivo
+                    será encerrado.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="processo">
+
+    <div class="section-container">
+
+        <div class="section-title">
+
+            <h2>
+                Como funciona o processo
+            </h2>
+
+            <div class="section-divider"></div>
+
+            <p>
+                Veja as etapas para participar da oportunidade.
+            </p>
+
+        </div>
+
+
+        <div class="process">
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Escolha a qualificação
+                </h3>
+
+                <p>
+                    Selecione a opção Básico ou Completo.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Conclua a preparação
+                </h3>
+
+                <p>
+                    Realize o processo de qualificação profissional.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Envie seus documentos
+                </h3>
+
+                <p>
+                    Os documentos serão enviados somente pelo canal
+                    oficial informado no processo.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Encaminhamento
+                </h3>
+
+                <p>
+                    Os candidatos qualificados e aprovados nos requisitos
+                    serão encaminhados conforme disponibilidade das vagas.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="documents">
+
+    <div class="section-container">
+
+        <div class="section-title">
+
+            <h2>
+                Documentação necessária
+            </h2>
+
+            <div class="section-divider"></div>
+
+            <p>
+                A documentação será solicitada durante o processo
+                de encaminhamento.
+            </p>
+
+        </div>
+
+
+        <div class="document-box">
+
+            <h3>
+                Documentos que poderão ser solicitados
+            </h3>
+
+            <ul class="document-list">
+
+                <li>
+                    Documento de identificação
+                </li>
+
+                <li>
+                    Carteira de Trabalho Digital
+                </li>
+
+                <li>
+                    Certificado ou comprovante de qualificação profissional
+                </li>
+
+                <li>
+                    Informações de contato atualizadas
+                </li>
+
+            </ul>
+
+
+            <div class="document-warning">
+
+                <strong>
+                    Importante:
+                </strong>
+
+                Os documentos não são armazenados diretamente neste site.
+                O envio da documentação deverá ocorrer somente através
+                do canal oficial informado durante o processo seletivo.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="final-cta">
+
+    <div class="section-container">
+
+        <h2>
+            Ainda há vagas disponíveis
+        </h2>
+
+        <div class="section-divider"></div>
+
+        <p>
+
+            São apenas 16 vagas para a oportunidade.
+            Caso você tenha interesse em atuar como Recepcionista
+            de Consultório Médico, confira as opções de qualificação
+            profissional disponíveis.
+
+        </p>
+
+        <a href="#qualificacao" class="btn-primary">
+
+            Ver opções de qualificação
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+
+        <strong>COMING RH</strong>
+
+        <br>
+
+        Processo de recrutamento e seleção profissional.
+
+    </p>
+
+    <p style="margin-top:12px;">
+
+        E-mail de atendimento:
+        comingrh.online@gmail.com
+
+    </p>
+
+</footer>
+
+</body>
+</html>
