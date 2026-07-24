@@ -1,1829 +1,1071 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Empréstimo do Brasil</title>
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    background: #ffffff;
-    color: #111111;
+body{
+    background:#ffffff;
+    color:#111111;
 }
 
+/* CABEÇALHO */
 
-/* =========================
-   CABEÇALHO
-========================= */
-
-header {
-
-    height: 80px;
-
-    background: #ffffff;
-
-    border-bottom: 1px solid #e8e8e8;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 0 7%;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 999;
-
-    box-shadow: 0 3px 18px rgba(0,0,0,0.07);
-
+header{
+    width:100%;
+    height:82px;
+    background:#ffffff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #eeeeee;
+    box-shadow:0 3px 18px rgba(0,0,0,.08);
 }
 
-
-/* LOGO */
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
 }
 
-
-/* IMAGEM DE PERFIL */
-
-.logo-image {
-
-    width: 56px;
-
-    height: 56px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    display: block;
-
-    border: 3px solid #ffd000;
-
-    background: #ffffff;
-
-    box-shadow:
-
-        0 0 0 3px #111111,
-
-        0 0 18px rgba(255,208,0,0.55);
-
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+    display:block;
 }
 
-
-.logo-text h1 {
-
-    font-size: 20px;
-
-    color: #111111;
-
-    font-weight: 900;
-
+.logo-text h1{
+    font-size:20px;
+    font-weight:900;
+    color:#111111;
 }
 
-
-.logo-text p {
-
-    font-size: 11px;
-
-    color: #777777;
-
-    margin-top: 3px;
-
+.logo-text p{
+    font-size:11px;
+    color:#777777;
+    margin-top:3px;
 }
 
-
-/* MENU */
-
-nav {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 28px;
-
+nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-
-nav a {
-
-    color: #222222;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-
+nav a{
+    text-decoration:none;
+    color:#222222;
+    font-size:14px;
+    font-weight:bold;
 }
 
-
-nav a:hover {
-
-    color: #d6a900;
-
+nav a:hover{
+    color:#d4a900;
 }
 
-
-.nav-button {
-
-    background: #ffd000;
-
-    color: #111111 !important;
-
-    padding: 13px 20px;
-
-    border-radius: 7px;
-
-    box-shadow: 0 6px 18px rgba(255,208,0,0.3);
-
+.nav-btn{
+    background:#ffd000;
+    padding:13px 20px;
+    border-radius:7px;
+    color:#111111 !important;
+    box-shadow:0 5px 18px rgba(255,208,0,.3);
 }
 
-
-.nav-button:hover {
-
-    background: #111111;
-
-    color: #ffd000 !important;
-
+.nav-btn:hover{
+    background:#111111;
+    color:#ffd000 !important;
 }
 
+/* HERO */
 
-/* =========================
-   HERO
-========================= */
-
-.hero {
-
-    min-height: 590px;
-
+.hero{
+    min-height:590px;
+    display:flex;
+    align-items:center;
+    padding:80px 7%;
     background:
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.98),
+        rgba(255,255,255,.93),
+        rgba(255,255,255,.75)
+    ),
+    url("https://logopng.com.br/logos/banco-do-brasil-5.png");
 
-        linear-gradient(
-
-            90deg,
-
-            rgba(255,255,255,0.98),
-
-            rgba(255,255,255,0.93),
-
-            rgba(255,255,255,0.76)
-
-        ),
-
-        url("imagem(5).png");
-
-    background-size: cover;
-
-    background-position: center;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 80px 7%;
-
-}
-
-
-.hero-content {
-
-    max-width: 680px;
-
-}
-
-
-.tag {
-
-    display: inline-block;
-
-    background: #ffd000;
-
-    color: #111111;
-
-    padding: 9px 16px;
-
-    border-radius: 5px;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    margin-bottom: 22px;
-
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:500px;
 }
-
-
-.hero h2 {
-
-    font-size: 52px;
-
-    line-height: 1.08;
-
-    margin-bottom: 22px;
-
-    color: #111111;
 
+.hero-content{
+    max-width:650px;
 }
 
-
-.hero h2 span {
-
-    color: #d2a800;
-
+.tag{
+    display:inline-block;
+    background:#ffd000;
+    color:#111111;
+    padding:9px 16px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:900;
+    margin-bottom:22px;
 }
-
-
-.hero p {
-
-    color: #555555;
 
-    font-size: 18px;
-
-    line-height: 1.7;
-
-    margin-bottom: 32px;
-
+.hero h2{
+    font-size:52px;
+    line-height:1.08;
+    margin-bottom:22px;
 }
-
-
-.hero-buttons {
-
-    display: flex;
 
-    gap: 15px;
-
-    flex-wrap: wrap;
-
+.hero h2 span{
+    color:#d4a900;
 }
-
-
-.btn {
-
-    display: inline-block;
-
-    padding: 16px 27px;
 
-    border-radius: 7px;
-
-    text-decoration: none;
-
-    font-weight: 900;
-
-    transition: 0.3s;
-
+.hero p{
+    font-size:18px;
+    color:#555555;
+    line-height:1.7;
+    margin-bottom:30px;
 }
-
-
-.btn-yellow {
 
-    background: #ffd000;
-
-    color: #111111;
-
-    box-shadow: 0 8px 25px rgba(255,208,0,0.35);
-
+.buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
 }
-
-
-.btn-yellow:hover {
-
-    background: #111111;
 
-    color: #ffd000;
-
-    transform: translateY(-3px);
-
+.btn{
+    display:inline-block;
+    padding:16px 27px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:900;
+    transition:.3s;
 }
-
-
-.btn-black {
-
-    background: #111111;
-
-    color: #ffffff;
 
+.btn-yellow{
+    background:#ffd000;
+    color:#111111;
+    box-shadow:0 8px 25px rgba(255,208,0,.35);
 }
 
-
-.btn-black:hover {
-
-    background: #ffd000;
-
-    color: #111111;
-
+.btn-yellow:hover{
+    background:#111111;
+    color:#ffd000;
+    transform:translateY(-3px);
 }
-
-
-/* =========================
-   BARRA DE CONFIANÇA
-========================= */
-
-.trust-bar {
-
-    background: #111111;
-
-    color: #ffffff;
-
-    padding: 22px 7%;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
 
-    gap: 20px;
-
-    text-align: center;
-
+.btn-black{
+    background:#111111;
+    color:#ffffff;
 }
-
-
-.trust-item {
-
-    font-size: 14px;
-
-    font-weight: bold;
 
+.btn-black:hover{
+    background:#ffd000;
+    color:#111111;
 }
 
+/* BARRA */
 
-.trust-item span {
-
-    color: #ffd000;
-
-    font-size: 20px;
-
-    margin-right: 8px;
-
+.trust{
+    background:#111111;
+    color:#ffffff;
+    padding:24px 7%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    text-align:center;
+    gap:20px;
 }
-
-
-/* =========================
-   SEÇÕES
-========================= */
 
-.section {
-
-    padding: 85px 7%;
-
-    background: #ffffff;
-
+.trust strong{
+    color:#ffd000;
+    font-size:22px;
+    margin-right:8px;
 }
-
-
-.section-title {
 
-    text-align: center;
+/* SEÇÃO */
 
-    margin-bottom: 50px;
-
+.section{
+    padding:85px 7%;
 }
-
-
-.section-title h2 {
 
-    font-size: 36px;
-
-    margin-bottom: 12px;
-
+.title{
+    text-align:center;
+    margin-bottom:50px;
 }
-
 
-.section-title h2 span {
-
-    color: #d2a800;
-
+.title h2{
+    font-size:36px;
+    margin-bottom:12px;
 }
-
 
-.section-title p {
-
-    color: #777777;
-
+.title h2 span{
+    color:#d4a900;
 }
-
 
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
+.title p{
+    color:#777777;
 }
-
 
-.card {
+/* CARDS */
 
-    padding: 32px;
-
-    border: 1px solid #eeeeee;
-
-    border-radius: 13px;
-
-    background: #ffffff;
-
-    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-
-    transition: 0.3s;
-
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-
-.card:hover {
-
-    transform: translateY(-8px);
-
-    border-color: #ffd000;
-
-    box-shadow: 0 16px 35px rgba(0,0,0,0.12);
-
+.card{
+    padding:32px;
+    border:1px solid #eeeeee;
+    border-radius:13px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
 }
-
-
-.card-icon {
-
-    width: 56px;
-
-    height: 56px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #ffd000;
-
-    color: #111111;
-
-    border-radius: 10px;
-
-    font-size: 25px;
-
-    font-weight: 900;
-
-    margin-bottom: 20px;
 
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ffd000;
 }
 
-
-.card h3 {
-
-    font-size: 20px;
-
-    margin-bottom: 12px;
-
+.card-icon{
+    width:56px;
+    height:56px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#ffd000;
+    border-radius:10px;
+    font-size:25px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
-
-
-.card p {
 
-    color: #666666;
-
-    line-height: 1.6;
-
+.card h3{
+    margin-bottom:12px;
+    font-size:20px;
 }
-
-
-/* =========================
-   SIMULAÇÃO
-========================= */
-
-.simulation {
-
-    background: #111111;
 
-    padding: 90px 7%;
-
+.card p{
+    color:#666666;
+    line-height:1.6;
 }
-
-
-.simulation-wrapper {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    display: grid;
 
-    grid-template-columns: 0.9fr 1.1fr;
+/* SIMULAÇÃO */
 
-    gap: 60px;
-
-    align-items: center;
-
+.simulation{
+    background:#111111;
+    padding:90px 7%;
 }
-
 
-.simulation-info {
-
-    color: #ffffff;
-
+.simulation-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:60px;
+    align-items:center;
 }
-
 
-.simulation-info h2 {
-
-    font-size: 42px;
-
-    margin-bottom: 20px;
-
+.simulation-info{
+    color:#ffffff;
 }
-
-
-.simulation-info h2 span {
-
-    color: #ffd000;
 
+.simulation-info h2{
+    font-size:42px;
+    margin-bottom:20px;
 }
 
-
-.simulation-info p {
-
-    color: #cccccc;
-
-    line-height: 1.7;
-
-    margin-bottom: 25px;
-
+.simulation-info h2 span{
+    color:#ffd000;
 }
-
 
-.simulation-info ul {
-
-    list-style: none;
-
+.simulation-info p{
+    color:#cccccc;
+    line-height:1.7;
+    margin-bottom:25px;
 }
-
-
-.simulation-info li {
-
-    margin-bottom: 15px;
-
-    color: #eeeeee;
 
+.simulation-info ul{
+    list-style:none;
 }
-
-
-.simulation-info li::before {
-
-    content: "✓";
-
-    color: #ffd000;
-
-    font-weight: bold;
-
-    margin-right: 10px;
 
+.simulation-info li{
+    margin-bottom:15px;
 }
 
-
-/* SIMULADOR */
-
-.simulator {
-
-    background: #ffffff;
-
-    border-radius: 16px;
-
-    padding: 32px;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-
+.simulation-info li::before{
+    content:"✓";
+    color:#ffd000;
+    font-weight:bold;
+    margin-right:10px;
 }
-
 
-.simulator h3 {
+/* CAIXA */
 
-    font-size: 25px;
-
-    margin-bottom: 8px;
-
+.simulator{
+    background:#ffffff;
+    border-radius:16px;
+    padding:32px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
-
 
-.simulator-subtitle {
-
-    color: #777777;
-
-    font-size: 14px;
-
-    margin-bottom: 25px;
-
+.simulator h3{
+    font-size:25px;
+    margin-bottom:8px;
 }
-
-
-.value-box {
 
-    background: #111111;
-
-    border-radius: 10px;
-
-    padding: 23px;
-
-    text-align: center;
-
-    color: #ffffff;
-
+.subtitle{
+    color:#777777;
+    font-size:14px;
+    margin-bottom:25px;
 }
-
 
-.value-label {
-
-    color: #aaaaaa;
-
-    font-size: 12px;
-
-    margin-bottom: 7px;
-
+.value-box{
+    background:#111111;
+    border-radius:10px;
+    padding:23px;
+    text-align:center;
 }
-
-
-.value-display {
 
-    color: #ffd000;
-
-    font-size: 38px;
-
-    font-weight: 900;
-
+.value-label{
+    color:#aaaaaa;
+    font-size:12px;
+    margin-bottom:7px;
 }
-
-
-.range {
-
-    width: 100%;
 
-    margin: 22px 0 10px;
-
-    accent-color: #ffd000;
-
-    cursor: pointer;
-
+.value{
+    color:#ffd000;
+    font-size:38px;
+    font-weight:900;
 }
-
-
-.range-labels {
-
-    display: flex;
 
-    justify-content: space-between;
-
-    color: #777777;
-
-    font-size: 12px;
-
+input[type="range"]{
+    width:100%;
+    margin:24px 0 10px;
+    accent-color:#ffd000;
+    cursor:pointer;
 }
-
-
-.amount-controls {
-
-    display: flex;
 
-    gap: 10px;
-
-    margin: 22px 0;
-
+.range-labels{
+    display:flex;
+    justify-content:space-between;
+    color:#777777;
+    font-size:12px;
 }
-
-
-.amount-btn {
-
-    width: 45px;
-
-    height: 43px;
-
-    border: none;
-
-    border-radius: 6px;
-
-    background: #ffd000;
-
-    color: #111111;
-
-    font-size: 22px;
-
-    font-weight: bold;
 
-    cursor: pointer;
-
+.amount-controls{
+    display:flex;
+    gap:10px;
+    margin:22px 0;
 }
-
-
-.amount-btn:hover {
 
-    background: #111111;
-
-    color: #ffd000;
-
+.amount-btn{
+    width:45px;
+    height:43px;
+    border:0;
+    border-radius:6px;
+    background:#ffd000;
+    color:#111111;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
 }
-
-
-.amount-input {
-
-    flex: 1;
-
-    border: 1px solid #dddddd;
-
-    border-radius: 6px;
-
-    text-align: center;
-
-    font-size: 17px;
 
-    font-weight: bold;
-
+.amount-input{
+    flex:1;
+    border:1px solid #dddddd;
+    border-radius:6px;
+    text-align:center;
+    font-size:17px;
+    font-weight:bold;
 }
-
-
-label {
-
-    display: block;
-
-    font-weight: bold;
-
-    font-size: 14px;
 
-    margin-bottom: 8px;
-
+label{
+    display:block;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
-
-
-select {
-
-    width: 100%;
-
-    padding: 14px;
-
-    border: 1px solid #dddddd;
 
-    border-radius: 6px;
-
-    margin-bottom: 20px;
-
-    font-size: 15px;
-
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #dddddd;
+    border-radius:6px;
+    margin-bottom:20px;
+    font-size:15px;
 }
-
-
-.simulate-button {
-
-    width: 100%;
-
-    border: none;
-
-    padding: 16px;
-
-    border-radius: 7px;
-
-    background: #ffd000;
-
-    color: #111111;
-
-    font-weight: 900;
 
-    font-size: 16px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-
+.simulate-button{
+    width:100%;
+    padding:16px;
+    border:0;
+    border-radius:7px;
+    background:#ffd000;
+    color:#111111;
+    font-weight:900;
+    font-size:16px;
+    cursor:pointer;
 }
-
-
-.simulate-button:hover {
-
-    background: #111111;
 
-    color: #ffd000;
-
+.simulate-button:hover{
+    background:#111111;
+    color:#ffd000;
 }
-
-
-.result {
-
-    background: #f5f5f5;
-
-    border-left: 5px solid #ffd000;
-
-    border-radius: 8px;
 
-    padding: 20px;
-
-    margin-top: 20px;
-
+.result{
+    background:#f5f5f5;
+    border-left:5px solid #ffd000;
+    border-radius:8px;
+    padding:20px;
+    margin-top:20px;
 }
-
 
-.result small {
-
-    color: #777777;
-
+.result small{
+    color:#777777;
 }
-
 
-.result-value {
-
-    font-size: 28px;
-
-    font-weight: 900;
-
-    margin-top: 6px;
-
+.result-value{
+    font-size:28px;
+    font-weight:900;
+    margin-top:6px;
 }
-
-
-.disclaimer {
 
-    color: #888888;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-
-    margin-top: 18px;
-
+.disclaimer{
+    color:#888888;
+    font-size:11px;
+    line-height:1.5;
+    margin-top:18px;
 }
-
-
-/* =========================
-   CTA
-========================= */
 
-.cta {
+/* CTA */
 
-    background: #ffd000;
-
-    text-align: center;
-
-    padding: 70px 7%;
-
+.cta{
+    background:#ffd000;
+    text-align:center;
+    padding:70px 7%;
 }
-
-
-.cta h2 {
-
-    font-size: 36px;
 
-    margin-bottom: 15px;
-
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
 }
-
-
-.cta p {
 
-    margin-bottom: 25px;
-
+.cta p{
+    margin-bottom:25px;
 }
-
-
-.cta a {
-
-    display: inline-block;
-
-    background: #111111;
-
-    color: #ffffff;
-
-    padding: 16px 28px;
-
-    border-radius: 7px;
-
-    text-decoration: none;
 
-    font-weight: bold;
-
+.cta a{
+    display:inline-block;
+    background:#111111;
+    color:#ffffff;
+    padding:16px 28px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:bold;
 }
-
-
-.cta a:hover {
 
-    background: #ffffff;
+/* RODAPÉ */
 
-    color: #111111;
-
+footer{
+    background:#111111;
+    color:#ffffff;
+    padding:55px 7% 20px;
 }
-
-
-/* =========================
-   RODAPÉ
-========================= */
 
-footer {
-
-    background: #111111;
-
-    color: #ffffff;
-
-    padding: 55px 7% 20px;
-
+.footer-content{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+    margin-bottom:40px;
 }
-
-
-.footer-content {
 
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr;
-
-    gap: 50px;
-
-    margin-bottom: 40px;
-
+.footer-brand p{
+    color:#999999;
+    line-height:1.6;
+    margin-top:18px;
 }
-
-
-.footer-brand p {
 
-    color: #999999;
-
-    line-height: 1.6;
-
-    max-width: 400px;
-
-    margin-top: 18px;
-
+.footer-column h3{
+    color:#ffd000;
+    margin-bottom:18px;
 }
-
-
-.footer-column h3 {
 
-    color: #ffd000;
-
-    margin-bottom: 18px;
-
+.footer-column a{
+    display:block;
+    color:#aaaaaa;
+    text-decoration:none;
+    margin-bottom:12px;
 }
-
-
-.footer-column a {
-
-    display: block;
-
-    color: #aaaaaa;
 
-    text-decoration: none;
-
-    margin-bottom: 12px;
-
+.footer-column a:hover{
+    color:#ffd000;
 }
-
 
-.footer-column a:hover {
-
-    color: #ffd000;
-
+.email-link{
+    color:#ffd000 !important;
+    word-break:break-word;
 }
-
 
-.copyright {
-
-    border-top: 1px solid #333333;
-
-    padding-top: 20px;
-
-    text-align: center;
-
-    color: #777777;
-
-    font-size: 12px;
-
+.copyright{
+    border-top:1px solid #333333;
+    padding-top:20px;
+    text-align:center;
+    color:#777777;
+    font-size:12px;
 }
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 850px) {
-
-    header {
-
-        height: auto;
-
-        padding: 15px 5%;
 
-        flex-direction: column;
+/* CELULAR */
 
-        gap: 18px;
+@media(max-width:850px){
 
+    header{
+        height:auto;
+        padding:15px 5%;
+        flex-direction:column;
+        gap:18px;
     }
 
-    nav {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 15px;
-
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
     }
 
-    .hero {
-
-        text-align: center;
-
-        justify-content: center;
-
+    .hero{
+        text-align:center;
+        justify-content:center;
+        background-size:280px;
+        background-position:center bottom;
+        padding-bottom:300px;
     }
 
-    .hero h2 {
-
-        font-size: 38px;
-
+    .hero h2{
+        font-size:38px;
     }
 
-    .hero-buttons {
-
-        justify-content: center;
-
+    .buttons{
+        justify-content:center;
     }
 
-    .trust-bar {
-
-        grid-template-columns: 1fr;
-
+    .trust{
+        grid-template-columns:1fr;
     }
 
-    .cards {
-
-        grid-template-columns: 1fr;
-
+    .cards{
+        grid-template-columns:1fr;
     }
 
-    .simulation-wrapper {
-
-        grid-template-columns: 1fr;
-
+    .simulation-container{
+        grid-template-columns:1fr;
     }
 
-    .simulation-info {
-
-        text-align: center;
-
+    .simulation-info{
+        text-align:center;
     }
 
-    .simulation-info ul {
-
-        text-align: left;
-
-        max-width: 300px;
-
-        margin: auto;
-
+    .simulation-info ul{
+        text-align:left;
+        max-width:300px;
+        margin:auto;
     }
 
-    .footer-content {
-
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
+    .footer-content{
+        grid-template-columns:1fr;
+        gap:30px;
     }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-```
-<div class="logo">
+    <div class="logo">
 
-    <img
+        <img
+            src="https://logopng.com.br/logos/banco-do-brasil-5.png"
+            alt="Empréstimo do Brasil"
+        >
 
-        src="imagem(5).png"
+        <div class="logo-text">
 
-        alt="Empréstimo do Brasil"
+            <h1>Empréstimo do Brasil</h1>
 
-        class="logo-image"
+            <p>Soluções financeiras para você</p>
 
-    >
-
-    <div class="logo-text">
-
-        <h1>Empréstimo do Brasil</h1>
-
-        <p>Soluções financeiras para você</p>
+        </div>
 
     </div>
 
-</div>
+    <nav>
 
+        <a href="#inicio">Início</a>
 
-<nav>
+        <a href="#vantagens">Vantagens</a>
 
-    <a href="#inicio">Início</a>
+        <a href="#simulacao">Simulação</a>
 
-    <a href="#vantagens">Vantagens</a>
+        <a href="#contato">Contato</a>
 
-    <a href="#simulacao">Simulação</a>
+        <a
+            href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
+            target="_blank"
+            class="nav-btn"
+        >
+            Simular agora
+        </a>
 
-    <a href="#contato">Contato</a>
-
-    <a href="#simulacao" class="nav-button">
-
-        Simular agora
-
-    </a>
-
-</nav>
-```
+    </nav>
 
 </header>
 
 <section class="hero" id="inicio">
 
-```
-<div class="hero-content">
+    <div class="hero-content">
 
-    <div class="tag">
+        <div class="tag">
+            SOLUÇÕES FINANCEIRAS
+        </div>
 
-        SOLUÇÕES FINANCEIRAS
+        <h2>
+            O crédito que ajuda você a
+            <span>realizar seus planos.</span>
+        </h2>
 
-    </div>
+        <p>
+            Faça uma simulação de forma simples e veja uma estimativa
+            do valor das suas parcelas.
+        </p>
 
+        <div class="buttons">
 
-    <h2>
+            <a
+                href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
+                target="_blank"
+                class="btn btn-yellow"
+            >
+                SIMULAR AGORA
+            </a>
 
-        O crédito que ajuda você a
+            <a
+                href="#vantagens"
+                class="btn btn-black"
+            >
+                SAIBA MAIS
+            </a>
 
-        <span>realizar seus planos.</span>
-
-    </h2>
-
-
-    <p>
-
-        Faça uma simulação de forma simples e veja uma estimativa
-
-        do valor das suas parcelas.
-
-    </p>
-
-
-    <div class="hero-buttons">
-
-        <a href="#simulacao" class="btn btn-yellow">
-
-            Simular agora
-
-        </a>
-
-
-        <a href="#vantagens" class="btn btn-black">
-
-            Saiba mais
-
-        </a>
+        </div>
 
     </div>
-
-</div>
-```
 
 </section>
 
-<section class="trust-bar">
+<section class="trust">
 
-```
-<div class="trust-item">
+    <div>
+        <strong>✓</strong>
+        Processo simples
+    </div>
 
-    <span>✓</span>
+    <div>
+        <strong>✓</strong>
+        Atendimento profissional
+    </div>
 
-    Processo simples
-
-</div>
-
-
-<div class="trust-item">
-
-    <span>✓</span>
-
-    Atendimento profissional
-
-</div>
-
-
-<div class="trust-item">
-
-    <span>✓</span>
-
-    Informações claras
-
-</div>
-```
+    <div>
+        <strong>✓</strong>
+        Informações claras
+    </div>
 
 </section>
 
 <section class="section" id="vantagens">
 
-```
-<div class="section-title">
+    <div class="title">
 
-    <h2>
-
-        Uma experiência mais
-
-        <span>simples para você</span>
-
-    </h2>
-
-
-    <p>
-
-        Conheça algumas das nossas principais vantagens.
-
-    </p>
-
-</div>
-
-
-<div class="cards">
-
-
-    <div class="card">
-
-        <div class="card-icon">
-
-            ✓
-
-        </div>
-
-
-        <h3>
-
-            Processo simples
-
-        </h3>
-
+        <h2>
+            Uma experiência mais
+            <span>simples para você</span>
+        </h2>
 
         <p>
-
-            Faça sua simulação de forma rápida e organizada.
-
+            Conheça algumas das nossas principais vantagens.
         </p>
 
     </div>
 
+    <div class="cards">
 
-    <div class="card">
+        <div class="card">
 
-        <div class="card-icon">
+            <div class="card-icon">✓</div>
 
-            $
+            <h3>Processo simples</h3>
 
-        </div>
-
-
-        <h3>
-
-            Valores personalizados
-
-        </h3>
-
-
-        <p>
-
-            Escolha o valor desejado dentro da faixa disponível.
-
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <div class="card-icon">
-
-            ★
+            <p>
+                Faça sua simulação de forma rápida e organizada.
+            </p>
 
         </div>
 
+        <div class="card">
 
-        <h3>
+            <div class="card-icon">$</div>
 
-            Atendimento profissional
+            <h3>Valores personalizados</h3>
 
-        </h3>
+            <p>
+                Escolha o valor desejado dentro da faixa disponível.
+            </p>
 
+        </div>
 
-        <p>
+        <div class="card">
 
-            Conte com informações claras durante todo o processo.
+            <div class="card-icon">★</div>
 
-        </p>
+            <h3>Atendimento profissional</h3>
+
+            <p>
+                Conte com informações claras durante todo o processo.
+            </p>
+
+        </div>
 
     </div>
-
-</div>
-```
 
 </section>
 
 <section class="simulation" id="simulacao">
 
-```
-<div class="simulation-wrapper">
+    <div class="simulation-container">
 
+        <div class="simulation-info">
 
-    <div class="simulation-info">
+            <h2>
+                Faça sua
+                <span>simulação</span>
+            </h2>
 
-        <h2>
+            <p>
+                Escolha um valor entre R$ 1.205 e R$ 5.500
+                e veja uma estimativa das parcelas.
+            </p>
 
-            Faça sua
+            <ul>
 
-            <span>simulação</span>
+                <li>Valor ajustável</li>
 
-        </h2>
+                <li>Escolha das parcelas</li>
 
+                <li>Resultado instantâneo</li>
 
-        <p>
+                <li>Simulação fácil de usar</li>
 
-            Escolha um valor entre R$ 1.205 e R$ 5.500
-
-            e veja uma estimativa das parcelas.
-
-        </p>
-
-
-        <ul>
-
-            <li>Valor ajustável</li>
-
-            <li>Escolha das parcelas</li>
-
-            <li>Resultado instantâneo</li>
-
-            <li>Simulação fácil de usar</li>
-
-        </ul>
-
-    </div>
-
-
-    <div class="simulator">
-
-        <h3>
-
-            Simular empréstimo
-
-        </h3>
-
-
-        <p class="simulator-subtitle">
-
-            Escolha o valor desejado.
-
-        </p>
-
-
-        <div class="value-box">
-
-            <div class="value-label">
-
-                VALOR SELECIONADO
-
-            </div>
-
-
-            <div
-
-                class="value-display"
-
-                id="valueDisplay"
-
-            >
-
-                R$ 1.205,00
-
-            </div>
+            </ul>
 
         </div>
 
+        <div class="simulator">
 
-        <input
+            <h3>Simular empréstimo</h3>
 
-            type="range"
+            <p class="subtitle">
+                Escolha o valor desejado.
+            </p>
 
-            class="range"
+            <div class="value-box">
 
-            id="rangeValue"
+                <div class="value-label">
+                    VALOR SELECIONADO
+                </div>
 
-            min="1205"
+                <div
+                    class="value"
+                    id="valueDisplay"
+                >
+                    R$ 1.205,00
+                </div>
 
-            max="5500"
-
-            step="5"
-
-            value="1205"
-
-        >
-
-
-        <div class="range-labels">
-
-            <span>R$ 1.205</span>
-
-            <span>R$ 5.500</span>
-
-        </div>
-
-
-        <div class="amount-controls">
-
-            <button
-
-                class="amount-btn"
-
-                onclick="alterarValor(-100)"
-
-            >
-
-                −
-
-            </button>
-
+            </div>
 
             <input
-
-                class="amount-input"
-
-                id="amountInput"
-
-                value="R$ 1.205,00"
-
-                readonly
-
+                type="range"
+                id="rangeValue"
+                min="1205"
+                max="5500"
+                step="5"
+                value="1205"
             >
 
+            <div class="range-labels">
 
-            <button
+                <span>R$ 1.205</span>
 
-                class="amount-btn"
-
-                onclick="alterarValor(100)"
-
-            >
-
-                +
-
-            </button>
-
-        </div>
-
-
-        <label>
-
-            Quantidade de parcelas
-
-        </label>
-
-
-        <select id="parcelas">
-
-            <option value="6">
-
-                6 parcelas
-
-            </option>
-
-
-            <option value="12" selected>
-
-                12 parcelas
-
-            </option>
-
-
-            <option value="18">
-
-                18 parcelas
-
-            </option>
-
-
-            <option value="24">
-
-                24 parcelas
-
-            </option>
-
-
-            <option value="36">
-
-                36 parcelas
-
-            </option>
-
-        </select>
-
-
-        <button
-
-            class="simulate-button"
-
-            onclick="calcularSimulacao()"
-
-        >
-
-            SIMULAR AGORA
-
-        </button>
-
-
-        <div class="result">
-
-            <small>
-
-                ESTIMATIVA DA PARCELA
-
-            </small>
-
-
-            <div
-
-                class="result-value"
-
-                id="resultValue"
-
-            >
-
-                R$ 0,00
+                <span>R$ 5.500</span>
 
             </div>
 
+            <div class="amount-controls">
+
+                <button
+                    class="amount-btn"
+                    onclick="alterarValor(-100)"
+                >
+                    −
+                </button>
+
+                <input
+                    class="amount-input"
+                    id="amountInput"
+                    value="R$ 1.205,00"
+                    readonly
+                >
+
+                <button
+                    class="amount-btn"
+                    onclick="alterarValor(100)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <label>
+                Quantidade de parcelas
+            </label>
+
+            <select id="parcelas">
+
+                <option value="6">
+                    6 parcelas
+                </option>
+
+                <option value="12" selected>
+                    12 parcelas
+                </option>
+
+                <option value="18">
+                    18 parcelas
+                </option>
+
+                <option value="24">
+                    24 parcelas
+                </option>
+
+                <option value="36">
+                    36 parcelas
+                </option>
+
+            </select>
+
+            <button
+                class="simulate-button"
+                onclick="calcularSimulacao()"
+            >
+                SIMULAR AGORA
+            </button>
+
+            <div class="result">
+
+                <small>
+                    ESTIMATIVA DA PARCELA
+                </small>
+
+                <div
+                    class="result-value"
+                    id="resultValue"
+                >
+                    R$ 0,00
+                </div>
+
+            </div>
+
+            <p class="disclaimer">
+                Esta simulação é apenas uma estimativa.
+                As condições finais dependem de análise e aprovação.
+            </p>
+
         </div>
 
-
-        <p class="disclaimer">
-
-            Esta simulação é apenas uma estimativa.
-
-            As condições finais dependem de análise e aprovação.
-
-        </p>
-
     </div>
-
-</div>
-```
 
 </section>
 
 <section class="cta">
 
-```
-<h2>
+    <h2>
+        Comece sua simulação agora
+    </h2>
 
-    Comece sua simulação agora
+    <p>
+        Preencha seus dados no formulário de simulação.
+    </p>
 
-</h2>
-
-
-<p>
-
-    Escolha o valor que deseja simular.
-
-</p>
-
-
-<a href="#simulacao">
-
-    FAZER SIMULAÇÃO
-
-</a>
-```
+    <a
+        href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
+        target="_blank"
+    >
+        FAZER SIMULAÇÃO
+    </a>
 
 </section>
 
 <footer id="contato">
 
-```
-<div class="footer-content">
+    <div class="footer-content">
 
+        <div class="footer-brand">
 
-    <div class="footer-brand">
+            <div class="logo">
 
-        <div class="logo">
+                <img
+                    src="https://logopng.com.br/logos/banco-do-brasil-5.png"
+                    alt="Empréstimo do Brasil"
+                >
 
-            <img
+                <div class="logo-text">
 
-                src="imagem(5).png"
+                    <h1>Empréstimo do Brasil</h1>
 
-                alt="Empréstimo do Brasil"
+                    <p>Soluções financeiras para você</p>
 
-                class="logo-image"
-
-            >
-
-
-            <div class="logo-text">
-
-                <h1>
-
-                    Empréstimo do Brasil
-
-                </h1>
-
-
-                <p>
-
-                    Soluções financeiras para você
-
-                </p>
+                </div>
 
             </div>
 
+            <p>
+                Atendimento e informações sobre soluções financeiras.
+            </p>
+
         </div>
 
+        <div class="footer-column">
 
-        <p>
+            <h3>Navegação</h3>
 
-            Soluções financeiras com atendimento profissional
+            <a href="#inicio">Início</a>
 
-            e informações claras.
+            <a href="#vantagens">Vantagens</a>
 
-        </p>
+            <a href="#simulacao">Simulação</a>
 
-    </div>
+        </div>
 
+        <div class="footer-column">
 
-    <div class="footer-column">
+            <h3>Contato</h3>
 
-        <h3>
+            <a
+                class="email-link"
+                href="mailto:bancodobrasil.online@gmail.com"
+            >
+                bancodobrasil.online@gmail.com
+            </a>
 
-            Navegação
+            <a
+                href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
+                target="_blank"
+            >
+                Abrir formulário
+            </a>
 
-        </h3>
-
-
-        <a href="#inicio">
-
-            Início
-
-        </a>
-
-
-        <a href="#vantagens">
-
-            Vantagens
-
-        </a>
-
-
-        <a href="#simulacao">
-
-            Simulação
-
-        </a>
+        </div>
 
     </div>
 
+    <div class="copyright">
 
-    <div class="footer-column">
-
-        <h3>
-
-            Atendimento
-
-        </h3>
-
-
-        <a href="#simulacao">
-
-            Fazer simulação
-
-        </a>
-
-
-        <a href="#contato">
-
-            Contato
-
-        </a>
+        © 2026 Empréstimo do Brasil. Todos os direitos reservados.
 
     </div>
-
-</div>
-
-
-<div class="copyright">
-
-    © 2026 Empréstimo do Brasil. Todos os direitos reservados.
-
-</div>
-```
 
 </footer>
 
 <script>
 
+const range =
+document.getElementById("rangeValue");
 
-const range = document.getElementById("rangeValue");
+const valueDisplay =
+document.getElementById("valueDisplay");
 
-const valueDisplay = document.getElementById("valueDisplay");
+const amountInput =
+document.getElementById("amountInput");
 
-const amountInput = document.getElementById("amountInput");
+const parcelas =
+document.getElementById("parcelas");
 
-const parcelas = document.getElementById("parcelas");
+const resultValue =
+document.getElementById("resultValue");
 
-const resultValue = document.getElementById("resultValue");
 
-
-function moeda(valor) {
+function moeda(valor){
 
     return valor.toLocaleString(
-
         "pt-BR",
-
         {
-
-            style: "currency",
-
-            currency: "BRL"
-
+            style:"currency",
+            currency:"BRL"
         }
-
     );
 
 }
 
 
-function atualizarValor(valor) {
+function atualizarValor(valor){
 
-
-    if (valor < 1205) {
-
+    if(valor < 1205){
         valor = 1205;
-
     }
 
-
-    if (valor > 5500) {
-
+    if(valor > 5500){
         valor = 5500;
-
     }
-
 
     range.value = valor;
 
-    valueDisplay.textContent = moeda(valor);
+    valueDisplay.textContent =
+    moeda(valor);
 
-    amountInput.value = moeda(valor);
+    amountInput.value =
+    moeda(valor);
 
     calcularSimulacao();
 
 }
 
 
-function alterarValor(valor) {
+function alterarValor(valor){
 
-    let atual = parseInt(range.value);
+    const atual =
+    parseInt(range.value);
 
     atualizarValor(atual + valor);
 
@@ -1831,74 +1073,45 @@ function alterarValor(valor) {
 
 
 range.addEventListener(
-
     "input",
-
-    function() {
+    function(){
 
         atualizarValor(
-
             parseInt(this.value)
-
         );
 
     }
-
 );
 
 
 parcelas.addEventListener(
-
     "change",
-
-    function() {
-
-        calcularSimulacao();
-
-    }
-
+    calcularSimulacao
 );
 
 
-function calcularSimulacao() {
-
+function calcularSimulacao(){
 
     const valor =
-
-        parseFloat(range.value);
-
+    parseFloat(range.value);
 
     const numeroParcelas =
+    parseInt(parcelas.value);
 
-        parseInt(parcelas.value);
-
-
-    const taxa = 0.025;
-
+    const taxa =
+    0.025;
 
     const valorFinal =
-
-        valor *
-
-        Math.pow(
-
-            1 + taxa,
-
-            numeroParcelas
-
-        );
-
+    valor * Math.pow(
+        1 + taxa,
+        numeroParcelas
+    );
 
     const parcela =
-
-        valorFinal /
-
-        numeroParcelas;
-
+    valorFinal / numeroParcelas;
 
     resultValue.textContent =
-
-        moeda(parcela);
+    moeda(parcela);
 
 }
 
@@ -1908,5 +1121,4 @@ atualizarValor(1205);
 </script>
 
 </body>
-
 </html>
