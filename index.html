@@ -9,7 +9,7 @@
 
 <style>
 
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -113,7 +113,8 @@ nav a:hover {
             rgba(255,255,255,0.93),
             rgba(255,255,255,0.75)
         ),
-        url("COLE_AQUI_O_LINK_DA_SUA_FOTO");
+        url("https://logopng.com.br/logos/banco-do-brasil-5.png");
+
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 500px;
@@ -421,11 +422,6 @@ select {
     cursor: pointer;
 }
 
-.simulate-button:hover {
-    background: #111111;
-    color: #ffd000;
-}
-
 .result {
     background: #f5f5f5;
     border-left: 5px solid #ffd000;
@@ -576,18 +572,17 @@ footer {
 
     header {
         position: relative;
-        min-height: auto;
         padding: 14px 5%;
         flex-direction: column;
         gap: 16px;
     }
 
-    logo {
+    .logo {
         width: 100%;
         justify-content: center;
     }
 
-    logo-mark {
+    .logo-mark {
         width: 50px;
         height: 50px;
     }
@@ -621,13 +616,8 @@ footer {
         background-size: 300px;
     }
 
-    .hero-content {
-        width: 100%;
-    }
-
     .hero h2 {
         font-size: 34px;
-        line-height: 1.12;
     }
 
     .hero p {
@@ -662,10 +652,6 @@ footer {
         gap: 16px;
     }
 
-    .card {
-        padding: 25px;
-    }
-
     .simulation {
         padding: 60px 5%;
     }
@@ -691,7 +677,6 @@ footer {
 
     .simulator {
         padding: 22px;
-        border-radius: 12px;
     }
 
     .value {
@@ -708,7 +693,6 @@ footer {
 
     .form-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
 
     .form-group.full {
@@ -1179,7 +1163,7 @@ footer {
                 <div class="logo-mark">
 
                     <img
-                        src="COLE_AQUI_O_LINK_DA_SUA_FOTO"
+                        src="https://logopng.com.br/logos/banco-do-brasil-5.png"
                         alt="Imagem de perfil"
                     >
 
@@ -1304,7 +1288,8 @@ function calcularSimulacao() {
         valorFinal /
         numeroParcelas;
 
-    resultValue.textContent = moeda(parcela);
+    resultValue.textContent =
+        moeda(parcela);
 
 }
 
