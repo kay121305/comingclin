@@ -2,32 +2,20 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Empréstimo do Brasil | Solicite uma análise</title>
-
-    <meta name="description"
-        content="Solicite uma análise de crédito de forma simples, transparente e segura.">
+    <title>Empréstimo do Brasil | Soluções Financeiras</title>
 
     <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-        :root {
-            --yellow: #f5c400;
-            --yellow-dark: #d5a900;
-            --black: #080808;
-            --dark: #111111;
-            --gray: #777777;
-            --light: #f6f6f6;
-            --white: #ffffff;
-        }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         html {
@@ -35,491 +23,1056 @@
         }
 
         body {
-            font-family: 'Inter', Arial, sans-serif;
-            background: #ffffff;
-            color: var(--black);
+            background: #f4f5f7;
+            color: #171717;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
-            background: var(--black);
-            color: white;
-            padding: 18px 6%;
+
+            width: 100%;
+
+            background: #080808;
+
+            border-bottom: 3px solid #ffd000;
+
+            padding: 15px 6%;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             position: sticky;
+
             top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid var(--yellow);
+
+            z-index: 999;
+
+            box-shadow: 0 4px 25px rgba(0,0,0,0.35);
+
         }
 
         .logo {
+
             display: flex;
+
             align-items: center;
+
             gap: 12px;
+
         }
 
-        .logo-icon {
-            width: 46px;
-            height: 46px;
-            background: var(--yellow);
-            color: var(--black);
+        .logo-image {
+
+            width: 56px;
+
+            height: 56px;
+
+            object-fit: cover;
+
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+            border: 2px solid #ffd000;
+
+            box-shadow:
+
+                0 0 12px rgba(255,208,0,0.7),
+
+                0 0 30px rgba(255,208,0,0.25);
+
+        }
+
+        .logo-text h1 {
+
+            font-size: 21px;
+
+            color: #ffd000;
+
             font-weight: 900;
-            font-size: 23px;
-            transform: rotate(-5deg);
-        }
 
-        .logo-text strong {
-            display: block;
-            font-size: 18px;
             letter-spacing: -0.5px;
+
         }
 
-        .logo-text span {
-            display: block;
-            color: var(--yellow);
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .logo-text p {
+
+            color: #ffffff;
+
+            font-size: 11px;
+
             margin-top: 3px;
+
+            opacity: 0.8;
+
+        }
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
         }
 
         nav a {
-            color: white;
+
+            color: #ffffff;
+
             text-decoration: none;
-            margin-left: 28px;
+
             font-size: 14px;
-            font-weight: 600;
-            transition: .3s;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
         }
 
         nav a:hover {
-            color: var(--yellow);
+
+            color: #ffd000;
+
         }
 
-        /* HERO */
+        .nav-button {
+
+            background: #ffd000;
+
+            color: #080808 !important;
+
+            padding: 12px 18px;
+
+            border-radius: 7px;
+
+        }
+
+        .nav-button:hover {
+
+            background: #ffffff;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+
+            min-height: 600px;
+
             background:
-                linear-gradient(135deg, rgba(0, 0, 0, .98), rgba(20, 20, 20, .94));
-            color: white;
-            padding: 90px 6% 100px;
-            min-height: 590px;
+
+                linear-gradient(
+
+                    90deg,
+
+                    rgba(0,0,0,0.95),
+
+                    rgba(0,0,0,0.70),
+
+                    rgba(0,0,0,0.80)
+
+                ),
+
+                url("image(5).png");
+
+            background-size: cover;
+
+            background-position: center;
+
             display: flex;
+
             align-items: center;
+
+            padding: 80px 7%;
+
         }
 
-        .hero-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 60px;
-            align-items: center;
+        .hero-content {
+
+            max-width: 680px;
+
+            color: #ffffff;
+
         }
 
-        .badge {
+        .tag {
+
             display: inline-block;
-            background: rgba(245, 196, 0, .13);
-            color: var(--yellow);
-            border: 1px solid rgba(245, 196, 0, .45);
-            padding: 9px 15px;
+
+            background: rgba(255,208,0,0.12);
+
+            border: 1px solid #ffd000;
+
+            color: #ffd000;
+
+            padding: 9px 16px;
+
             border-radius: 30px;
-            font-size: 12px;
-            font-weight: 700;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
             margin-bottom: 22px;
+
         }
 
-        .hero h1 {
-            font-size: clamp(38px, 5vw, 65px);
-            line-height: 1.04;
-            letter-spacing: -3px;
-            margin-bottom: 24px;
+        .hero h2 {
+
+            font-size: 52px;
+
+            line-height: 1.08;
+
+            margin-bottom: 22px;
+
         }
 
-        .hero h1 span {
-            color: var(--yellow);
+        .hero h2 span {
+
+            color: #ffd000;
+
         }
 
         .hero p {
-            color: #d0d0d0;
-            font-size: 17px;
+
+            color: #e1e1e1;
+
+            font-size: 18px;
+
             line-height: 1.7;
-            max-width: 590px;
-            margin-bottom: 30px;
+
+            margin-bottom: 32px;
+
         }
 
         .hero-buttons {
+
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
+
         }
 
-        .btn-primary {
-            display: inline-block;
-            background: var(--yellow);
-            color: var(--black);
-            padding: 16px 26px;
-            border-radius: 10px;
+        .btn {
+
             text-decoration: none;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 16px 25px;
+
+            border-radius: 8px;
+
             font-weight: 800;
-            transition: .3s;
+
+            transition: 0.3s;
+
         }
 
-        .btn-primary:hover {
-            background: white;
-            transform: translateY(-2px);
+        .btn-yellow {
+
+            background: #ffd000;
+
+            color: #080808;
+
+            box-shadow: 0 8px 25px rgba(255,208,0,0.25);
+
         }
 
-        .btn-secondary {
-            display: inline-block;
-            border: 1px solid #555;
-            color: white;
-            padding: 16px 26px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: .3s;
+        .btn-yellow:hover {
+
+            background: #ffffff;
+
+            transform: translateY(-3px);
+
         }
 
-        .btn-secondary:hover {
-            border-color: var(--yellow);
-            color: var(--yellow);
+        .btn-outline {
+
+            color: #ffffff;
+
+            border: 1px solid #ffffff;
+
         }
 
-        /* CARD */
+        .btn-outline:hover {
 
-        .hero-card {
-            background: white;
-            color: var(--black);
-            border-radius: 22px;
-            padding: 30px;
-            box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
+            background: #ffffff;
+
+            color: #080808;
+
         }
 
-        .hero-card h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
+
+        /* =========================
+           TRUST BAR
+        ========================= */
+
+        .trust-bar {
+
+            background: #ffd000;
+
+            padding: 18px 7%;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+
+            text-align: center;
+
         }
 
-        .hero-card p {
-            color: #777;
-            font-size: 13px;
-            margin-bottom: 22px;
+        .trust-item {
+
+            font-weight: 800;
+
+            color: #080808;
+
+            font-size: 14px;
+
         }
 
-        .fake-input {
-            background: #f5f5f5;
-            border-radius: 10px;
-            padding: 17px;
-            margin-bottom: 13px;
-        }
 
-        .fake-input small {
-            display: block;
-            color: #888;
-            font-size: 11px;
-            margin-bottom: 5px;
-        }
-
-        .fake-input strong {
-            font-size: 22px;
-        }
-
-        .progress {
-            height: 8px;
-            background: #e5e5e5;
-            border-radius: 20px;
-            overflow: hidden;
-            margin: 18px 0;
-        }
-
-        .progress div {
-            height: 100%;
-            width: 70%;
-            background: var(--yellow);
-        }
-
-        /* SEÇÕES */
+        /* =========================
+           SECTIONS
+        ========================= */
 
         .section {
-            padding: 85px 6%;
+
+            padding: 80px 7%;
+
+            background: #ffffff;
+
+        }
+
+        .section-dark {
+
+            background: #101010;
+
+            color: #ffffff;
+
         }
 
         .section-title {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 50px;
-        }
 
-        .section-title span {
-            color: var(--yellow-dark);
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-align: center;
+
+            margin-bottom: 50px;
+
         }
 
         .section-title h2 {
-            font-size: 38px;
-            margin: 12px 0;
-            letter-spacing: -1.5px;
+
+            font-size: 36px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .section-title h2 span {
+
+            color: #ffd000;
+
         }
 
         .section-title p {
-            color: #777;
-            line-height: 1.7;
+
+            color: #707070;
+
+            font-size: 16px;
+
         }
 
-        /* ETAPAS */
+        .section-dark .section-title p {
 
-        .steps {
-            max-width: 1100px;
-            margin: auto;
+            color: #bdbdbd;
+
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
+
         }
 
-        .step {
-            background: #fafafa;
-            padding: 30px;
-            border-radius: 18px;
+        .card {
+
+            background: #ffffff;
+
             border: 1px solid #eeeeee;
+
+            padding: 32px;
+
+            border-radius: 14px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+
         }
 
-        .step-number {
-            width: 43px;
-            height: 43px;
-            background: var(--black);
-            color: var(--yellow);
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            border-color: #ffd000;
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+
+        }
+
+        .card-icon {
+
+            width: 54px;
+
+            height: 54px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            border-radius: 10px;
-            font-weight: 900;
+
+            background: #ffd000;
+
+            color: #080808;
+
+            border-radius: 12px;
+
+            font-size: 25px;
+
+            font-weight: bold;
+
             margin-bottom: 20px;
+
         }
 
-        .step h3 {
-            margin-bottom: 10px;
-        }
+        .card h3 {
 
-        .step p {
-            color: #777;
-            line-height: 1.6;
-            font-size: 14px;
-        }
+            font-size: 20px;
 
-        /* SIMULAÇÃO */
-
-        .simulation {
-            background: var(--black);
-            color: white;
-        }
-
-        .simulation .section-title p {
-            color: #aaa;
-        }
-
-        .form-container {
-            max-width: 950px;
-            margin: auto;
-            background: white;
-            color: var(--black);
-            border-radius: 22px;
-            padding: 38px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group.full {
-            grid-column: 1 / -1;
-        }
-
-        label {
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            border: 1px solid #dddddd;
-            padding: 15px;
-            border-radius: 9px;
-            font-family: inherit;
-            font-size: 14px;
-            outline: none;
-            transition: .2s;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: var(--yellow-dark);
-            box-shadow: 0 0 0 3px rgba(245, 196, 0, .15);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 110px;
-        }
-
-        .form-note {
-            background: #fff9dc;
-            border-left: 4px solid var(--yellow-dark);
-            padding: 14px;
-            margin: 25px 0;
-            color: #5f5000;
-            font-size: 12px;
-            line-height: 1.6;
-        }
-
-        .submit-btn {
-            display: block;
-            width: 100%;
-            background: var(--black);
-            color: var(--yellow);
-            border: none;
-            padding: 18px;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 800;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        .submit-btn:hover {
-            background: var(--yellow);
-            color: var(--black);
-        }
-
-        /* INFORMAÇÕES */
-
-        .info-section {
-            background: #f7f7f7;
-        }
-
-        .info-grid {
-            max-width: 1100px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .info-card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            border: 1px solid #eeeeee;
-        }
-
-        .info-card h3 {
             margin-bottom: 12px;
+
         }
 
-        .info-card p {
-            color: #777;
+        .card p {
+
+            color: #666666;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================
+           SIMULADOR
+        ========================= */
+
+        .simulation-section {
+
+            background:
+
+                linear-gradient(
+
+                    135deg,
+
+                    #050505,
+
+                    #181818
+
+                );
+
+            padding: 90px 7%;
+
+        }
+
+        .simulation-wrapper {
+
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+        }
+
+        .simulation-info {
+
+            color: #ffffff;
+
+        }
+
+        .simulation-info h2 {
+
+            font-size: 42px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .simulation-info h2 span {
+
+            color: #ffd000;
+
+        }
+
+        .simulation-info p {
+
+            color: #c8c8c8;
+
             line-height: 1.7;
-            font-size: 14px;
+
+            margin-bottom: 25px;
+
         }
 
-        /* FOOTER */
+        .simulation-list {
+
+            list-style: none;
+
+        }
+
+        .simulation-list li {
+
+            margin-bottom: 15px;
+
+            color: #eeeeee;
+
+        }
+
+        .simulation-list li::before {
+
+            content: "✓";
+
+            color: #ffd000;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+
+        }
+
+        .simulator {
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            padding: 32px;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+
+        }
+
+        .simulator h3 {
+
+            font-size: 24px;
+
+            margin-bottom: 8px;
+
+        }
+
+        .simulator-subtitle {
+
+            color: #777777;
+
+            margin-bottom: 25px;
+
+            font-size: 14px;
+
+        }
+
+        .value-box {
+
+            background: #111111;
+
+            border-radius: 12px;
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #ffffff;
+
+            margin-bottom: 25px;
+
+        }
+
+        .value-label {
+
+            font-size: 13px;
+
+            color: #bbbbbb;
+
+            margin-bottom: 7px;
+
+        }
+
+        .value-display {
+
+            color: #ffd000;
+
+            font-size: 38px;
+
+            font-weight: 900;
+
+        }
+
+        .range {
+
+            width: 100%;
+
+            accent-color: #ffd000;
+
+            cursor: pointer;
+
+            height: 7px;
+
+            margin: 18px 0;
+
+        }
+
+        .range-values {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 12px;
+
+            color: #777777;
+
+        }
+
+        .amount-controls {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin: 20px 0;
+
+        }
+
+        .amount-btn {
+
+            width: 45px;
+
+            height: 42px;
+
+            border: none;
+
+            background: #ffd000;
+
+            color: #080808;
+
+            border-radius: 7px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+        }
+
+        .amount-btn:hover {
+
+            background: #111111;
+
+            color: #ffd000;
+
+        }
+
+        .amount-input {
+
+            flex: 1;
+
+            text-align: center;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 7px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+        }
+
+        .form-label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+
+        }
+
+        .select {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 7px;
+
+            margin-bottom: 20px;
+
+            font-size: 15px;
+
+        }
+
+        .result-box {
+
+            background: #f5f5f5;
+
+            border-radius: 10px;
+
+            padding: 20px;
+
+            margin-top: 20px;
+
+            border-left: 5px solid #ffd000;
+
+        }
+
+        .result-title {
+
+            font-size: 13px;
+
+            color: #777777;
+
+            margin-bottom: 5px;
+
+        }
+
+        .result-value {
+
+            font-size: 28px;
+
+            font-weight: 900;
+
+            color: #111111;
+
+        }
+
+        .simulate-button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            background: #ffd000;
+
+            color: #080808;
+
+            border-radius: 8px;
+
+            font-weight: 900;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+        }
+
+        .simulate-button:hover {
+
+            background: #111111;
+
+            color: #ffd000;
+
+        }
+
+        .disclaimer {
+
+            font-size: 11px;
+
+            color: #888888;
+
+            line-height: 1.5;
+
+            margin-top: 18px;
+
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+
+            padding: 70px 7%;
+
+            background: #ffd000;
+
+            text-align: center;
+
+        }
+
+        .cta h2 {
+
+            font-size: 36px;
+
+            margin-bottom: 15px;
+
+        }
+
+        .cta p {
+
+            margin-bottom: 25px;
+
+            color: #333333;
+
+        }
+
+        .cta-button {
+
+            display: inline-block;
+
+            background: #080808;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 16px 28px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+        .cta-button:hover {
+
+            background: #ffffff;
+
+            color: #080808;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            background: var(--black);
-            color: white;
-            padding: 45px 6% 25px;
+
+            background: #080808;
+
+            color: #ffffff;
+
+            padding: 55px 7% 20px;
+
         }
 
-        .footer-container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            flex-wrap: wrap;
+        .footer-content {
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 50px;
+
+            margin-bottom: 40px;
+
         }
 
-        footer p {
-            color: #888;
-            font-size: 12px;
-            line-height: 1.7;
-            max-width: 500px;
+        .footer-brand p {
+
+            color: #999999;
+
+            line-height: 1.6;
+
+            max-width: 400px;
+
+            margin-top: 18px;
+
         }
 
-        .footer-bottom {
+        .footer-column h3 {
+
+            color: #ffd000;
+
+            margin-bottom: 18px;
+
+        }
+
+        .footer-column a {
+
+            display: block;
+
+            color: #aaaaaa;
+
+            text-decoration: none;
+
+            margin-bottom: 12px;
+
+            transition: 0.3s;
+
+        }
+
+        .footer-column a:hover {
+
+            color: #ffd000;
+
+        }
+
+        .copyright {
+
             border-top: 1px solid #292929;
-            margin-top: 35px;
+
             padding-top: 20px;
-            color: #666;
-            font-size: 11px;
+
             text-align: center;
+
+            color: #777777;
+
+            font-size: 12px;
+
         }
 
-        /* CELULAR */
 
-        @media (max-width: 800px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 18px;
+
+            }
 
             nav {
-                display: none;
+
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+            nav a {
+
+                font-size: 12px;
+
             }
 
             .hero {
-                padding: 65px 5%;
+
+                min-height: 650px;
+
+                text-align: center;
+
+                justify-content: center;
+
             }
 
-            .hero-container {
+            .hero h2 {
+
+                font-size: 38px;
+
+            }
+
+            .hero-buttons {
+
+                justify-content: center;
+
+            }
+
+            .trust-bar {
+
                 grid-template-columns: 1fr;
-                gap: 45px;
+
             }
 
-            .hero h1 {
-                font-size: 42px;
-            }
+            .cards {
 
-            .steps,
-            .info-grid {
                 grid-template-columns: 1fr;
+
             }
 
-            .form-grid {
+            .simulation-wrapper {
+
                 grid-template-columns: 1fr;
+
             }
 
-            .form-group.full {
-                grid-column: auto;
+            .simulation-info {
+
+                text-align: center;
+
             }
 
-            .form-container {
-                padding: 24px;
+            .simulation-list {
+
+                text-align: left;
+
+                max-width: 300px;
+
+                margin: auto;
+
             }
 
-            .section {
-                padding: 65px 5%;
+            .footer-content {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
             }
 
         }
@@ -538,19 +1091,21 @@
 
         <div class="logo">
 
-            <div class="logo-icon">
-                E
-            </div>
+            <img
+
+                src="image(5).png"
+
+                alt="Empréstimo do Brasil"
+
+                class="logo-image"
+
+            >
 
             <div class="logo-text">
 
-                <strong>
-                    Empréstimo do Brasil
-                </strong>
+                <h1>Empréstimo do Brasil</h1>
 
-                <span>
-                    Crédito com transparência
-                </span>
+                <p>Soluções financeiras para você</p>
 
             </div>
 
@@ -559,16 +1114,18 @@
 
         <nav>
 
-            <a href="#como-funciona">
-                Como funciona
-            </a>
+            <a href="#inicio">Início</a>
 
-            <a href="#simulacao">
-                Solicitar análise
-            </a>
+            <a href="#vantagens">Vantagens</a>
 
-            <a href="#informacoes">
-                Informações
+            <a href="#simulacao">Simulação</a>
+
+            <a href="#contato">Contato</a>
+
+            <a href="#simulacao" class="nav-button">
+
+                Simular agora
+
             </a>
 
         </nav>
@@ -578,455 +1135,788 @@
 
     <!-- HERO -->
 
-    <section class="hero">
+    <section class="hero" id="inicio">
 
-        <div class="hero-container">
+        <div class="hero-content">
+
+            <div class="tag">
+
+                SOLUÇÕES FINANCEIRAS
+
+            </div>
 
 
-            <div>
+            <h2>
 
-                <div class="badge">
-                    SOLICITAÇÃO ONLINE
+                O crédito que você precisa para
+
+                <span>realizar seus planos.</span>
+
+            </h2>
+
+
+            <p>
+
+                Encontre uma solução financeira adequada às suas necessidades,
+
+                com um processo simples, atendimento profissional e informações
+
+                claras em cada etapa.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#simulacao" class="btn btn-yellow">
+
+                    Fazer uma simulação
+
+                </a>
+
+
+                <a href="#vantagens" class="btn btn-outline">
+
+                    Conheça nossas soluções
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRUST BAR -->
+
+    <section class="trust-bar">
+
+        <div class="trust-item">
+
+            ✓ Processo simples
+
+        </div>
+
+        <div class="trust-item">
+
+            ✓ Atendimento profissional
+
+        </div>
+
+        <div class="trust-item">
+
+            ✓ Informações transparentes
+
+        </div>
+
+    </section>
+
+
+    <!-- VANTAGENS -->
+
+    <section class="section" id="vantagens">
+
+        <div class="section-title">
+
+            <h2>
+
+                Por que escolher o
+
+                <span>Empréstimo do Brasil?</span>
+
+            </h2>
+
+            <p>
+
+                Uma experiência simples e profissional para você.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    ✓
+
+                </div>
+
+                <h3>
+
+                    Processo simplificado
+
+                </h3>
+
+                <p>
+
+                    Tenha acesso a uma experiência simples, prática e
+
+                    organizada para realizar sua solicitação.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    $
+
+                </div>
+
+                <h3>
+
+                    Valores personalizados
+
+                </h3>
+
+                <p>
+
+                    Faça uma simulação de acordo com o valor que você
+
+                    deseja solicitar.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    ★
+
+                </div>
+
+                <h3>
+
+                    Atendimento profissional
+
+                </h3>
+
+                <p>
+
+                    Conte com uma equipe preparada para orientar você
+
+                    durante o processo.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SIMULADOR -->
+
+    <section class="simulation-section" id="simulacao">
+
+        <div class="simulation-wrapper">
+
+
+            <div class="simulation-info">
+
+                <h2>
+
+                    Simule seu
+
+                    <span>empréstimo</span>
+
+                </h2>
+
+
+                <p>
+
+                    Escolha o valor que deseja simular entre
+
+                    R$ 1.205 e R$ 5.500 e veja uma estimativa
+
+                    das parcelas.
+
+                </p>
+
+
+                <ul class="simulation-list">
+
+                    <li>
+
+                        Escolha o valor desejado
+
+                    </li>
+
+                    <li>
+
+                        Selecione a quantidade de parcelas
+
+                    </li>
+
+                    <li>
+
+                        Veja uma estimativa imediatamente
+
+                    </li>
+
+                    <li>
+
+                        Processo simples e intuitivo
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="simulator">
+
+                <h3>
+
+                    Simule agora
+
+                </h3>
+
+
+                <p class="simulator-subtitle">
+
+                    Escolha o valor desejado para começar.
+
+                </p>
+
+
+                <div class="value-box">
+
+                    <div class="value-label">
+
+                        VALOR DESEJADO
+
+                    </div>
+
+
+                    <div class="value-display" id="valueDisplay">
+
+                        R$ 1.205,00
+
+                    </div>
+
                 </div>
 
 
-                <h1>
+                <input
 
-                    Uma análise de crédito
+                    type="range"
+
+                    class="range"
+
+                    id="rangeValue"
+
+                    min="1205"
+
+                    max="5500"
+
+                    step="5"
+
+                    value="1205"
+
+                >
+
+
+                <div class="range-values">
 
                     <span>
-                        simples e transparente.
+
+                        R$ 1.205
+
                     </span>
 
-                </h1>
+                    <span>
 
+                        R$ 5.500
 
-                <p>
-
-                    Solicite uma análise de crédito de forma prática.
-                    Informe o valor desejado e aguarde a avaliação da sua solicitação.
-
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="https://form.jotform.com/262044743759060"
-                        target="_blank"
-                        class="btn-primary">
-
-                        SOLICITAR ANÁLISE
-
-                    </a>
-
-
-                    <a
-                        href="#como-funciona"
-                        class="btn-secondary">
-
-                        COMO FUNCIONA
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="hero-card">
-
-                <h3>
-                    Faça sua solicitação
-                </h3>
-
-
-                <p>
-                    Valores disponíveis para análise conforme perfil e condições.
-                </p>
-
-
-                <div class="fake-input">
-
-                    <small>
-                        VALOR SOLICITADO
-                    </small>
-
-
-                    <strong>
-                        R$ 1.250 a R$ 5.500
-                    </strong>
+                    </span>
 
                 </div>
 
 
-                <div class="progress">
+                <div class="amount-controls">
 
-                    <div></div>
+                    <button
 
-                </div>
+                        class="amount-btn"
 
+                        onclick="alterarValor(-100)"
 
-                <p style="margin-bottom:0;">
+                    >
 
-                    Sua solicitação será analisada individualmente.
+                        −
 
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- COMO FUNCIONA -->
-
-    <section
-        class="section"
-        id="como-funciona">
-
-
-        <div class="section-title">
-
-            <span>
-                Processo simples
-            </span>
-
-
-            <h2>
-                Como funciona?
-            </h2>
-
-
-            <p>
-
-                O processo foi pensado para ser simples,
-                objetivo e transparente.
-
-            </p>
-
-        </div>
-
-
-        <div class="steps">
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-
-                <h3>
-                    Preencha seus dados
-                </h3>
-
-
-                <p>
-
-                    Informe seus dados básicos e o valor que deseja solicitar para análise.
-
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-
-                <h3>
-                    Envie sua solicitação
-                </h3>
-
-
-                <p>
-
-                    Preencha o formulário online e envie suas informações para análise.
-
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-
-                <h3>
-                    Aguarde a análise
-                </h3>
-
-
-                <p>
-
-                    Sua solicitação será avaliada conforme as informações fornecidas.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SOLICITAÇÃO -->
-
-    <section
-        class="section simulation"
-        id="simulacao">
-
-
-        <div class="section-title">
-
-            <span>
-                Solicitação online
-            </span>
-
-
-            <h2>
-                Solicite uma análise
-            </h2>
-
-
-            <p>
-
-                Clique no botão abaixo para preencher o formulário de solicitação.
-
-            </p>
-
-        </div>
-
-
-        <div class="form-container">
-
-
-            <div class="form-grid">
-
-
-                <div class="form-group">
-
-                    <label>
-                        Solicitação online
-                    </label>
+                    </button>
 
 
                     <input
+
+                        class="amount-input"
+
+                        id="amountInput"
+
                         type="text"
-                        value="Formulário de solicitação de crédito"
-                        disabled>
+
+                        value="R$ 1.205,00"
+
+                        readonly
+
+                    >
+
+
+                    <button
+
+                        class="amount-btn"
+
+                        onclick="alterarValor(100)"
+
+                    >
+
+                        +
+
+                    </button>
 
                 </div>
 
 
-                <div class="form-group">
+                <label class="form-label">
 
-                    <label>
-                        Valores disponíveis
-                    </label>
+                    Quantidade de parcelas
+
+                </label>
 
 
-                    <input
-                        type="text"
-                        value="R$ 1.250 a R$ 5.500"
-                        disabled>
+                <select class="select" id="parcelas">
+
+                    <option value="6">
+
+                        6 parcelas
+
+                    </option>
+
+                    <option value="12" selected>
+
+                        12 parcelas
+
+                    </option>
+
+                    <option value="18">
+
+                        18 parcelas
+
+                    </option>
+
+                    <option value="24">
+
+                        24 parcelas
+
+                    </option>
+
+                    <option value="36">
+
+                        36 parcelas
+
+                    </option>
+
+                </select>
+
+
+                <button
+
+                    class="simulate-button"
+
+                    onclick="calcularSimulacao()"
+
+                >
+
+                    SIMULAR AGORA
+
+                </button>
+
+
+                <div class="result-box">
+
+                    <div class="result-title">
+
+                        ESTIMATIVA DA PARCELA
+
+                    </div>
+
+
+                    <div
+
+                        class="result-value"
+
+                        id="resultValue"
+
+                    >
+
+                        R$ 0,00
+
+                    </div>
 
                 </div>
 
 
-            </div>
+                <p class="disclaimer">
 
+                    A simulação apresentada é meramente estimativa.
 
-            <div class="form-note">
+                    As condições finais dependem de análise e aprovação.
 
-                <strong>
-                    Importante:
-                </strong>
-
-
-                O envio da solicitação não representa aprovação ou garantia
-                de concessão de crédito. Todas as solicitações estão sujeitas
-                à análise e às condições aplicáveis.
+                </p>
 
             </div>
-
-
-            <a
-                href="https://form.jotform.com/262044743759060"
-                target="_blank"
-                class="submit-btn">
-
-                ENVIAR SOLICITAÇÃO PARA ANÁLISE
-
-            </a>
 
         </div>
 
     </section>
 
 
-    <!-- INFORMAÇÕES -->
+    <!-- CTA -->
 
-    <section
-        class="section info-section"
-        id="informacoes">
+    <section class="cta">
 
+        <h2>
 
-        <div class="section-title">
+            Pronto para começar?
 
-            <span>
-                Transparência
-            </span>
+        </h2>
 
 
-            <h2>
-                Informações importantes
-            </h2>
+        <p>
 
-        </div>
+            Faça sua simulação de forma simples e rápida.
 
-
-        <div class="info-grid">
+        </p>
 
 
-            <div class="info-card">
+        <a
 
-                <h3>
-                    Análise individual
-                </h3>
+            href="#simulacao"
 
+            class="cta-button"
 
-                <p>
+        >
 
-                    Cada solicitação poderá ser avaliada individualmente
-                    conforme as informações fornecidas.
+            COMEÇAR SIMULAÇÃO
 
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>
-                    Processo transparente
-                </h3>
-
-
-                <p>
-
-                    O envio do formulário não representa aprovação automática.
-                    As condições devem ser verificadas antes de qualquer decisão.
-
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>
-                    Segurança das informações
-                </h3>
-
-
-                <p>
-
-                    Não solicitamos senhas, códigos de segurança,
-                    dados completos de cartão ou informações desnecessárias.
-
-                </p>
-
-            </div>
-
-
-            <div class="info-card">
-
-                <h3>
-                    Retorno da solicitação
-                </h3>
-
-
-                <p>
-
-                    As informações de contato fornecidas poderão ser utilizadas
-                    para retorno relacionado à solicitação realizada.
-
-                </p>
-
-            </div>
-
-        </div>
+        </a>
 
     </section>
 
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer id="contato">
+
+        <div class="footer-content">
 
 
-        <div class="footer-container">
-
-
-            <div>
+            <div class="footer-brand">
 
                 <div class="logo">
 
-                    <div class="logo-icon">
-                        E
-                    </div>
+                    <img
+
+                        src="image(5).png"
+
+                        alt="Empréstimo do Brasil"
+
+                        class="logo-image"
+
+                    >
 
 
                     <div class="logo-text">
 
-                        <strong>
+                        <h1>
+
                             Empréstimo do Brasil
-                        </strong>
+
+                        </h1>
 
 
-                        <span>
-                            Crédito com transparência
-                        </span>
+                        <p>
+
+                            Soluções financeiras para você
+
+                        </p>
 
                     </div>
 
                 </div>
 
-            </div>
-
-
-            <div>
 
                 <p>
 
-                    As informações apresentadas neste site possuem caráter informativo.
-                    Toda solicitação está sujeita à análise e às condições aplicáveis.
+                    Uma marca dedicada a oferecer soluções financeiras
+
+                    com atendimento profissional e informações claras.
 
                 </p>
 
             </div>
 
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Navegação
+
+                </h3>
+
+
+                <a href="#inicio">
+
+                    Início
+
+                </a>
+
+
+                <a href="#vantagens">
+
+                    Vantagens
+
+                </a>
+
+
+                <a href="#simulacao">
+
+                    Simulação
+
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+
+                    Atendimento
+
+                </h3>
+
+
+                <a href="#simulacao">
+
+                    Fazer simulação
+
+                </a>
+
+
+                <a href="#contato">
+
+                    Fale conosco
+
+                </a>
+
+
+                <a href="#">
+
+                    Política de privacidade
+
+                </a>
+
+            </div>
+
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="copyright">
 
-            © 2026 Empréstimo do Brasil.
-            Todos os direitos reservados.
+            © 2026 Empréstimo do Brasil. Todos os direitos reservados.
 
         </div>
 
     </footer>
+
+
+    <script>
+
+
+        const range = document.getElementById("rangeValue");
+
+        const valueDisplay = document.getElementById("valueDisplay");
+
+        const amountInput = document.getElementById("amountInput");
+
+        const parcelas = document.getElementById("parcelas");
+
+        const resultValue = document.getElementById("resultValue");
+
+
+        function formatarMoeda(valor) {
+
+            return valor.toLocaleString(
+
+                "pt-BR",
+
+                {
+
+                    style: "currency",
+
+                    currency: "BRL"
+
+                }
+
+            );
+
+        }
+
+
+        function atualizarValor(valor) {
+
+
+            if (valor < 1205) {
+
+                valor = 1205;
+
+            }
+
+
+            if (valor > 5500) {
+
+                valor = 5500;
+
+            }
+
+
+            range.value = valor;
+
+
+            valueDisplay.textContent = formatarMoeda(valor);
+
+
+            amountInput.value = formatarMoeda(valor);
+
+
+            calcularSimulacao();
+
+        }
+
+
+        range.addEventListener(
+
+            "input",
+
+            function() {
+
+                atualizarValor(
+
+                    parseInt(this.value)
+
+                );
+
+            }
+
+        );
+
+
+        function alterarValor(valor) {
+
+
+            let atual = parseInt(range.value);
+
+
+            let novoValor = atual + valor;
+
+
+            if (novoValor < 1205) {
+
+                novoValor = 1205;
+
+            }
+
+
+            if (novoValor > 5500) {
+
+                novoValor = 5500;
+
+            }
+
+
+            atualizarValor(novoValor);
+
+        }
+
+
+        parcelas.addEventListener(
+
+            "change",
+
+            function() {
+
+                calcularSimulacao();
+
+            }
+
+        );
+
+
+        function calcularSimulacao() {
+
+
+            const valor =
+
+                parseFloat(range.value);
+
+
+            const numeroParcelas =
+
+                parseInt(parcelas.value);
+
+
+            const taxa = 0.025;
+
+
+            const valorComJuros =
+
+                valor *
+
+                Math.pow(
+
+                    1 + taxa,
+
+                    numeroParcelas
+
+                );
+
+
+            const parcela =
+
+                valorComJuros /
+
+                numeroParcelas;
+
+
+            resultValue.textContent =
+
+                formatarMoeda(parcela);
+
+        }
+
+
+        atualizarValor(1205);
+
+
+    </script>
 
 
 </body>
