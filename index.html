@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BANCO DO BRASIL</title>
+<title>Banco do Brasil</title>
 
 <style>
 
@@ -27,10 +27,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   CABEÇALHO
-========================= */
-
 header {
     width: 100%;
     min-height: 80px;
@@ -43,7 +39,7 @@ header {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid #eeeeee;
-    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 18px rgba(0,0,0,0.08);
 }
 
 .logo {
@@ -57,12 +53,18 @@ header {
     height: 54px;
     border-radius: 12px;
     background: #ffd000;
-    color: #111111;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    font-weight: 900;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.logo-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .logo-text h1 {
@@ -99,24 +101,23 @@ nav a:hover {
     border-radius: 7px;
     color: #111111 !important;
 }
-/* HERO */
-.hero{
-    min-height:590px;
-    display:flex;
-    align-items:center;
-    padding:80px 7%;
+
+.hero {
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
     background:
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,.98),
-        rgba(255,255,255,.93),
-        rgba(255,255,255,.75)
-    ),
-    url("https://logopng.com.br/logos/banco-do-brasil-5.png");
-    background-repeat:no-repeat;
-    background-position:right center;
-    background-size:500px;
-       );
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.98),
+            rgba(255,255,255,0.93),
+            rgba(255,255,255,0.75)
+        ),
+        url("https://logopng.com.br/logos/banco-do-brasil-5.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 500px;
 }
 
 .hero-content {
@@ -186,10 +187,6 @@ nav a:hover {
     color: #111111;
 }
 
-/* =========================
-   BARRA DE CONFIANÇA
-========================= */
-
 .trust {
     background: #111111;
     color: #ffffff;
@@ -205,10 +202,6 @@ nav a:hover {
     font-size: 22px;
     margin-right: 8px;
 }
-
-/* =========================
-   SEÇÕES
-========================= */
 
 .section {
     padding: 85px 7%;
@@ -231,10 +224,6 @@ nav a:hover {
 .title p {
     color: #777777;
 }
-
-/* =========================
-   CARDS
-========================= */
 
 .cards {
     display: grid;
@@ -277,10 +266,6 @@ nav a:hover {
     color: #666666;
     line-height: 1.6;
 }
-
-/* =========================
-   SIMULAÇÃO
-========================= */
 
 .simulation {
     background: #111111;
@@ -329,10 +314,6 @@ nav a:hover {
     font-weight: bold;
     margin-right: 10px;
 }
-
-/* =========================
-   SIMULADOR
-========================= */
 
 .simulator {
     background: #ffffff;
@@ -471,10 +452,6 @@ select {
     margin-top: 18px;
 }
 
-/* =========================
-   FORMULÁRIO
-========================= */
-
 .form-section {
     padding: 85px 7%;
     background: #f7f7f7;
@@ -544,10 +521,6 @@ select {
     cursor: pointer;
 }
 
-/* =========================
-   CTA
-========================= */
-
 .cta {
     background: #ffd000;
     text-align: center;
@@ -572,10 +545,6 @@ select {
     text-decoration: none;
     font-weight: bold;
 }
-
-/* =========================
-   RODAPÉ
-========================= */
 
 footer {
     background: #111111;
@@ -604,10 +573,6 @@ footer {
     font-size: 12px;
 }
 
-/* =========================
-   CELULAR
-========================= */
-
 @media (max-width: 850px) {
 
     header {
@@ -627,13 +592,11 @@ footer {
         width: 50px;
         height: 50px;
     }
-    .logo-text h1 {<div class="logo">
-        <img
-            src="https://logopng.com.br/logos/banco-do-brasil-5.png"
-            alt="Empréstimo do Brasil"
-        >
-     font-size: 17px;
+
+    .logo-text h1 {
+        font-size: 17px;
     }
+
     nav {
         width: 100%;
         display: grid;
@@ -655,6 +618,8 @@ footer {
         min-height: auto;
         padding: 55px 5% 65px;
         text-align: center;
+        background-position: center;
+        background-size: 300px;
     }
 
     .hero-content {
@@ -773,576 +738,521 @@ footer {
 
 <header>
 
-    <div class="logo">
+```
+<div class="logo">
 
-        <div class="logo-mark">
-            EB
-        </div>
+    <div class="logo-mark">
 
-        <div class="logo-text">
-
-            <h1>
-                Empréstimo do Brasil
-            </h1>
-
-            <p>
-                Soluções financeiras para você
-            </p>
-
-        </div>
+        <img
+            src="https://logopng.com.br/logos/banco-do-brasil-5.png"
+            alt="Imagem de perfil"
+        >
 
     </div>
 
-    <nav>
+    <div class="logo-text">
 
-        <a href="#inicio">
-            Início
-        </a>
+        <h1>
+            Banco do Brasil
+        </h1>
 
-        <a href="#vantagens">
-            Vantagens
-        </a>
+        <p>
+            Soluções financeiras para você
+        </p>
 
-        <a href="#simulacao">
-            Simulação
-        </a>
+    </div>
 
-        <a href="#solicitacao">
-            Solicitação
-        </a>
+</div>
 
-        <a
-            href="#simulacao"
-            class="nav-btn"
-        >
-            Simular agora
-        </a>
+<nav>
 
-    </nav>
+    <a href="#inicio">Início</a>
+    <a href="#vantagens">Vantagens</a>
+    <a href="#simulacao">Simulação</a>
+    <a href="#solicitacao">Solicitação</a>
+
+    <a href="#simulacao" class="nav-btn">
+        Simular agora
+    </a>
+
+</nav>
+```
 
 </header>
 
-<section
-    class="hero"
-    id="inicio"
->
+<section class="hero" id="inicio">
 
-    <div class="hero-content">
+```
+<div class="hero-content">
 
-        <div class="tag">
-            SOLUÇÕES FINANCEIRAS
-        </div>
+    <div class="tag">
+        SOLUÇÕES FINANCEIRAS
+    </div>
 
-        <h2>
+    <h2>
+        O crédito que ajuda você a
+        <span>realizar seus planos.</span>
+    </h2>
 
-            O crédito que ajuda você a
+    <p>
+        Faça uma simulação de forma simples e veja uma estimativa
+        do valor das suas parcelas.
+    </p>
 
-            <span>
-                realizar seus planos.
-            </span>
+    <div class="buttons">
 
-        </h2>
+        <a href="#simulacao" class="btn btn-yellow">
+            SIMULAR AGORA
+        </a>
 
-        <p>
-
-            Faça uma simulação de forma simples e veja uma estimativa
-            do valor das suas parcelas.
-
-        </p>
-
-        <div class="buttons">
-
-            <a
-                href="#simulacao"
-                class="btn btn-yellow"
-            >
-                SIMULAR AGORA
-            </a>
-
-            <a
-                href="#vantagens"
-                class="btn btn-black"
-            >
-                SAIBA MAIS
-            </a>
-
-        </div>
+        <a href="#vantagens" class="btn btn-black">
+            SAIBA MAIS
+        </a>
 
     </div>
+
+</div>
+```
 
 </section>
 
 <section class="trust">
 
-    <div>
-        <strong>✓</strong>
-        Processo simples
-    </div>
+```
+<div>
+    <strong>✓</strong>
+    Processo simples
+</div>
 
-    <div>
-        <strong>✓</strong>
-        Atendimento profissional
-    </div>
+<div>
+    <strong>✓</strong>
+    Atendimento profissional
+</div>
 
-    <div>
-        <strong>✓</strong>
-        Informações claras
-    </div>
+<div>
+    <strong>✓</strong>
+    Informações claras
+</div>
+```
 
 </section>
 
-<section
-    class="section"
-    id="vantagens"
->
+<section class="section" id="vantagens">
 
-    <div class="title">
+```
+<div class="title">
 
-        <h2>
+    <h2>
+        Uma experiência mais
+        <span>simples para você</span>
+    </h2>
 
-            Uma experiência mais
+    <p>
+        Conheça algumas das nossas principais vantagens.
+    </p>
 
-            <span>
-                simples para você
-            </span>
+</div>
 
-        </h2>
+<div class="cards">
+
+    <div class="card">
+
+        <div class="card-icon">
+            ✓
+        </div>
+
+        <h3>
+            Processo simples
+        </h3>
 
         <p>
-            Conheça algumas das nossas principais vantagens.
+            Faça sua simulação de forma rápida e organizada.
         </p>
 
     </div>
 
-    <div class="cards">
+    <div class="card">
 
-        <div class="card">
-
-            <div class="card-icon">
-                ✓
-            </div>
-
-            <h3>
-                Processo simples
-            </h3>
-
-            <p>
-                Faça sua simulação de forma rápida e organizada.
-            </p>
-
+        <div class="card-icon">
+            $
         </div>
 
-        <div class="card">
+        <h3>
+            Valores personalizados
+        </h3>
 
-            <div class="card-icon">
-                $
-            </div>
-
-            <h3>
-                Valores personalizados
-            </h3>
-
-            <p>
-                Escolha o valor desejado dentro da faixa disponível.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <div class="card-icon">
-                ★
-            </div>
-
-            <h3>
-                Atendimento profissional
-            </h3>
-
-            <p>
-                Conte com informações claras durante todo o processo.
-            </p>
-
-        </div>
+        <p>
+            Escolha o valor desejado dentro da faixa disponível.
+        </p>
 
     </div>
 
-</section>
+    <div class="card">
 
-<section
-    class="simulation"
-    id="simulacao"
->
-
-    <div class="simulation-container">
-
-        <div class="simulation-info">
-
-            <h2>
-
-                Faça sua
-
-                <span>
-                    simulação
-                </span>
-
-            </h2>
-
-            <p>
-
-                Escolha um valor entre R$ 1.205 e R$ 5.500
-                e veja uma estimativa das parcelas.
-
-            </p>
-
-            <ul>
-
-                <li>
-                    Valor ajustável
-                </li>
-
-                <li>
-                    Escolha das parcelas
-                </li>
-
-                <li>
-                    Resultado instantâneo
-                </li>
-
-                <li>
-                    Simulação fácil de usar
-                </li>
-
-            </ul>
-
+        <div class="card-icon">
+            ★
         </div>
 
-        <div class="simulator">
+        <h3>
+            Atendimento profissional
+        </h3>
 
-            <h3>
-                Simular empréstimo
-            </h3>
-
-            <p class="subtitle">
-                Escolha o valor desejado.
-            </p>
-
-            <div class="value-box">
-
-                <div class="value-label">
-                    VALOR SELECIONADO
-                </div>
-
-                <div
-                    class="value"
-                    id="valueDisplay"
-                >
-                    R$ 1.205,00
-                </div>
-
-            </div>
-
-            <input
-                type="range"
-                id="rangeValue"
-                min="1205"
-                max="5500"
-                step="5"
-                value="1205"
-            >
-
-            <div class="range-labels">
-
-                <span>
-                    R$ 1.205
-                </span>
-
-                <span>
-                    R$ 5.500
-                </span>
-
-            </div>
-
-            <div class="amount-controls">
-
-                <button
-                    class="amount-btn"
-                    onclick="alterarValor(-100)"
-                >
-                    −
-                </button>
-
-                <input
-                    class="amount-input"
-                    id="amountInput"
-                    value="R$ 1.205,00"
-                    readonly
-                >
-
-                <button
-                    class="amount-btn"
-                    onclick="alterarValor(100)"
-                >
-                    +
-                </button>
-
-            </div>
-
-            <label>
-                Quantidade de parcelas
-            </label>
-
-            <select id="parcelas">
-
-                <option value="6">
-                    6 parcelas
-                </option>
-
-                <option
-                    value="12"
-                    selected
-                >
-                    12 parcelas
-                </option>
-
-                <option value="18">
-                    18 parcelas
-                </option>
-
-                <option value="24">
-                    24 parcelas
-                </option>
-
-                <option value="36">
-                    36 parcelas
-                </option>
-
-            </select>
-
-            <button
-                class="simulate-button"
-                onclick="calcularSimulacao()"
-            >
-                SIMULAR AGORA
-            </button>
-
-            <div class="result">
-
-                <small>
-                    ESTIMATIVA DA PARCELA
-                </small>
-
-                <div
-                    class="result-value"
-                    id="resultValue"
-                >
-                    R$ 0,00
-                </div>
-
-            </div>
-
-            <p class="disclaimer">
-
-                Esta simulação é apenas uma estimativa.
-                As condições finais dependem de análise e aprovação.
-
-            </p>
-
-        </div>
+        <p>
+            Conte com informações claras durante todo o processo.
+        </p>
 
     </div>
 
+</div>
+```
+
 </section>
 
-<section
-    class="form-section"
-    id="solicitacao"
->
+<section class="simulation" id="simulacao">
 
-    <div class="form-box">
+```
+<div class="simulation-container">
+
+    <div class="simulation-info">
 
         <h2>
-            Solicitação de contato
+            Faça sua
+            <span>simulação</span>
         </h2>
 
         <p>
-            Preencha os dados abaixo para enviar sua solicitação.
+            Escolha um valor entre R$ 1.205 e R$ 5.500
+            e veja uma estimativa das parcelas.
         </p>
 
-        <form
-            action="mailto:bancodobrasil.online@gmail.com"
-            method="post"
-            enctype="text/plain"
+        <ul>
+
+            <li>Valor ajustável</li>
+            <li>Escolha das parcelas</li>
+            <li>Resultado instantâneo</li>
+            <li>Simulação fácil de usar</li>
+
+        </ul>
+
+    </div>
+
+    <div class="simulator">
+
+        <h3>
+            Simular empréstimo
+        </h3>
+
+        <p class="subtitle">
+            Escolha o valor desejado.
+        </p>
+
+        <div class="value-box">
+
+            <div class="value-label">
+                VALOR SELECIONADO
+            </div>
+
+            <div class="value" id="valueDisplay">
+                R$ 1.205,00
+            </div>
+
+        </div>
+
+        <input
+            type="range"
+            id="rangeValue"
+            min="1205"
+            max="5500"
+            step="5"
+            value="1205"
         >
 
-            <div class="form-grid">
+        <div class="range-labels">
 
-                <div class="form-group">
+            <span>R$ 1.205</span>
+            <span>R$ 5.500</span>
 
-                    <label>
-                        Nome completo
-                    </label>
+        </div>
 
-                    <input
-                        type="text"
-                        name="Nome completo"
-                        required
-                    >
+        <div class="amount-controls">
 
-                </div>
+            <button
+                class="amount-btn"
+                onclick="alterarValor(-100)"
+            >
+                −
+            </button>
 
-                <div class="form-group">
+            <input
+                class="amount-input"
+                id="amountInput"
+                value="R$ 1.205,00"
+                readonly
+            >
 
-                    <label>
-                        Telefone
-                    </label>
+            <button
+                class="amount-btn"
+                onclick="alterarValor(100)"
+            >
+                +
+            </button>
 
-                    <input
-                        type="tel"
-                        name="Telefone"
-                        required
-                    >
+        </div>
 
-                </div>
+        <label>
+            Quantidade de parcelas
+        </label>
 
-                <div class="form-group">
+        <select id="parcelas">
 
-                    <label>
-                        E-mail
-                    </label>
+            <option value="6">
+                6 parcelas
+            </option>
 
-                    <input
-                        type="email"
-                        name="E-mail"
-                        required
-                    >
+            <option value="12" selected>
+                12 parcelas
+            </option>
 
-                </div>
+            <option value="18">
+                18 parcelas
+            </option>
 
-                <div class="form-group">
+            <option value="24">
+                24 parcelas
+            </option>
 
-                    <label>
-                        Valor desejado
-                    </label>
+            <option value="36">
+                36 parcelas
+            </option>
 
-                    <select
-                        name="Valor desejado"
-                    >
+        </select>
 
-                        <option>
-                            R$ 1.205
-                        </option>
+        <button
+            class="simulate-button"
+            onclick="calcularSimulacao()"
+        >
+            SIMULAR AGORA
+        </button>
 
-                        <option>
-                            R$ 2.000
-                        </option>
+        <div class="result">
 
-                        <option>
-                            R$ 3.000
-                        </option>
+            <small>
+                ESTIMATIVA DA PARCELA
+            </small>
 
-                        <option>
-                            R$ 4.000
-                        </option>
+            <div
+                class="result-value"
+                id="resultValue"
+            >
+                R$ 0,00
+            </div>
 
-                        <option>
-                            R$ 5.500
-                        </option>
+        </div>
 
-                    </select>
+        <p class="disclaimer">
 
-                </div>
+            Esta simulação é apenas uma estimativa.
+            As condições finais dependem de análise e aprovação.
 
-                <div
-                    class="form-group full"
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="form-section" id="solicitacao">
+
+```
+<div class="form-box">
+
+    <h2>
+        Solicitação de contato
+    </h2>
+
+    <p>
+        Preencha os dados abaixo para enviar sua solicitação.
+    </p>
+
+    <form
+        action="mailto:bancodobrasil.online@gmail.com"
+        method="post"
+        enctype="text/plain"
+    >
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    name="Nome completo"
+                    required
                 >
-
-                    <label>
-                        Observações
-                    </label>
-
-                    <textarea
-                        name="Observações"
-                        placeholder="Digite uma mensagem..."
-                    ></textarea>
-
-                </div>
 
             </div>
 
-            <button
-                type="submit"
-                class="form-submit"
-            >
-                ENVIAR SOLICITAÇÃO
-            </button>
+            <div class="form-group">
 
-        </form>
+                <label>
+                    Telefone
+                </label>
 
-    </div>
+                <input
+                    type="tel"
+                    name="Telefone"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    name="E-mail"
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    Valor desejado
+                </label>
+
+                <select name="Valor desejado">
+
+                    <option>
+                        R$ 1.205
+                    </option>
+
+                    <option>
+                        R$ 2.000
+                    </option>
+
+                    <option>
+                        R$ 3.000
+                    </option>
+
+                    <option>
+                        R$ 4.000
+                    </option>
+
+                    <option>
+                        R$ 5.500
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group full">
+
+                <label>
+                    Observações
+                </label>
+
+                <textarea
+                    name="Observações"
+                    placeholder="Digite uma mensagem..."
+                ></textarea>
+
+            </div>
+
+        </div>
+
+        <button
+            type="submit"
+            class="form-submit"
+        >
+            ENVIAR SOLICITAÇÃO
+        </button>
+
+    </form>
+
+</div>
+```
 
 </section>
 
 <section class="cta">
 
-    <h2>
-        Comece sua simulação agora
-    </h2>
+```
+<h2>
+    Comece sua simulação agora
+</h2>
 
-    <p>
-        Escolha o valor que deseja simular.
-    </p>
+<p>
+    Escolha o valor que deseja simular.
+</p>
 
-    <a
-        href="#solicitacao"
-    >
-        FAZER SOLICITAÇÃO
-    </a>
+<a href="#solicitacao">
+    FAZER SOLICITAÇÃO
+</a>
+```
 
 </section>
 
 <footer>
 
-    <div class="footer-content">
+```
+<div class="footer-content">
 
-        <div class="footer-brand">
+    <div class="footer-brand">
 
-            <div class="logo">
+        <div class="logo">
 
-                <div class="logo-mark">
-                    EB
-                </div>
+            <div class="logo-mark">
 
-                <div class="logo-text">
-
-                    <h1>
-                        Empréstimo do Brasil
-                    </h1>
-
-                    <p>
-                        Soluções financeiras para você
-                    </p>
-
-                </div>
+                <img
+                    src="https://logopng.com.br/logos/banco-do-brasil-5.png"
+                    alt="Imagem de perfil"
+                >
 
             </div>
 
-            <p>
+            <div class="logo-text">
 
-                Soluções financeiras com informações claras
-                e atendimento profissional.
+                <h1>
+                   Banco do Brasil
+                </h1>
 
-            </p>
+                <p>
+                    Soluções financeiras para você
+                </p>
+
+            </div>
 
         </div>
 
-    </div>
-
-    <div class="copyright">
-
-        © 2026 Empréstimo do Brasil.
-        Todos os direitos reservados.
+        <p>
+            Soluções financeiras com informações claras
+            e atendimento profissional.
+        </p>
 
     </div>
+
+</div>
+
+<div class="copyright">
+
+    © 2026 Banco do Brasil.
+    Todos os direitos reservados.
+
+</div>
+```
 
 </footer>
 
@@ -1363,7 +1273,6 @@ const parcelas =
 const resultValue =
     document.getElementById("resultValue");
 
-
 function moeda(valor) {
 
     return valor.toLocaleString(
@@ -1375,7 +1284,6 @@ function moeda(valor) {
     );
 
 }
-
 
 function atualizarValor(valor) {
 
@@ -1399,7 +1307,6 @@ function atualizarValor(valor) {
 
 }
 
-
 function alterarValor(valor) {
 
     const atual =
@@ -1410,7 +1317,6 @@ function alterarValor(valor) {
     );
 
 }
-
 
 range.addEventListener(
     "input",
@@ -1423,12 +1329,10 @@ range.addEventListener(
     }
 );
 
-
 parcelas.addEventListener(
     "change",
     calcularSimulacao
 );
-
 
 function calcularSimulacao() {
 
@@ -1457,7 +1361,6 @@ function calcularSimulacao() {
 
 }
 
-
 atualizarValor(1205);
 
 </script>
@@ -1465,3 +1368,4 @@ atualizarValor(1205);
 </body>
 
 </html>
+
