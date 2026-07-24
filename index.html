@@ -1,1407 +1,1034 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>VINCORACLIN | Oportunidade Profissional</title>
-
-  <meta name="description" content="Oportunidade profissional para Recepcionista de Consultório Médico. Processo seletivo aberto.">
-
-  <style>
-    :root {
-      --navy: #071a2f;
-      --navy-light: #0d2c4a;
-      --gold: #c9a85d;
-      --gold-light: #e7d18d;
-      --white: #ffffff;
-      --background: #f4f6f8;
-      --text: #172331;
-      --muted: #687684;
-      --border: #e1e6eb;
-      --telegram: #229ED9;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1160px, 92%);
-      margin: 0 auto;
-    }
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 26, 47, 0.98);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .header-content {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-    }
-
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--gold-light);
-      border-radius: 50%;
-      color: var(--gold-light);
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .brand-name {
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-    }
-
-    .brand-name span {
-      color: var(--gold-light);
-    }
-
-    .header-button,
-    .button-primary,
-    .button-secondary,
-    .telegram-button,
-    .course-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.25s ease;
-      cursor: pointer;
-    }
-
-    .header-button {
-      padding: 11px 17px;
-      border-radius: 5px;
-      background: var(--gold-light);
-      color: var(--navy);
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .header-button:hover,
-    .button-primary:hover {
-      background: var(--white);
-      transform: translateY(-2px);
-    }
-
-    .hero {
-      padding: 90px 0;
-      background: linear-gradient(135deg, #071a2f, #0d2c4a);
-      color: var(--white);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 7px 14px;
-      border: 1px solid rgba(231,209,141,0.5);
-      border-radius: 30px;
-      color: var(--gold-light);
-      font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 0.8px;
-    }
-
-    .hero h1 {
-      max-width: 760px;
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.08;
-      margin-bottom: 22px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero-description {
-      max-width: 690px;
-      margin-bottom: 30px;
-      color: #d9e2eb;
-      font-size: 18px;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button-primary,
-    .button-secondary {
-      min-height: 48px;
-      padding: 13px 20px;
-      border-radius: 5px;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .button-primary {
-      background: var(--gold-light);
-      color: var(--navy);
-    }
-
-    .button-secondary {
-      border: 1px solid rgba(255,255,255,0.45);
-      color: var(--white);
-    }
-
-    .button-secondary:hover {
-      background: rgba(255,255,255,0.08);
-    }
-
-    .vacancy-card {
-      padding: 30px;
-      background: var(--white);
-      color: var(--text);
-      border-top: 4px solid var(--gold);
-      border-radius: 10px;
-      box-shadow: 0 20px 45px rgba(0,0,0,0.25);
-    }
-
-    .vacancy-card h2 {
-      margin-bottom: 22px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
-      color: var(--navy);
-      font-size: 22px;
-    }
-
-    /* INFORMAÇÕES LADO A LADO */
-    .vacancy-info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-    }
-
-    .vacancy-item {
-      min-height: 112px;
-      padding: 18px;
-      background: #fafbfc;
-      border: 1px solid #edf0f3;
-      border-radius: 8px;
-    }
-
-    .vacancy-icon {
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      background: #f7f0dc;
-      border-radius: 50%;
-      color: var(--navy);
-      font-size: 15px;
-      font-weight: bold;
-    }
-
-    .vacancy-item strong {
-      display: block;
-      margin-bottom: 3px;
-      color: var(--navy);
-      font-size: 11px;
-      letter-spacing: 0.4px;
-    }
-
-    .vacancy-item span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .immediate-box {
-      margin-top: 20px;
-      padding: 17px;
-      background: #fbf7e9;
-      border-left: 4px solid var(--gold);
-      border-radius: 5px;
-    }
-
-    .immediate-box strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #725d22;
-      font-size: 14px;
-    }
-
-    .immediate-box p {
-      color: #6f674e;
-      font-size: 13px;
-    }
-
-    .vacancies-box {
-      margin-top: 18px;
-      padding: 18px;
-      background: var(--navy);
-      border-radius: 5px;
-      text-align: center;
-      color: var(--white);
-    }
-
-    .vacancies-box strong {
-      display: block;
-      color: var(--gold-light);
-      font-size: 29px;
-    }
-
-    .vacancies-box span {
-      color: #d5dee8;
-      font-size: 12px;
-    }
-
-    .section {
-      padding: 82px 0;
-    }
-
-    .section-white {
-      background: var(--white);
-    }
-
-    .section-dark {
-      background: var(--navy);
-      color: var(--white);
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin: 0 auto 45px;
-      text-align: center;
-    }
-
-    .section-heading h2 {
-      margin-bottom: 10px;
-      color: var(--navy);
-      font-size: 34px;
-    }
-
-    .section-dark .section-heading h2 {
-      color: var(--white);
-    }
-
-    .section-heading p {
-      color: var(--muted);
-    }
-
-    .section-dark .section-heading p {
-      color: #d5dee8;
-    }
-
-    .gold-line {
-      width: 65px;
-      height: 3px;
-      margin: 17px auto;
-      background: var(--gold);
-    }
-
-    .profile-card {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 35px;
-      align-items: center;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 25px;
-      background: #fafbfc;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
-    .profile-visual {
-      min-height: 270px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      background: linear-gradient(145deg, #0d2c4a, #071a2f);
-      border-radius: 8px;
-    }
-
-    .profile-visual svg {
-      width: 100%;
-      height: 100%;
-      min-height: 270px;
-    }
-
-    .profile-content h3 {
-      margin-bottom: 5px;
-      color: var(--navy);
-      font-size: 27px;
-    }
-
-    .profile-subtitle {
-      margin-bottom: 14px;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .profile-content p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .benefit-card {
-      padding: 28px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--gold);
-      border-radius: 8px;
-    }
-
-    .benefit-icon {
-      width: 42px;
-      height: 42px;
-      margin-bottom: 14px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    .benefit-card h3 {
-      margin-bottom: 9px;
-      color: var(--navy);
-      font-size: 18px;
-    }
-
-    .benefit-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .email-box {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 42px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 10px;
-      background: rgba(255,255,255,0.04);
-      text-align: center;
-    }
-
-    .email-box h3 {
-      margin-bottom: 13px;
-      color: var(--gold-light);
-      font-size: 25px;
-    }
-
-    .email-box p {
-      max-width: 760px;
-      margin: 0 auto 14px;
-      color: #d7e0e8;
-    }
-
-    .email-address {
-      max-width: 520px;
-      margin: 25px auto;
-      padding: 16px;
-      border: 1px solid rgba(231,209,141,0.35);
-      border-radius: 5px;
-      background: rgba(255,255,255,0.08);
-      color: var(--gold-light);
-      font-weight: bold;
-      word-break: break-word;
-    }
-
-    .qualification-wrapper {
-      padding: 45px;
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-    }
-
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .course-card {
-      position: relative;
-      padding: 30px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 9px;
-    }
-
-    .course-card.featured {
-      border: 2px solid var(--gold);
-    }
-
-    .course-badge {
-      position: absolute;
-      top: -13px;
-      right: 20px;
-      padding: 6px 13px;
-      background: var(--gold);
-      border-radius: 20px;
-      color: var(--white);
-      font-size: 10px;
-      font-weight: bold;
-    }
-
-    .course-card h3 {
-      color: var(--navy);
-      font-size: 25px;
-    }
-
-    .course-subtitle {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .course-price {
-      margin: 17px 0;
-      color: var(--navy);
-      font-size: 35px;
-      font-weight: bold;
-    }
-
-    .course-list {
-      list-style: none;
-      margin-bottom: 24px;
-    }
-
-    .course-list li {
-      padding: 9px 0;
-      border-bottom: 1px solid #f0f1f3;
-      color: #596674;
-      font-size: 14px;
-    }
-
-    .course-list li::before {
-      content: "✓";
-      margin-right: 9px;
-      color: var(--gold);
-      font-weight: bold;
-    }
-
-    .course-button {
-      width: 100%;
-      min-height: 48px;
-      padding: 12px;
-      background: var(--navy);
-      border-radius: 5px;
-      color: var(--white);
-      font-size: 12px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    .course-button:hover {
-      background: var(--telegram);
-    }
-
-    .course-message {
-      margin-top: 14px;
-      padding: 12px;
-      background: #f5f7f9;
-      border-radius: 5px;
-      color: var(--muted);
-      font-size: 12px;
-      text-align: center;
-    }
-
-    .important-box {
-      max-width: 900px;
-      margin: 32px auto 0;
-      padding: 23px;
-      background: #fffaf0;
-      border: 1px solid #e8d9a7;
-      border-radius: 7px;
-    }
-
-    .important-box h3 {
-      margin-bottom: 8px;
-      color: #715b1c;
-    }
-
-    .important-box p {
-      color: #6d6445;
-      font-size: 14px;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .process-card {
-      padding: 27px 20px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    .process-number {
-      width: 45px;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 15px;
-      background: var(--navy);
-      border-radius: 50%;
-      color: var(--gold-light);
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .process-card h3 {
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-size: 17px;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .documents-card {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 35px;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 9px;
-      background: rgba(255,255,255,0.04);
-    }
-
-    .documents-card h3 {
-      margin-bottom: 18px;
-      color: var(--gold-light);
-    }
-
-    .documents-list {
-      list-style: none;
-    }
-
-    .documents-list li {
-      padding: 13px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      color: #e2e8ee;
-    }
-
-    .documents-list li::before {
-      content: "✓";
-      margin-right: 10px;
-      color: var(--gold-light);
-      font-weight: bold;
-    }
-
-    .documents-notice {
-      margin-top: 23px;
-      padding: 17px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 5px;
-      color: #d8e0e8;
-      font-size: 13px;
-    }
-
-    .final-section {
-      text-align: center;
-    }
-
-    .final-section h2 {
-      margin-bottom: 12px;
-      color: var(--navy);
-      font-size: 34px;
-    }
-
-    .final-section p {
-      max-width: 720px;
-      margin: 0 auto 25px;
-      color: var(--muted);
-    }
-
-    .footer {
-      padding: 35px 0;
-      background: #041322;
-      color: #b9c4cf;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    .footer strong {
-      color: var(--white);
-      font-size: 19px;
-    }
-
-    .footer strong span {
-      color: var(--gold-light);
-    }
-
-    .footer p + p {
-      margin-top: 8px;
-    }
-
-    @media (max-width: 950px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 680px) {
-      .header-content {
-        min-height: 68px;
-      }
-
-      .brand-name {
-        font-size: 18px;
-      }
-
-      .header-button {
-        padding: 9px 11px;
-        font-size: 10px;
-      }
-
-      .hero {
-        padding: 62px 0 70px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .section {
-        padding: 58px 0;
-      }
-
-      .section-heading h2 {
-        font-size: 28px;
-      }
-
-      .profile-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .profile-visual {
-        min-height: 300px;
-      }
-
-      .courses-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .qualification-wrapper {
-        padding: 23px 15px;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .email-box {
-        padding: 28px 20px;
-      }
-
-      .documents-card {
-        padding: 25px 20px;
-      }
-
-      .button-group {
-        flex-direction: column;
-      }
-
-      .button-primary,
-      .button-secondary {
-        width: 100%;
-      }
-
-      .vacancy-info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Empréstimo do Brasil | Solicite uma análise</title>
+
+    <meta name="description"
+        content="Solicite uma análise de crédito de forma simples, transparente e segura.">
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        :root {
+            --yellow: #f5c400;
+            --yellow-dark: #d5a900;
+            --black: #080808;
+            --dark: #111111;
+            --gray: #777777;
+            --light: #f6f6f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #ffffff;
+            color: var(--black);
+        }
+
+        /* HEADER */
+
+        header {
+            background: var(--black);
+            color: white;
+            padding: 18px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--yellow);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 46px;
+            height: 46px;
+            background: var(--yellow);
+            color: var(--black);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 23px;
+            transform: rotate(-5deg);
+        }
+
+        .logo-text strong {
+            display: block;
+            font-size: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            display: block;
+            color: var(--yellow);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(0, 0, 0, .98), rgba(20, 20, 20, .94));
+            color: white;
+            padding: 90px 6% 100px;
+            min-height: 590px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(245, 196, 0, .13);
+            color: var(--yellow);
+            border: 1px solid rgba(245, 196, 0, .45);
+            padding: 9px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 65px);
+            line-height: 1.04;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--yellow);
+        }
+
+        .hero p {
+            color: #d0d0d0;
+            font-size: 17px;
+            line-height: 1.7;
+            max-width: 590px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--black);
+            padding: 16px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            transition: .3s;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            border: 1px solid #555;
+            color: white;
+            padding: 16px 26px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+        /* CARD */
+
+        .hero-card {
+            background: white;
+            color: var(--black);
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, .45);
+        }
+
+        .hero-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        .fake-input {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 17px;
+            margin-bottom: 13px;
+        }
+
+        .fake-input small {
+            display: block;
+            color: #888;
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        .fake-input strong {
+            font-size: 22px;
+        }
+
+        .progress {
+            height: 8px;
+            background: #e5e5e5;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 18px 0;
+        }
+
+        .progress div {
+            height: 100%;
+            width: 70%;
+            background: var(--yellow);
+        }
+
+        /* SEÇÕES */
+
+        .section {
+            padding: 85px 6%;
+        }
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title span {
+            color: var(--yellow-dark);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin: 12px 0;
+            letter-spacing: -1.5px;
+        }
+
+        .section-title p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        /* ETAPAS */
+
+        .steps {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #eeeeee;
+        }
+
+        .step-number {
+            width: 43px;
+            height: 43px;
+            background: var(--black);
+            color: var(--yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #777;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* SIMULAÇÃO */
+
+        .simulation {
+            background: var(--black);
+            color: white;
+        }
+
+        .simulation .section-title p {
+            color: #aaa;
+        }
+
+        .form-container {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            color: var(--black);
+            border-radius: 22px;
+            padding: 38px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #dddddd;
+            padding: 15px;
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: .2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--yellow-dark);
+            box-shadow: 0 0 0 3px rgba(245, 196, 0, .15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-note {
+            background: #fff9dc;
+            border-left: 4px solid var(--yellow-dark);
+            padding: 14px;
+            margin: 25px 0;
+            color: #5f5000;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: var(--black);
+            color: var(--yellow);
+            border: none;
+            padding: 18px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 800;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .submit-btn:hover {
+            background: var(--yellow);
+            color: var(--black);
+        }
+
+        /* INFORMAÇÕES */
+
+        .info-section {
+            background: #f7f7f7;
+        }
+
+        .info-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            border: 1px solid #eeeeee;
+        }
+
+        .info-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: #777;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--black);
+            color: white;
+            padding: 45px 6% 25px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 12px;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #292929;
+            margin-top: 35px;
+            padding-top: 20px;
+            color: #666;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 65px 5%;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .steps,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .form-container {
+                padding: 24px;
+            }
+
+            .section {
+                padding: 65px 5%;
+            }
+
+        }
+
+    </style>
 
 </head>
 
+
 <body>
 
-<header class="header">
-  <div class="container header-content">
 
-```
-<a href="#" class="brand">
-  <div class="brand-mark">+</div>
+    <!-- HEADER -->
 
-  <div class="brand-name">
-    VINCORA<span>CLIN</span>
-  </div>
-</a>
+    <header>
 
-<a href="#curriculo" class="header-button">
-  ENVIAR CURRÍCULO
-</a>
-```
+        <div class="logo">
 
-  </div>
-</header>
+            <div class="logo-icon">
+                E
+            </div>
 
-<main>
+            <div class="logo-text">
 
-<section class="hero">
-  <div class="container hero-grid">
+                <strong>
+                    Empréstimo do Brasil
+                </strong>
 
-```
-<div>
+                <span>
+                    Crédito com transparência
+                </span>
 
-  <div class="label">
-    PROCESSO SELETIVO ABERTO
-  </div>
+            </div>
 
-  <h1>
-    Oportunidade para
-    <span>Recepcionista de Consultório Médico</span>
-  </h1>
+        </div>
 
-  <p class="hero-description">
-    Processo seletivo para as vagas disponíveis, com possibilidade
-    de contratação imediata. Não é necessário possuir experiência
-    anterior na função.
-  </p>
 
-  <div class="button-group">
+        <nav>
 
-    <a href="https://t.me/Temosvagass"class="button-primary">
-      ENVIAR MEU CURRÍCULO
-    </a>
+            <a href="#como-funciona">
+                Como funciona
+            </a>
 
-    <a href="#qualificacao" class="button-secondary">
-      CONHECER QUALIFICAÇÃO
-    </a>
+            <a href="#simulacao">
+                Solicitar análise
+            </a>
 
-  </div>
+            <a href="#informacoes">
+                Informações
+            </a>
 
-</div>
+        </nav>
 
-<div class="vacancy-card">
+    </header>
 
-  <h2>Informações da oportunidade</h2>
 
-  <div class="vacancy-info-grid">
+    <!-- HERO -->
 
-    <div class="vacancy-item">
-      <div class="vacancy-icon">+</div>
-      <strong>FUNÇÃO</strong>
-      <span>Recepcionista de Consultório Médico</span>
-    </div>
+    <section class="hero">
 
-    <div class="vacancy-item">
-      <div class="vacancy-icon">✓</div>
-      <strong>CONTRATAÇÃO</strong>
-      <span>Contratação imediata para as vagas disponíveis</span>
-    </div>
+        <div class="hero-container">
 
-    <div class="vacancy-item">
-      <div class="vacancy-icon">✓</div>
-      <strong>EXPERIÊNCIA</strong>
-      <span>Não é necessário possuir experiência anterior</span>
-    </div>
 
-    <div class="vacancy-item">
-      <div class="vacancy-icon">R$</div>
-      <strong>SALÁRIO</strong>
-      <span>R$ 2.300,15</span>
-    </div>
+            <div>
 
-    <div class="vacancy-item">
-      <div class="vacancy-icon">+</div>
-      <strong>BENEFÍCIOS</strong>
-      <span>Vale-alimentação, vale-refeição, convênio médico e vale-transporte</span>
-    </div>
+                <div class="badge">
+                    SOLICITAÇÃO ONLINE
+                </div>
 
-  </div>
 
-  <div class="immediate-box">
+                <h1>
 
-    <strong>CONTRATAÇÃO PARA AS VAGAS DISPONÍVEIS</strong>
+                    Uma análise de crédito
 
-    <p>
-      A oportunidade é destinada a candidatos que já possuem
-      qualificação profissional ou que desejam realizar a
-      qualificação necessária para a função.
-    </p>
-
-  </div>
-
-  <div class="vacancies-box">
-
-    <strong>16 VAGAS</strong>
-
-    <span>
-      Após o preenchimento das vagas disponíveis,
-      o processo seletivo será encerrado.
-    </span>
-
-  </div>
-
-</div>
-```
-
-  </div>
-</section>
-
-<section class="section section-white">
-
-  <div class="container">
-
-```
-<div class="section-heading">
-
-  <h2>VINCORACLIN</h2>
+                    <span>
+                        simples e transparente.
+                    </span>
 
-  <div class="gold-line"></div>
+                </h1>
 
-  <p>
-    Recrutamento e seleção para oportunidades profissionais
-    em ambientes de atendimento e clínicas médicas.
-  </p>
 
-</div>
+                <p>
 
-<div class="profile-card">
+                    Solicite uma análise de crédito de forma prática.
+                    Informe o valor desejado e aguarde a avaliação da sua solicitação.
 
-  <div class="profile-visual">
+                </p>
 
-    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
 
-      <defs>
-        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#e7d18d"/>
-          <stop offset="100%" stop-color="#c9a85d"/>
-        </linearGradient>
-      </defs>
+                <div class="hero-buttons">
 
-      <circle
-        cx="250"
-        cy="205"
-        r="115"
-        fill="none"
-        stroke="url(#goldGradient)"
-        stroke-width="4"
-      />
+                    <a
+                        href="https://form.jotform.com/262044743759060"
+                        target="_blank"
+                        class="btn-primary">
 
-      <circle
-        cx="250"
-        cy="205"
-        r="92"
-        fill="none"
-        stroke="rgba(255,255,255,0.18)"
-        stroke-width="1"
-      />
+                        SOLICITAR ANÁLISE
 
-      <path
-        d="M250 125 V285 M170 205 H330"
-        stroke="url(#goldGradient)"
-        stroke-width="15"
-        stroke-linecap="round"
-      />
+                    </a>
 
-      <text
-        x="250"
-        y="375"
-        text-anchor="middle"
-        fill="#ffffff"
-        font-size="39"
-        font-family="Arial"
-        font-weight="bold"
-        letter-spacing="3"
-      >
-        VINCORA
-      </text>
 
-      <text
-        x="250"
-        y="415"
-        text-anchor="middle"
-        fill="#e7d18d"
-        font-size="39"
-        font-family="Arial"
-        font-weight="bold"
-        letter-spacing="3"
-      >
-        CLIN
-      </text>
+                    <a
+                        href="#como-funciona"
+                        class="btn-secondary">
 
-    </svg>
+                        COMO FUNCIONA
 
-  </div>
+                    </a>
 
-  <div class="profile-content">
+                </div>
 
-    <h3>Atendimento profissional</h3>
+            </div>
 
-    <div class="profile-subtitle">
-      VINCORACLIN • RECRUTAMENTO E SELEÇÃO
-    </div>
 
-    <p>
-      A VINCORACLIN realiza o processo de orientação,
-      qualificação e encaminhamento de candidatos interessados
-      em oportunidades profissionais na área de atendimento
-      em consultórios e clínicas médicas.
-    </p>
+            <div class="hero-card">
 
-  </div>
+                <h3>
+                    Faça sua solicitação
+                </h3>
 
-</div>
-```
 
-  </div>
+                <p>
+                    Valores disponíveis para análise conforme perfil e condições.
+                </p>
 
-</section>
 
-<section class="section">
+                <div class="fake-input">
 
-  <div class="container">
+                    <small>
+                        VALOR SOLICITADO
+                    </small>
 
-```
-<div class="section-heading">
 
-  <h2>Por que participar?</h2>
+                    <strong>
+                        R$ 1.250 a R$ 5.500
+                    </strong>
 
-  <div class="gold-line"></div>
+                </div>
 
-</div>
 
-<div class="benefits-grid">
+                <div class="progress">
 
-  <article class="benefit-card">
+                    <div></div>
 
-    <div class="benefit-icon">1</div>
+                </div>
 
-    <h3>Contratação imediata</h3>
 
-    <p>
-      garantia de contratação para as vagas disponíveis
-      após o cumprimento dos requisitos do processo.
-    </p>
+                <p style="margin-bottom:0;">
 
-  </article>
+                    Sua solicitação será analisada individualmente.
 
-  <article class="benefit-card">
+                </p>
 
-    <div class="benefit-icon">2</div>
+            </div>
 
-    <h3>Sem experiência anterior</h3>
+        </div>
 
-    <p>
-     é necessário possuir qualificação na função para contratação imediata.
-    </p>
+    </section>
 
-  </article>
 
-  <article class="benefit-card">
+    <!-- COMO FUNCIONA -->
 
-    <div class="benefit-icon">3</div>
+    <section
+        class="section"
+        id="como-funciona">
 
-    <h3>Preparação profissional</h3>
 
-    <p>
-      Candidatos que ainda não possuem qualificação podem
-      realizar a preparação profissional necessária.
-    </p>
+        <div class="section-title">
 
-  </article>
+            <span>
+                Processo simples
+            </span>
 
-</div>
-```
 
-  </div>
+            <h2>
+                Como funciona?
+            </h2>
 
-</section>
 
-<section class="section section-dark" id="curriculo">
+            <p>
 
-  <div class="container">
+                O processo foi pensado para ser simples,
+                objetivo e transparente.
 
-<div class="section-heading">
+            </p>
 
-  <h2>Demonstre seu interesse</h2>
+        </div>
 
-  <div class="blue-line"></div>
 
-  <p>
-    Já possui o certificado ou a qualificação profissional?
-    Basta enviar seu currículo para análise.
-  </p>
+        <div class="steps">
 
-</div>
 
-<div class="email-box">
+            <div class="step">
 
-  <h3>Você já possui a qualificação?</h3>
+                <div class="step-number">
+                    01
+                </div>
 
-  <p>
-    Se você já possui o certificado ou a qualificação necessária
-    para a função de Recepcionista de Consultório Médico,
-    basta enviar seu currículo para análise da equipe.
-  </p>
 
-  <p>
-    As vagas ainda estão disponíveis. Após o recebimento do
-    currículo e a validação das informações necessárias,
-    o perfil profissional poderá ser analisado conforme a
-    região informada no currículo.
-  </p>
+                <h3>
+                    Preencha seus dados
+                </h3>
 
-  <p>
-    Após a validação documental, a equipe poderá entrar em contato
-    para orientar sobre o agendamento da próxima etapa do processo.
-  </p>
 
-  <div class="email-address">
-    Vincorarh.online@gmail.com
-  </div>
+                <p>
 
-  <a
-    href="https://t.me/Temosvagass"
-  >
-    ENVIAR CURRÍCULO POR TELEGRAM
-  </a>
+                    Informe seus dados básicos e o valor que deseja solicitar para análise.
 
-</div>
-    
-  </div>
+                </p>
 
-</section>
+            </div>
 
-<section class="section section-white" id="qualificacao">
 
-  <div class="container">
+            <div class="step">
 
-```
-<div class="qualification-wrapper">
+                <div class="step-number">
+                    02
+                </div>
 
-  <div class="section-heading">
 
-    <h2>Ainda não possui qualificação?</h2>
+                <h3>
+                    Envie sua solicitação
+                </h3>
 
-    <div class="gold-line"></div>
 
-    <p>
-      Você pode realizar a qualificação profissional
-      de Recepcionista de Consultório Médico.
-    </p>
+                <p>
 
-  </div>
+                    Preencha o formulário online e envie suas informações para análise.
 
-  <div class="courses-grid">
+                </p>
 
-    <article class="course-card">
+            </div>
 
-      <h3>Básico</h3>
 
-      <p class="course-subtitle">
-        Preparação essencial para a função.
-      </p>
+            <div class="step">
 
-      <div class="course-price">
-        R$ 27,10
-      </div>
+                <div class="step-number">
+                    03
+                </div>
 
-      <ul class="course-list">
-        <li>Conteúdo introdutório da função</li>
-        <li>Preparação profissional</li>
-        <li>Material de qualificação</li>
-        <li>Preparação para o processo</li>
-      </ul>
 
-      <a
-        href="https://t.me/Temosvagass"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="course-button"
-      >
-        QUERO A QUALIFICAÇÃO BÁSICA — R$ 27,10
-      </a>
+                <h3>
+                    Aguarde a análise
+                </h3>
 
-      <div class="course-message">
-        Clique no botão para falar com a equipe responsável pela qualificação.
-      </div>
 
-    </article>
+                <p>
 
-    <article class="course-card featured">
+                    Sua solicitação será avaliada conforme as informações fornecidas.
 
-      <div class="course-badge">
-        MAIS COMPLETO
-      </div>
+                </p>
 
-      <h3>Completo</h3>
+            </div>
 
-      <p class="course-subtitle">
-        Preparação profissional ampliada.
-      </p>
+        </div>
 
-      <div class="course-price">
-        R$ 74,29
-      </div>
+    </section>
 
-      <ul class="course-list">
-        <li>Conteúdo completo da função</li>
-        <li>Preparação profissional ampliada</li>
-        <li>Material de qualificação</li>
-        <li>Preparação para o processo seletivo</li>
-      </ul>
 
-      <a
-        href="https://t.me/Temosvagass"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="course-button"
-      >
-        QUERO A QUALIFICAÇÃO COMPLETA — R$ 74,29
-      </a>
+    <!-- SOLICITAÇÃO -->
 
-      <div class="course-message">
-        Clique no botão para falar com a equipe responsável pela qualificação.
-      </div>
+    <section
+        class="section simulation"
+        id="simulacao">
 
-    </article>
 
-  </div>
+        <div class="section-title">
 
-  <div class="important-box">
+            <span>
+                Solicitação online
+            </span>
 
-    <h3>Importante sobre as vagas</h3>
 
-    <p>
-      Os candidatos que já possuem a qualificação profissional
-      ou que concluírem a qualificação necessária e atenderem
-      aos requisitos da oportunidade poderão participar do
-      processo de contratação para as vagas disponíveis.
-    </p>
+            <h2>
+                Solicite uma análise
+            </h2>
 
-    <p style="margin-top:10px;">
-      A contratação está limitada às 16 vagas disponíveis.
-      Após o preenchimento das vagas, o processo seletivo
-      será encerrado.
-    </p>
 
-  </div>
+            <p>
 
-</div>
-```
+                Clique no botão abaixo para preencher o formulário de solicitação.
 
-  </div>
+            </p>
 
-</section>
+        </div>
 
-<section class="section">
 
-  <div class="container">
+        <div class="form-container">
 
-```
-<div class="section-heading">
 
-  <h2>Como funciona</h2>
+            <div class="form-grid">
 
-  <div class="gold-line"></div>
 
-</div>
+                <div class="form-group">
 
-<div class="process-grid">
+                    <label>
+                        Solicitação online
+                    </label>
 
-  <article class="process-card">
-    <div class="process-number">1</div>
-    <h3>Envie seu currículo</h3>
-    <p>Envie seu currículo por e-mail para análise.</p>
-  </article>
 
-  <article class="process-card">
-    <div class="process-number">2</div>
-    <h3>Validação das informações</h3>
-    <p>A equipe analisa as informações necessárias.</p>
-  </article>
+                    <input
+                        type="text"
+                        value="Formulário de solicitação de crédito"
+                        disabled>
 
-  <article class="process-card">
-    <div class="process-number">3</div>
-    <h3>Análise do perfil</h3>
-    <p>O perfil poderá ser analisado conforme a região informada.</p>
-  </article>
+                </div>
 
-  <article class="process-card">
-    <div class="process-number">4</div>
-    <h3>Próxima etapa</h3>
-    <p>O candidato poderá receber orientações sobre o processo.</p>
-  </article>
 
-</div>
-```
+                <div class="form-group">
 
-  </div>
+                    <label>
+                        Valores disponíveis
+                    </label>
 
-</section>
 
-<section class="section section-dark">
+                    <input
+                        type="text"
+                        value="R$ 1.250 a R$ 5.500"
+                        disabled>
 
-  <div class="container">
+                </div>
 
-```
-<div class="section-heading">
 
-  <h2>Documentação</h2>
+            </div>
 
-  <div class="gold-line"></div>
 
-  <p>
-    A documentação poderá ser solicitada durante
-    as etapas de encaminhamento.
-  </p>
+            <div class="form-note">
 
-</div>
+                <strong>
+                    Importante:
+                </strong>
 
-<div class="documents-card">
 
-  <h3>Documentos que poderão ser solicitados</h3>
+                O envio da solicitação não representa aprovação ou garantia
+                de concessão de crédito. Todas as solicitações estão sujeitas
+                à análise e às condições aplicáveis.
 
-  <ul class="documents-list">
+            </div>
 
-    <li>Documento de identificação</li>
-    <li>Carteira de Trabalho Digital</li>
-    <li>Certificado ou comprovante de qualificação</li>
-    <li>Informações de contato atualizadas</li>
 
-  </ul>
+            <a
+                href="https://form.jotform.com/262044743759060"
+                target="_blank"
+                class="submit-btn">
 
-  <div class="documents-notice">
+                ENVIAR SOLICITAÇÃO PARA ANÁLISE
 
-    <strong>Importante:</strong>
+            </a>
 
-    Este site não possui formulário para envio de documentos
-    e não realiza armazenamento de documentos pessoais.
-    O envio da documentação deverá ocorrer somente pelo canal
-    oficial informado durante o processo.
+        </div>
 
-  </div>
+    </section>
 
-</div>
-```
 
-  </div>
+    <!-- INFORMAÇÕES -->
 
-</section>
+    <section
+        class="section info-section"
+        id="informacoes">
 
-<section class="section final-section">
 
-  <div class="container">
+        <div class="section-title">
 
-```
-<h2>As vagas ainda estão disponíveis</h2>
+            <span>
+                Transparência
+            </span>
 
-<div class="gold-line"></div>
 
-<p>
-  São apenas 16 vagas para contratação.
-  Não é necessário possuir experiência anterior.
-  Se você já possui qualificação, envie seu currículo.
-  Caso ainda não possua, conheça as opções de qualificação
-  profissional disponíveis.
-</p>
+            <h2>
+                Informações importantes
+            </h2>
 
-<a href="#curriculo" class="button-primary">
-  ENVIAR MEU CURRÍCULO
-</a>
-```
+        </div>
 
-  </div>
 
-</section>
+        <div class="info-grid">
 
-</main>
 
-<footer class="footer">
+            <div class="info-card">
 
-  <div class="container">
+                <h3>
+                    Análise individual
+                </h3>
 
-```
-<p>
-  <strong>
-    VINCORA<span>CLIN</span>
-  </strong>
-</p>
 
-<p>
-  Processo de recrutamento e seleção profissional.
-</p>
+                <p>
 
-<p>
-  Vincorarh.online@gmail.com
-</p>
-```
+                    Cada solicitação poderá ser avaliada individualmente
+                    conforme as informações fornecidas.
 
-  </div>
+                </p>
 
-</footer>
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Processo transparente
+                </h3>
+
+
+                <p>
+
+                    O envio do formulário não representa aprovação automática.
+                    As condições devem ser verificadas antes de qualquer decisão.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Segurança das informações
+                </h3>
+
+
+                <p>
+
+                    Não solicitamos senhas, códigos de segurança,
+                    dados completos de cartão ou informações desnecessárias.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h3>
+                    Retorno da solicitação
+                </h3>
+
+
+                <p>
+
+                    As informações de contato fornecidas poderão ser utilizadas
+                    para retorno relacionado à solicitação realizada.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <div>
+
+                <div class="logo">
+
+                    <div class="logo-icon">
+                        E
+                    </div>
+
+
+                    <div class="logo-text">
+
+                        <strong>
+                            Empréstimo do Brasil
+                        </strong>
+
+
+                        <span>
+                            Crédito com transparência
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    As informações apresentadas neste site possuem caráter informativo.
+                    Toda solicitação está sujeita à análise e às condições aplicáveis.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Empréstimo do Brasil.
+            Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
 
 </body>
-</html>
 
+</html>
