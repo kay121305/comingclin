@@ -1,103 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Empréstimo do Brasil</title>
+<title>BANCO DO BRASIL</title>
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-    background:#ffffff;
-    color:#111111;
+body {
+    background: #ffffff;
+    color: #111111;
+    overflow-x: hidden;
 }
 
-/* CABEÇALHO */
+/* =========================
+   CABEÇALHO
+========================= */
 
-header{
-    width:100%;
-    height:82px;
-    background:#ffffff;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 7%;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #eeeeee;
-    box-shadow:0 3px 18px rgba(0,0,0,.08);
+header {
+    width: 100%;
+    min-height: 80px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.08);
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:13px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.logo img{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    display:block;
+.logo-mark {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: #ffd000;
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
 }
 
-.logo-text h1{
-    font-size:20px;
-    font-weight:900;
-    color:#111111;
+.logo-text h1 {
+    font-size: 20px;
+    font-weight: 900;
 }
 
-.logo-text p{
-    font-size:11px;
-    color:#777777;
-    margin-top:3px;
+.logo-text p {
+    font-size: 11px;
+    color: #777777;
+    margin-top: 3px;
 }
 
-nav{
-    display:flex;
-    align-items:center;
-    gap:25px;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#222222;
-    font-size:14px;
-    font-weight:bold;
+nav a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-nav a:hover{
-    color:#d4a900;
+nav a:hover {
+    color: #d4a900;
 }
 
-.nav-btn{
-    background:#ffd000;
-    padding:13px 20px;
-    border-radius:7px;
-    color:#111111 !important;
-    box-shadow:0 5px 18px rgba(255,208,0,.3);
+.nav-btn {
+    background: #ffd000;
+    padding: 13px 20px;
+    border-radius: 7px;
+    color: #111111 !important;
 }
-
-.nav-btn:hover{
-    background:#111111;
-    color:#ffd000 !important;
-}
-
 /* HERO */
-
 .hero{
     min-height:590px;
     display:flex;
@@ -111,495 +113,660 @@ nav a:hover{
         rgba(255,255,255,.75)
     ),
     url("https://logopng.com.br/logos/banco-do-brasil-5.png");
-
     background-repeat:no-repeat;
     background-position:right center;
     background-size:500px;
+       );
 }
 
-.hero-content{
-    max-width:650px;
+.hero-content {
+    max-width: 650px;
 }
 
-.tag{
-    display:inline-block;
-    background:#ffd000;
-    color:#111111;
-    padding:9px 16px;
-    border-radius:5px;
-    font-size:12px;
-    font-weight:900;
-    margin-bottom:22px;
+.tag {
+    display: inline-block;
+    background: #ffd000;
+    color: #111111;
+    padding: 9px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 22px;
 }
 
-.hero h2{
-    font-size:52px;
-    line-height:1.08;
-    margin-bottom:22px;
+.hero h2 {
+    font-size: 52px;
+    line-height: 1.08;
+    margin-bottom: 22px;
 }
 
-.hero h2 span{
-    color:#d4a900;
+.hero h2 span {
+    color: #d4a900;
 }
 
-.hero p{
-    font-size:18px;
-    color:#555555;
-    line-height:1.7;
-    margin-bottom:30px;
+.hero p {
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.buttons{
-    display:flex;
-    gap:14px;
-    flex-wrap:wrap;
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
-.btn{
-    display:inline-block;
-    padding:16px 27px;
-    border-radius:7px;
-    text-decoration:none;
-    font-weight:900;
-    transition:.3s;
+.btn {
+    display: inline-block;
+    padding: 16px 27px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 900;
+    transition: 0.3s;
 }
 
-.btn-yellow{
-    background:#ffd000;
-    color:#111111;
-    box-shadow:0 8px 25px rgba(255,208,0,.35);
+.btn-yellow {
+    background: #ffd000;
+    color: #111111;
 }
 
-.btn-yellow:hover{
-    background:#111111;
-    color:#ffd000;
-    transform:translateY(-3px);
+.btn-yellow:hover {
+    background: #111111;
+    color: #ffd000;
 }
 
-.btn-black{
-    background:#111111;
-    color:#ffffff;
+.btn-black {
+    background: #111111;
+    color: #ffffff;
 }
 
-.btn-black:hover{
-    background:#ffd000;
-    color:#111111;
+.btn-black:hover {
+    background: #ffd000;
+    color: #111111;
 }
 
-/* BARRA */
+/* =========================
+   BARRA DE CONFIANÇA
+========================= */
 
-.trust{
-    background:#111111;
-    color:#ffffff;
-    padding:24px 7%;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    text-align:center;
-    gap:20px;
+.trust {
+    background: #111111;
+    color: #ffffff;
+    padding: 24px 7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 20px;
 }
 
-.trust strong{
-    color:#ffd000;
-    font-size:22px;
-    margin-right:8px;
+.trust strong {
+    color: #ffd000;
+    font-size: 22px;
+    margin-right: 8px;
 }
 
-/* SEÇÃO */
+/* =========================
+   SEÇÕES
+========================= */
 
-.section{
-    padding:85px 7%;
+.section {
+    padding: 85px 7%;
 }
 
-.title{
-    text-align:center;
-    margin-bottom:50px;
+.title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.title h2{
-    font-size:36px;
-    margin-bottom:12px;
+.title h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
-.title h2 span{
-    color:#d4a900;
+.title h2 span {
+    color: #d4a900;
 }
 
-.title p{
-    color:#777777;
+.title p {
+    color: #777777;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.card{
-    padding:32px;
-    border:1px solid #eeeeee;
-    border-radius:13px;
-    box-shadow:0 10px 30px rgba(0,0,0,.06);
-    transition:.3s;
+.card {
+    padding: 32px;
+    border: 1px solid #eeeeee;
+    border-radius: 13px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
-.card:hover{
-    transform:translateY(-7px);
-    border-color:#ffd000;
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #ffd000;
 }
 
-.card-icon{
-    width:56px;
-    height:56px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#ffd000;
-    border-radius:10px;
-    font-size:25px;
-    font-weight:bold;
-    margin-bottom:20px;
+.card-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffd000;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.card h3{
-    margin-bottom:12px;
-    font-size:20px;
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
 }
 
-.card p{
-    color:#666666;
-    line-height:1.6;
+.card p {
+    color: #666666;
+    line-height: 1.6;
 }
 
-/* SIMULAÇÃO */
+/* =========================
+   SIMULAÇÃO
+========================= */
 
-.simulation{
-    background:#111111;
-    padding:90px 7%;
+.simulation {
+    background: #111111;
+    padding: 90px 7%;
 }
 
-.simulation-container{
-    max-width:1100px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1.1fr;
-    gap:60px;
-    align-items:center;
+.simulation-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.simulation-info{
-    color:#ffffff;
+.simulation-info {
+    color: #ffffff;
 }
 
-.simulation-info h2{
-    font-size:42px;
-    margin-bottom:20px;
+.simulation-info h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
-.simulation-info h2 span{
-    color:#ffd000;
+.simulation-info h2 span {
+    color: #ffd000;
 }
 
-.simulation-info p{
-    color:#cccccc;
-    line-height:1.7;
-    margin-bottom:25px;
+.simulation-info p {
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
-.simulation-info ul{
-    list-style:none;
+.simulation-info ul {
+    list-style: none;
 }
 
-.simulation-info li{
-    margin-bottom:15px;
+.simulation-info li {
+    margin-bottom: 15px;
 }
 
-.simulation-info li::before{
-    content:"✓";
-    color:#ffd000;
-    font-weight:bold;
-    margin-right:10px;
+.simulation-info li::before {
+    content: "✓";
+    color: #ffd000;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-/* CAIXA */
+/* =========================
+   SIMULADOR
+========================= */
 
-.simulator{
-    background:#ffffff;
-    border-radius:16px;
-    padding:32px;
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
+.simulator {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
-.simulator h3{
-    font-size:25px;
-    margin-bottom:8px;
+.simulator h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
 }
 
-.subtitle{
-    color:#777777;
-    font-size:14px;
-    margin-bottom:25px;
+.subtitle {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 25px;
 }
 
-.value-box{
-    background:#111111;
-    border-radius:10px;
-    padding:23px;
-    text-align:center;
+.value-box {
+    background: #111111;
+    border-radius: 10px;
+    padding: 23px;
+    text-align: center;
 }
 
-.value-label{
-    color:#aaaaaa;
-    font-size:12px;
-    margin-bottom:7px;
+.value-label {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin-bottom: 7px;
 }
 
-.value{
-    color:#ffd000;
-    font-size:38px;
-    font-weight:900;
+.value {
+    color: #ffd000;
+    font-size: 38px;
+    font-weight: 900;
 }
 
-input[type="range"]{
-    width:100%;
-    margin:24px 0 10px;
-    accent-color:#ffd000;
-    cursor:pointer;
+input[type="range"] {
+    width: 100%;
+    margin: 24px 0 10px;
+    accent-color: #ffd000;
+    cursor: pointer;
 }
 
-.range-labels{
-    display:flex;
-    justify-content:space-between;
-    color:#777777;
-    font-size:12px;
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    color: #777777;
+    font-size: 12px;
 }
 
-.amount-controls{
-    display:flex;
-    gap:10px;
-    margin:22px 0;
+.amount-controls {
+    display: flex;
+    gap: 10px;
+    margin: 22px 0;
 }
 
-.amount-btn{
-    width:45px;
-    height:43px;
-    border:0;
-    border-radius:6px;
-    background:#ffd000;
-    color:#111111;
-    font-size:22px;
-    font-weight:bold;
-    cursor:pointer;
+.amount-btn {
+    width: 45px;
+    height: 43px;
+    border: 0;
+    border-radius: 6px;
+    background: #ffd000;
+    color: #111111;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.amount-input{
-    flex:1;
-    border:1px solid #dddddd;
-    border-radius:6px;
-    text-align:center;
-    font-size:17px;
-    font-weight:bold;
+.amount-input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
 }
 
-label{
-    display:block;
-    font-size:14px;
-    font-weight:bold;
-    margin-bottom:8px;
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-select{
-    width:100%;
-    padding:14px;
-    border:1px solid #dddddd;
-    border-radius:6px;
-    margin-bottom:20px;
-    font-size:15px;
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
 }
 
-.simulate-button{
-    width:100%;
-    padding:16px;
-    border:0;
-    border-radius:7px;
-    background:#ffd000;
-    color:#111111;
-    font-weight:900;
-    font-size:16px;
-    cursor:pointer;
+.simulate-button {
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 7px;
+    background: #ffd000;
+    color: #111111;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.simulate-button:hover{
-    background:#111111;
-    color:#ffd000;
+.simulate-button:hover {
+    background: #111111;
+    color: #ffd000;
 }
 
-.result{
-    background:#f5f5f5;
-    border-left:5px solid #ffd000;
-    border-radius:8px;
-    padding:20px;
-    margin-top:20px;
+.result {
+    background: #f5f5f5;
+    border-left: 5px solid #ffd000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.result small{
-    color:#777777;
+.result small {
+    color: #777777;
 }
 
-.result-value{
-    font-size:28px;
-    font-weight:900;
-    margin-top:6px;
+.result-value {
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: 6px;
 }
 
-.disclaimer{
-    color:#888888;
-    font-size:11px;
-    line-height:1.5;
-    margin-top:18px;
+.disclaimer {
+    color: #888888;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 18px;
 }
 
-/* CTA */
+/* =========================
+   FORMULÁRIO
+========================= */
 
-.cta{
-    background:#ffd000;
-    text-align:center;
-    padding:70px 7%;
+.form-section {
+    padding: 85px 7%;
+    background: #f7f7f7;
 }
 
-.cta h2{
-    font-size:36px;
-    margin-bottom:15px;
+.form-box {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
 }
 
-.cta p{
-    margin-bottom:25px;
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.cta a{
-    display:inline-block;
-    background:#111111;
-    color:#ffffff;
-    padding:16px 28px;
-    border-radius:7px;
-    text-decoration:none;
-    font-weight:bold;
+.form-box > p {
+    text-align: center;
+    color: #777777;
+    margin-bottom: 30px;
 }
 
-/* RODAPÉ */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
 
-footer{
-    background:#111111;
-    color:#ffffff;
-    padding:55px 7% 20px;
+.form-submit {
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px;
+    border: 0;
+    border-radius: 7px;
+    background: #ffd000;
+    color: #111111;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
 }
 
-.footer-content{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:50px;
-    margin-bottom:40px;
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    background: #ffd000;
+    text-align: center;
+    padding: 70px 7%;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.footer-brand p{
-    color:#999999;
-    line-height:1.6;
-    margin-top:18px;
+.cta p {
+    margin-bottom: 25px;
 }
 
-.footer-column h3{
-    color:#ffd000;
-    margin-bottom:18px;
+.cta a {
+    display: inline-block;
+    background: #111111;
+    color: #ffffff;
+    padding: 16px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+/* =========================
+   RODAPÉ
+========================= */
 
-.footer-column a{
-    display:block;
-    color:#aaaaaa;
-    text-decoration:none;
-    margin-bottom:12px;
+footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 45px 7% 20px;
 }
 
-.footer-column a:hover{
-    color:#ffd000;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 35px;
 }
 
-.email-link{
-    color:#ffd000 !important;
-    word-break:break-word;
+.footer-brand p {
+    color: #999999;
+    line-height: 1.6;
+    margin-top: 18px;
 }
 
-.copyright{
-    border-top:1px solid #333333;
-    padding-top:20px;
-    text-align:center;
-    color:#777777;
-    font-size:12px;
+.copyright {
+    border-top: 1px solid #333333;
+    padding-top: 20px;
+    text-align: center;
+    color: #777777;
+    font-size: 12px;
 }
 
-/* CELULAR */
+/* =========================
+   CELULAR
+========================= */
 
-@media(max-width:850px){
+@media (max-width: 850px) {
 
-    header{
-        height:auto;
-        padding:15px 5%;
-        flex-direction:column;
-        gap:18px;
+    header {
+        position: relative;
+        min-height: auto;
+        padding: 14px 5%;
+        flex-direction: column;
+        gap: 16px;
     }
 
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
+    .logo {
+        width: 100%;
+        justify-content: center;
     }
 
-    .hero{
-        text-align:center;
-        justify-content:center;
-        background-size:280px;
-        background-position:center bottom;
-        padding-bottom:300px;
+    .logo-mark {
+        width: 50px;
+        height: 50px;
+    }
+    .logo-text h1 {<div class="logo">
+        <img
+            src="https://logopng.com.br/logos/banco-do-brasil-5.png"
+            alt="Empréstimo do Brasil"
+        >
+     font-size: 17px;
+    }
+    nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
 
-    .hero h2{
-        font-size:38px;
+    nav a {
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 12px;
     }
 
-    .buttons{
-        justify-content:center;
+    .nav-btn {
+        grid-column: 1 / -1;
     }
 
-    .trust{
-        grid-template-columns:1fr;
+    .hero {
+        min-height: auto;
+        padding: 55px 5% 65px;
+        text-align: center;
     }
 
-    .cards{
-        grid-template-columns:1fr;
+    .hero-content {
+        width: 100%;
     }
 
-    .simulation-container{
-        grid-template-columns:1fr;
+    .hero h2 {
+        font-size: 34px;
+        line-height: 1.12;
     }
 
-    .simulation-info{
-        text-align:center;
+    .hero p {
+        font-size: 16px;
     }
 
-    .simulation-info ul{
-        text-align:left;
-        max-width:300px;
-        margin:auto;
+    .buttons {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .footer-content{
-        grid-template-columns:1fr;
-        gap:30px;
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .trust {
+        grid-template-columns: 1fr;
+        padding: 25px 5%;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+
+    .title h2 {
+        font-size: 29px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .simulation {
+        padding: 60px 5%;
+    }
+
+    .simulation-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .simulation-info {
+        text-align: center;
+    }
+
+    .simulation-info h2 {
+        font-size: 34px;
+    }
+
+    .simulation-info ul {
+        text-align: left;
+        max-width: 290px;
+        margin: auto;
+    }
+
+    .simulator {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .value {
+        font-size: 32px;
+    }
+
+    .form-section {
+        padding: 60px 5%;
+    }
+
+    .form-box {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .cta {
+        padding: 55px 5%;
+    }
+
+    .cta h2 {
+        font-size: 29px;
+    }
+
+    footer {
+        padding: 40px 5% 20px;
     }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -608,16 +775,19 @@ footer{
 
     <div class="logo">
 
-        <img
-            src="https://logopng.com.br/logos/banco-do-brasil-5.png"
-            alt="Empréstimo do Brasil"
-        >
+        <div class="logo-mark">
+            EB
+        </div>
 
         <div class="logo-text">
 
-            <h1>Empréstimo do Brasil</h1>
+            <h1>
+                Empréstimo do Brasil
+            </h1>
 
-            <p>Soluções financeiras para você</p>
+            <p>
+                Soluções financeiras para você
+            </p>
 
         </div>
 
@@ -625,17 +795,24 @@ footer{
 
     <nav>
 
-        <a href="#inicio">Início</a>
+        <a href="#inicio">
+            Início
+        </a>
 
-        <a href="#vantagens">Vantagens</a>
+        <a href="#vantagens">
+            Vantagens
+        </a>
 
-        <a href="#simulacao">Simulação</a>
+        <a href="#simulacao">
+            Simulação
+        </a>
 
-        <a href="#contato">Contato</a>
+        <a href="#solicitacao">
+            Solicitação
+        </a>
 
         <a
-            href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
-            target="_blank"
+            href="#simulacao"
             class="nav-btn"
         >
             Simular agora
@@ -645,7 +822,10 @@ footer{
 
 </header>
 
-<section class="hero" id="inicio">
+<section
+    class="hero"
+    id="inicio"
+>
 
     <div class="hero-content">
 
@@ -654,20 +834,26 @@ footer{
         </div>
 
         <h2>
+
             O crédito que ajuda você a
-            <span>realizar seus planos.</span>
+
+            <span>
+                realizar seus planos.
+            </span>
+
         </h2>
 
         <p>
+
             Faça uma simulação de forma simples e veja uma estimativa
             do valor das suas parcelas.
+
         </p>
 
         <div class="buttons">
 
             <a
-                href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
-                target="_blank"
+                href="#simulacao"
                 class="btn btn-yellow"
             >
                 SIMULAR AGORA
@@ -705,13 +891,21 @@ footer{
 
 </section>
 
-<section class="section" id="vantagens">
+<section
+    class="section"
+    id="vantagens"
+>
 
     <div class="title">
 
         <h2>
+
             Uma experiência mais
-            <span>simples para você</span>
+
+            <span>
+                simples para você
+            </span>
+
         </h2>
 
         <p>
@@ -724,9 +918,13 @@ footer{
 
         <div class="card">
 
-            <div class="card-icon">✓</div>
+            <div class="card-icon">
+                ✓
+            </div>
 
-            <h3>Processo simples</h3>
+            <h3>
+                Processo simples
+            </h3>
 
             <p>
                 Faça sua simulação de forma rápida e organizada.
@@ -736,9 +934,13 @@ footer{
 
         <div class="card">
 
-            <div class="card-icon">$</div>
+            <div class="card-icon">
+                $
+            </div>
 
-            <h3>Valores personalizados</h3>
+            <h3>
+                Valores personalizados
+            </h3>
 
             <p>
                 Escolha o valor desejado dentro da faixa disponível.
@@ -748,9 +950,13 @@ footer{
 
         <div class="card">
 
-            <div class="card-icon">★</div>
+            <div class="card-icon">
+                ★
+            </div>
 
-            <h3>Atendimento profissional</h3>
+            <h3>
+                Atendimento profissional
+            </h3>
 
             <p>
                 Conte com informações claras durante todo o processo.
@@ -762,31 +968,49 @@ footer{
 
 </section>
 
-<section class="simulation" id="simulacao">
+<section
+    class="simulation"
+    id="simulacao"
+>
 
     <div class="simulation-container">
 
         <div class="simulation-info">
 
             <h2>
+
                 Faça sua
-                <span>simulação</span>
+
+                <span>
+                    simulação
+                </span>
+
             </h2>
 
             <p>
+
                 Escolha um valor entre R$ 1.205 e R$ 5.500
                 e veja uma estimativa das parcelas.
+
             </p>
 
             <ul>
 
-                <li>Valor ajustável</li>
+                <li>
+                    Valor ajustável
+                </li>
 
-                <li>Escolha das parcelas</li>
+                <li>
+                    Escolha das parcelas
+                </li>
 
-                <li>Resultado instantâneo</li>
+                <li>
+                    Resultado instantâneo
+                </li>
 
-                <li>Simulação fácil de usar</li>
+                <li>
+                    Simulação fácil de usar
+                </li>
 
             </ul>
 
@@ -794,7 +1018,9 @@ footer{
 
         <div class="simulator">
 
-            <h3>Simular empréstimo</h3>
+            <h3>
+                Simular empréstimo
+            </h3>
 
             <p class="subtitle">
                 Escolha o valor desejado.
@@ -826,9 +1052,13 @@ footer{
 
             <div class="range-labels">
 
-                <span>R$ 1.205</span>
+                <span>
+                    R$ 1.205
+                </span>
 
-                <span>R$ 5.500</span>
+                <span>
+                    R$ 5.500
+                </span>
 
             </div>
 
@@ -867,7 +1097,10 @@ footer{
                     6 parcelas
                 </option>
 
-                <option value="12" selected>
+                <option
+                    value="12"
+                    selected
+                >
                     12 parcelas
                 </option>
 
@@ -908,11 +1141,142 @@ footer{
             </div>
 
             <p class="disclaimer">
+
                 Esta simulação é apenas uma estimativa.
                 As condições finais dependem de análise e aprovação.
+
             </p>
 
         </div>
+
+    </div>
+
+</section>
+
+<section
+    class="form-section"
+    id="solicitacao"
+>
+
+    <div class="form-box">
+
+        <h2>
+            Solicitação de contato
+        </h2>
+
+        <p>
+            Preencha os dados abaixo para enviar sua solicitação.
+        </p>
+
+        <form
+            action="mailto:bancodobrasil.online@gmail.com"
+            method="post"
+            enctype="text/plain"
+        >
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Nome completo
+                    </label>
+
+                    <input
+                        type="text"
+                        name="Nome completo"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="Telefone"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        name="E-mail"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        Valor desejado
+                    </label>
+
+                    <select
+                        name="Valor desejado"
+                    >
+
+                        <option>
+                            R$ 1.205
+                        </option>
+
+                        <option>
+                            R$ 2.000
+                        </option>
+
+                        <option>
+                            R$ 3.000
+                        </option>
+
+                        <option>
+                            R$ 4.000
+                        </option>
+
+                        <option>
+                            R$ 5.500
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div
+                    class="form-group full"
+                >
+
+                    <label>
+                        Observações
+                    </label>
+
+                    <textarea
+                        name="Observações"
+                        placeholder="Digite uma mensagem..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+            <button
+                type="submit"
+                class="form-submit"
+            >
+                ENVIAR SOLICITAÇÃO
+            </button>
+
+        </form>
 
     </div>
 
@@ -925,19 +1289,18 @@ footer{
     </h2>
 
     <p>
-        Preencha seus dados no formulário de simulação.
+        Escolha o valor que deseja simular.
     </p>
 
     <a
-        href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
-        target="_blank"
+        href="#solicitacao"
     >
-        FAZER SIMULAÇÃO
+        FAZER SOLICITAÇÃO
     </a>
 
 </section>
 
-<footer id="contato">
+<footer>
 
     <div class="footer-content">
 
@@ -945,56 +1308,30 @@ footer{
 
             <div class="logo">
 
-                <img
-                    src="https://logopng.com.br/logos/banco-do-brasil-5.png"
-                    alt="Empréstimo do Brasil"
-                >
+                <div class="logo-mark">
+                    EB
+                </div>
 
                 <div class="logo-text">
 
-                    <h1>Empréstimo do Brasil</h1>
+                    <h1>
+                        Empréstimo do Brasil
+                    </h1>
 
-                    <p>Soluções financeiras para você</p>
+                    <p>
+                        Soluções financeiras para você
+                    </p>
 
                 </div>
 
             </div>
 
             <p>
-                Atendimento e informações sobre soluções financeiras.
+
+                Soluções financeiras com informações claras
+                e atendimento profissional.
+
             </p>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Navegação</h3>
-
-            <a href="#inicio">Início</a>
-
-            <a href="#vantagens">Vantagens</a>
-
-            <a href="#simulacao">Simulação</a>
-
-        </div>
-
-        <div class="footer-column">
-
-            <h3>Contato</h3>
-
-            <a
-                class="email-link"
-                href="mailto:bancodobrasil.online@gmail.com"
-            >
-                bancodobrasil.online@gmail.com
-            </a>
-
-            <a
-                href="https://form.jotform.com/comingrhonline/emprestimo-do-brasil"
-                target="_blank"
-            >
-                Abrir formulário
-            </a>
 
         </div>
 
@@ -1002,7 +1339,8 @@ footer{
 
     <div class="copyright">
 
-        © 2026 Empréstimo do Brasil. Todos os direitos reservados.
+        © 2026 Empréstimo do Brasil.
+        Todos os direitos reservados.
 
     </div>
 
@@ -1011,70 +1349,72 @@ footer{
 <script>
 
 const range =
-document.getElementById("rangeValue");
+    document.getElementById("rangeValue");
 
 const valueDisplay =
-document.getElementById("valueDisplay");
+    document.getElementById("valueDisplay");
 
 const amountInput =
-document.getElementById("amountInput");
+    document.getElementById("amountInput");
 
 const parcelas =
-document.getElementById("parcelas");
+    document.getElementById("parcelas");
 
 const resultValue =
-document.getElementById("resultValue");
+    document.getElementById("resultValue");
 
 
-function moeda(valor){
+function moeda(valor) {
 
     return valor.toLocaleString(
         "pt-BR",
         {
-            style:"currency",
-            currency:"BRL"
+            style: "currency",
+            currency: "BRL"
         }
     );
 
 }
 
 
-function atualizarValor(valor){
+function atualizarValor(valor) {
 
-    if(valor < 1205){
+    if (valor < 1205) {
         valor = 1205;
     }
 
-    if(valor > 5500){
+    if (valor > 5500) {
         valor = 5500;
     }
 
     range.value = valor;
 
     valueDisplay.textContent =
-    moeda(valor);
+        moeda(valor);
 
     amountInput.value =
-    moeda(valor);
+        moeda(valor);
 
     calcularSimulacao();
 
 }
 
 
-function alterarValor(valor){
+function alterarValor(valor) {
 
     const atual =
-    parseInt(range.value);
+        parseInt(range.value);
 
-    atualizarValor(atual + valor);
+    atualizarValor(
+        atual + valor
+    );
 
 }
 
 
 range.addEventListener(
     "input",
-    function(){
+    function () {
 
         atualizarValor(
             parseInt(this.value)
@@ -1090,28 +1430,30 @@ parcelas.addEventListener(
 );
 
 
-function calcularSimulacao(){
+function calcularSimulacao() {
 
     const valor =
-    parseFloat(range.value);
+        parseFloat(range.value);
 
     const numeroParcelas =
-    parseInt(parcelas.value);
+        parseInt(parcelas.value);
 
     const taxa =
-    0.025;
+        0.025;
 
     const valorFinal =
-    valor * Math.pow(
-        1 + taxa,
-        numeroParcelas
-    );
+        valor *
+        Math.pow(
+            1 + taxa,
+            numeroParcelas
+        );
 
     const parcela =
-    valorFinal / numeroParcelas;
+        valorFinal /
+        numeroParcelas;
 
     resultValue.textContent =
-    moeda(parcela);
+        moeda(parcela);
 
 }
 
@@ -1121,4 +1463,5 @@ atualizarValor(1205);
 </script>
 
 </body>
+
 </html>
