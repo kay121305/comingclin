@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,7 +113,7 @@ nav a:hover {
             rgba(255,255,255,0.93),
             rgba(255,255,255,0.75)
         ),
-        url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d");
+        url("https://th.bing.com/th/id/OIP.mAjJkFZv8BBUx1JuaIq8VAHaEO?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3");
 
     background-repeat: no-repeat;
     background-position: right center;
@@ -400,19 +401,13 @@ label {
     margin-bottom: 8px;
 }
 
-select,
-input,
-textarea {
+select {
     width: 100%;
     padding: 14px;
     border: 1px solid #dddddd;
-    border-radius: 7px;
-    font-size: 15px;
-    outline: none;
-}
-
-select {
+    border-radius: 6px;
     margin-bottom: 20px;
+    font-size: 15px;
 }
 
 .simulate-button {
@@ -492,6 +487,17 @@ select {
     grid-column: 1 / -1;
 }
 
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
 .form-group textarea {
     min-height: 110px;
     resize: vertical;
@@ -510,26 +516,10 @@ select {
     cursor: pointer;
 }
 
-.privacy {
-    margin-top: 18px;
-    font-size: 12px;
-    color: #777777;
-    line-height: 1.5;
-}
-
 .cta {
-    min-height: 330px;
-    background:
-        linear-gradient(
-            rgba(0,208,132,0.88),
-            rgba(0,168,102,0.92)
-        ),
-        url("https://creditavel.org/wp-content/uploads/2022/09/Emprestimo-Simplic-2-1.webp");
-
-    background-size: cover;
-    background-position: center;
+    background: #00d084;
     text-align: center;
-    padding: 90px 7%;
+    padding: 70px 7%;
 }
 
 .cta h2 {
@@ -590,6 +580,15 @@ footer {
     .logo {
         width: 100%;
         justify-content: center;
+    }
+
+    .logo-mark {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-text h1 {
+        font-size: 17px;
     }
 
     nav {
@@ -726,7 +725,7 @@ footer {
         <div class="logo-mark">
 
             <img
-                src="COLOQUE O LINK DA SUA LOGO AQUI"
+                src="https://multifinanca.com/wp-content/uploads/2022/05/simplic3.jpeg"
                 alt="Logo da empresa"
             >
 
@@ -736,7 +735,7 @@ footer {
 
             <h1>Simplic</h1>
 
-            <p>Soluções financeiras para você</p>
+            <p>Dinheiro na conta em 24H</p>
 
         </div>
 
@@ -902,7 +901,7 @@ footer {
 
         <div class="simulator">
 
-            <h3>Simular solicitação</h3>
+            <h3>Simular empréstimo</h3>
 
             <p class="subtitle">
                 Escolha o valor desejado.
@@ -1079,34 +1078,6 @@ footer {
                 <div class="form-group">
 
                     <label>
-                        Telefone
-                    </label>
-
-                    <input
-                        type="tel"
-                        name="Telefone"
-                        required
-                    >
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>
-                        E-mail
-                    </label>
-
-                    <input
-                        type="email"
-                        name="E-mail"
-                        required
-                    >
-
-                </div>
-
-                <div class="form-group">
-
-                    <label>
                         CPF
                     </label>
 
@@ -1136,6 +1107,34 @@ footer {
                 <div class="form-group">
 
                     <label>
+                        Telefone
+                    </label>
+
+                    <input
+                        type="tel"
+                        name="Telefone"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        name="E-mail"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
                         Valor desejado
                     </label>
 
@@ -1145,17 +1144,9 @@ footer {
 
                         <option>R$ 2.000</option>
 
-                        <option>R$ 2.500</option>
-
                         <option>R$ 3.000</option>
-                        
-                        <option>R$ 3.500</option>
 
-                        <option>R$ 4.000</option>      
-                        
-                        <option>R$ 4.500</option>
-
-                        <option>R$ 5.000</option>
+                        <option>R$ 4.000</option>
 
                         <option>R$ 5.500</option>
 
@@ -1177,10 +1168,6 @@ footer {
                 </div>
 
             </div>
-
-            <p class="privacy">
-                Ao enviar este formulário, você declara estar ciente de que os dados fornecidos serão encaminhados para o e-mail informado pela empresa para análise e contato.
-            </p>
 
             <button
                 type="submit"
@@ -1222,7 +1209,7 @@ footer {
                 <div class="logo-mark">
 
                     <img
-                        src="https://www.idinheiro.com.br/wp-content/uploads/2021/02/simplic-2.jpg"
+                        src="https://multifinanca.com/wp-content/uploads/2022/05/simplic3.jpeg"
                         alt="Logo da empresa"
                     >
 
@@ -1352,7 +1339,7 @@ function calcularSimulacao() {
 
 }
 
-atualizarValor(=);
+atualizarValor(1205);
 
 </script>
 
